@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentCategory = 'all';
   let currentStack = 'all';
   let searchQuery = '';
+  let currentPage = 1;
+  const ITEMS_PER_PAGE = 9;
   
   // Elements
   const projectsGrid = document.getElementById('projects-grid');
@@ -12,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const stackFilterSelect = document.getElementById('stack-filter');
   const categoryButtons = document.querySelectorAll('.filter-btn');
   const themeToggleBtn = document.getElementById('theme-toggle');
+  const paginationContainer = document.getElementById('pagination-container');
   const detailModal = new bootstrap.Modal(document.getElementById('projectDetailModal'));
   
   // Category styling helper
@@ -38,8 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
     return 'bi-window-stack';
   }
 
-  // Render Projects Grid
-  function renderProjects() {
+  // Render Projects Grid with Pagination
+  function renderProjects(scrollUp = false) {
     const filtered = PROJECTS_DATA.filter(p => {
       // Category filter
       let matchCat = true;
@@ -68,14 +71,33 @@ document.addEventListener('DOMContentLoaded', () => {
       return matchCat && matchStack && matchSearch;
     });
 
+    const totalProjects = filtered.length;
+    const totalPages = Math.ceil(totalProjects / ITEMS_PER_PAGE) || 1;
+    
+    // Safety check on current page
+    if (currentPage > totalPages) {
+      currentPage = totalPages;
+    }
+    if (currentPage < 1) {
+      currentPage = 1;
+    }
+
+    const startIdx = (currentPage - 1) * ITEMS_PER_PAGE;
+    const endIdx = Math.min(startIdx + ITEMS_PER_PAGE, totalProjects);
+    const paginatedItems = filtered.slice(startIdx, endIdx);
+
     // Update count display
     if (projectCountEl) {
-      projectCountEl.textContent = `Menampilkan ${filtered.length} dari ${PROJECTS_DATA.length} proyek`;
+      if (totalProjects === 0) {
+        projectCountEl.textContent = `0 proyek ditemukan`;
+      } else {
+        projectCountEl.textContent = `Menampilkan ${startIdx + 1}–${endIdx} dari total ${totalProjects} proyek (Halaman ${currentPage}/${totalPages})`;
+      }
     }
 
     if (!projectsGrid) return;
 
-    if (filtered.length === 0) {
+    if (totalProjects === 0) {
       projectsGrid.innerHTML = `
         <div class="col-12 text-center py-5">
           <i class="bi bi-search display-3 text-muted mb-3 d-block"></i>
@@ -84,10 +106,12 @@ document.addEventListener('DOMContentLoaded', () => {
           <button class="btn btn-outline-custom mt-2" onclick="resetFilters()">Reset Filter</button>
         </div>
       `;
+      if (paginationContainer) paginationContainer.innerHTML = '';
       return;
     }
 
-    projectsGrid.innerHTML = filtered.map(p => {
+    // Render cards
+    projectsGrid.innerHTML = paginatedItems.map(p => {
       const catClass = getCategoryClass(p.category);
       const catIcon = getCategoryIcon(p.category);
       const flagshipBadge = p.is_flagship ? `<span class="badge badge-flagship me-2"><i class="bi bi-star-fill text-warning me-1"></i> Flagship</span>` : '';
@@ -97,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
       `).join('');
 
       return `
-        <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up">
+        <div class="col-md-6 col-lg-4 mb-4">
           <div class="project-card ${p.is_flagship ? 'flagship-card' : ''}">
             <div>
               <div class="d-flex justify-content-between align-items-start mb-2">
@@ -127,7 +151,79 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       `;
     }).join('');
+
+    // Render Pagination UI
+    renderPagination(totalPages);
+
+    // Optional smooth scroll to top of project section when changing pages
+    if (scrollUp) {
+      const section = document.getElementById('proyek');
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
   }
+
+  // Render Pagination Buttons
+  function renderPagination(totalPages) {
+    if (!paginationContainer) return;
+    if (totalPages <= 1) {
+      paginationContainer.innerHTML = '';
+      return;
+    }
+
+    let paginationHtml = `
+      <nav aria-label="Navigasi Halaman Proyek" class="pagination-wrapper d-flex justify-content-center">
+        <ul class="pagination pagination-custom flex-wrap justify-content-center">
+          <li class="page-item ${currentPage === 1 ? 'disabled' : ''}">
+            <button class="page-link" onclick="changePage(${currentPage - 1})" aria-label="Sebelumnya">
+              <i class="bi bi-chevron-left me-1"></i> Prev
+            </button>
+          </li>
+    `;
+
+    // Max visible page numbers logic
+    for (let i = 1; i <= totalPages; i++) {
+      if (
+        i === 1 || 
+        i === totalPages || 
+        (i >= currentPage - 2 && i <= currentPage + 2)
+      ) {
+        paginationHtml += `
+          <li class="page-item ${i === currentPage ? 'active' : ''}">
+            <button class="page-link" onclick="changePage(${i})">${i}</button>
+          </li>
+        `;
+      } else if (
+        (i === currentPage - 3 && i > 1) || 
+        (i === currentPage + 3 && i < totalPages)
+      ) {
+        paginationHtml += `
+          <li class="page-item disabled">
+            <span class="page-link">...</span>
+          </li>
+        `;
+      }
+    }
+
+    paginationHtml += `
+          <li class="page-item ${currentPage === totalPages ? 'disabled' : ''}">
+            <button class="page-link" onclick="changePage(${currentPage + 1})" aria-label="Selanjutnya">
+              Next <i class="bi bi-chevron-right ms-1"></i>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    `;
+
+    paginationContainer.innerHTML = paginationHtml;
+  }
+
+  // Change page function
+  window.changePage = function(page) {
+    currentPage = page;
+    renderProjects(true);
+  };
 
   // Open Modal with project details
   window.openProjectModal = function(projectId) {
@@ -161,6 +257,7 @@ document.addEventListener('DOMContentLoaded', () => {
     currentCategory = 'all';
     currentStack = 'all';
     searchQuery = '';
+    currentPage = 1;
     if (searchInput) searchInput.value = '';
     if (stackFilterSelect) stackFilterSelect.value = 'all';
     categoryButtons.forEach(btn => {
@@ -175,6 +272,7 @@ document.addEventListener('DOMContentLoaded', () => {
       categoryButtons.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       currentCategory = btn.getAttribute('data-category');
+      currentPage = 1; // Reset to page 1 on filter
       renderProjects();
     });
   });
@@ -183,6 +281,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (searchInput) {
     searchInput.addEventListener('input', (e) => {
       searchQuery = e.target.value;
+      currentPage = 1; // Reset to page 1 on search
       renderProjects();
     });
   }
@@ -191,6 +290,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (stackFilterSelect) {
     stackFilterSelect.addEventListener('change', (e) => {
       currentStack = e.target.value;
+      currentPage = 1; // Reset to page 1 on stack change
       renderProjects();
     });
   }
