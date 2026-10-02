@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id" data-theme="dark">
+<html lang="id" data-bs-theme="dark" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,8 +35,8 @@
         <span>DevShowcase<span class="text-primary">.io</span></span>
       </a>
 
-      <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
-        <i class="bi bi-list fs-2"></i>
+      <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-label="Toggle navigation">
+        <i class="bi bi-list fs-2 text-main"></i>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarContent">
@@ -48,7 +48,7 @@
           <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
         </ul>
 
-        <div class="d-flex align-items-center gap-2">
+        <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
           <button id="theme-toggle" class="btn-theme-toggle" title="Toggle Theme">
             <i class="bi bi-sun-fill"></i>
           </button>
@@ -142,11 +142,11 @@
             <h4 class="fw-bold mb-2">Backend & API</h4>
             <p class="text-muted small mb-3">Pengembangan arsitektur server-side yang aman, scalable, dan efisien dalam pengolahan data.</p>
             <div class="d-flex flex-wrap gap-1">
-              <span class="badge bg-secondary">Laravel</span>
-              <span class="badge bg-secondary">CodeIgniter</span>
-              <span class="badge bg-secondary">Node.js Express</span>
-              <span class="badge bg-secondary">PHP Native</span>
-              <span class="badge bg-secondary">RESTful API</span>
+              <span class="badge-tech-pill">Laravel</span>
+              <span class="badge-tech-pill">CodeIgniter</span>
+              <span class="badge-tech-pill">Node.js Express</span>
+              <span class="badge-tech-pill">PHP Native</span>
+              <span class="badge-tech-pill">RESTful API</span>
             </div>
           </div>
         </div>
@@ -159,11 +159,11 @@
             <h4 class="fw-bold mb-2">Frontend & SPA</h4>
             <p class="text-muted small mb-3">Antarmuka interaktif yang cepat, intuitif, ramah pengguna, dan responsif di berbagai perangkat.</p>
             <div class="d-flex flex-wrap gap-1">
-              <span class="badge bg-secondary">Vue.js</span>
-              <span class="badge bg-secondary">JavaScript ES6+</span>
-              <span class="badge bg-secondary">Bootstrap 5</span>
-              <span class="badge bg-secondary">Tailwind CSS</span>
-              <span class="badge bg-secondary">SPA Architecture</span>
+              <span class="badge-tech-pill">Vue.js</span>
+              <span class="badge-tech-pill">JavaScript ES6+</span>
+              <span class="badge-tech-pill">Bootstrap 5</span>
+              <span class="badge-tech-pill">Tailwind CSS</span>
+              <span class="badge-tech-pill">SPA Architecture</span>
             </div>
           </div>
         </div>
@@ -176,11 +176,11 @@
             <h4 class="fw-bold mb-2">Algoritma & SPK</h4>
             <p class="text-muted small mb-3">Implementasi kalkulasi matematis kompleks untuk pendukung keputusan dan penalaran berbasis aturan.</p>
             <div class="d-flex flex-wrap gap-1">
-              <span class="badge bg-secondary">Certainty Factor</span>
-              <span class="badge bg-secondary">Metode SAW</span>
-              <span class="badge bg-secondary">Metode WASPAS</span>
-              <span class="badge bg-secondary">Time Series Forecast</span>
-              <span class="badge bg-secondary">NLP Sentiment</span>
+              <span class="badge-tech-pill">Certainty Factor</span>
+              <span class="badge-tech-pill">Metode SAW</span>
+              <span class="badge-tech-pill">Metode WASPAS</span>
+              <span class="badge-tech-pill">Time Series Forecast</span>
+              <span class="badge-tech-pill">NLP Sentiment</span>
             </div>
           </div>
         </div>
@@ -193,11 +193,11 @@
             <h4 class="fw-bold mb-2">IoT, Data & Industri</h4>
             <p class="text-muted small mb-3">Integrasi perangkat industri, monitoring telemetri sensor, dan pipeline data otomatis.</p>
             <div class="d-flex flex-wrap gap-1">
-              <span class="badge bg-secondary">Weighbridge API</span>
-              <span class="badge bg-secondary">Boiler Telemetry</span>
-              <span class="badge bg-secondary">Hardware Spooler</span>
-              <span class="badge bg-secondary">MySQL Optimization</span>
-              <span class="badge bg-secondary">Python Analytics</span>
+              <span class="badge-tech-pill">Weighbridge API</span>
+              <span class="badge-tech-pill">Boiler Telemetry</span>
+              <span class="badge-tech-pill">Hardware Spooler</span>
+              <span class="badge-tech-pill">MySQL Optimization</span>
+              <span class="badge-tech-pill">Python Analytics</span>
             </div>
           </div>
         </div>
@@ -206,7 +206,7 @@
   </section>
 
   <!-- Flagship Projects Highlight -->
-  <section id="flagship" class="section-padding bg-secondary-subtle">
+  <section id="flagship" class="section-padding section-alt-bg">
     <div class="container">
       <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-end mb-5">
         <div>
@@ -234,9 +234,9 @@
                 Sistem enterprise audit stok fisik vs sistem (stock opname) dealer resmi Honda untuk meminimalisir selisih inventaris suku cadang dengan integrasi barcode scanner.
               </p>
               <ul class="project-features-list">
-                <li><i class="bi bi-check-circle-fill"></i> Barcode scanner validation</li>
-                <li><i class="bi bi-check-circle-fill"></i> Deteksi selisih varian minus/plus</li>
-                <li><i class="bi bi-check-circle-fill"></i> Rekonsiliasi audit bulanan</li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Barcode scanner validation</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Deteksi selisih varian minus/plus</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Rekonsiliasi audit bulanan</span></li>
               </ul>
             </div>
             <button class="btn btn-card-detail mt-3" onclick="openProjectModal('hondasakti-stockopname')">
@@ -261,9 +261,9 @@
                 Platform Computer-Based Testing modern dengan arsitektur backend Laravel API dan antarmuka SPA Vue.js untuk pengerjaan soal ujian real-time tanpa delay.
               </p>
               <ul class="project-features-list">
-                <li><i class="bi bi-check-circle-fill"></i> Timer pengerjaan anti-cheat</li>
-                <li><i class="bi bi-check-circle-fill"></i> Auto-grading nilai otomatis</li>
-                <li><i class="bi bi-check-circle-fill"></i> Live monitoring pengawas ujian</li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Timer pengerjaan anti-cheat</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Auto-grading nilai otomatis</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Live monitoring pengawas ujian</span></li>
               </ul>
             </div>
             <button class="btn btn-card-detail mt-3" onclick="openProjectModal('ujian-online-laravel-vue')">
@@ -288,9 +288,9 @@
                 Sistem penalaran berbasis kepakaran untuk diagnosis hama dan penyakit tanaman kopi dengan kalkulasi derajat kepastian (Certainty Factor).
               </p>
               <ul class="project-features-list">
-                <li><i class="bi bi-check-circle-fill"></i> Perhitungan matematis CF akurat</li>
-                <li><i class="bi bi-check-circle-fill"></i> Rule-base hama & pencegahan</li>
-                <li><i class="bi bi-check-circle-fill"></i> Cetak rekap diagnosis konsultasi</li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Perhitungan matematis CF akurat</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Rule-base hama & pencegahan</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Cetak rekap diagnosis konsultasi</span></li>
               </ul>
             </div>
             <button class="btn btn-card-detail mt-3" onclick="openProjectModal('sp-kopi-certainty-Factor')">
@@ -354,7 +354,7 @@
           <button class="filter-btn" data-category="Modern Web">Modern Web & SPA</button>
         </div>
 
-        <div class="d-flex justify-content-between align-items-center mt-3 pt-2 border-top border-secondary-subtle">
+        <div class="d-flex justify-content-between align-items-center mt-3 pt-2 border-top border-subtle-custom">
           <div id="project-count" class="small text-muted fw-semibold">
             Memuat daftar proyek...
           </div>
@@ -372,7 +372,7 @@
   </section>
 
   <!-- Contact & Collaboration Section -->
-  <section id="kontak" class="section-padding bg-secondary-subtle">
+  <section id="kontak" class="section-padding section-alt-bg">
     <div class="container">
       <div class="contact-card max-w-700 mx-auto">
         <div class="section-tag">Siap Kolaborasi</div>
@@ -408,26 +408,27 @@
             <span id="modal-cat-badge" class="project-category-badge cat-web mb-2">Category</span>
             <h4 class="modal-title fw-bold" id="modal-title">Nama Proyek</h4>
             <div class="text-muted small">
-              <i class="bi bi-code-slash text-primary me-1"></i> <span id="modal-stack">Tech Stack</span>
+              <i class="bi bi-code-slash text-primary me-1"></i> <span id="modal-stack" class="text-main fw-semibold">Tech Stack</span>
             </div>
           </div>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
 
         <div class="modal-body">
           <h6 class="fw-bold text-highlight mb-2">Deskripsi & Nilai Solusi:</h6>
-          <p id="modal-desc" class="text-muted mb-4 leading-relaxed"></p>
+          <p id="modal-desc" class="modal-desc-text mb-4 leading-relaxed"></p>
 
           <h6 class="fw-bold text-highlight mb-2">Fitur Utama & Modul Fungsional:</h6>
-          <div id="modal-features" class="row mb-4">
+          <div id="modal-features" class="row mb-3">
             <!-- Features populated by JS -->
           </div>
 
-          <h6 class="fw-bold text-highlight mb-2">Lokasi Repository & Folder Lokal:</h6>
-          <div class="code-box mb-3" id="modal-repo-folder">e:/all-repos/project-name</div>
-
-          <h6 class="fw-bold text-highlight mb-2">Perintah Clone (GitHub):</h6>
-          <div class="code-box" id="modal-git-command">git clone https://github.com/...</div>
+          <div class="project-modal-summary-box p-3 rounded-3 mt-3">
+            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+              <span class="small text-muted"><i class="bi bi-shield-check text-success me-1"></i> Arsitektur & Logika Sistem Teruji</span>
+              <span class="small text-muted"><i class="bi bi-folder-check text-primary me-1"></i> 70+ Codebase Siap Dipresentasikan</span>
+            </div>
+          </div>
         </div>
 
         <div class="modal-footer">

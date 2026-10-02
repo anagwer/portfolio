@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
     projectsGrid.innerHTML = filtered.map(p => {
       const catClass = getCategoryClass(p.category);
       const catIcon = getCategoryIcon(p.category);
-      const flagshipBadge = p.is_flagship ? `<span class="badge bg-warning text-dark me-2"><i class="bi bi-star-fill"></i> Flagship</span>` : '';
+      const flagshipBadge = p.is_flagship ? `<span class="badge badge-flagship me-2"><i class="bi bi-star-fill text-warning me-1"></i> Flagship</span>` : '';
       
       const featuresHtml = (p.features || []).slice(0, 3).map(f => `
         <li><i class="bi bi-check-circle-fill"></i> <span>${f}</span></li>
@@ -146,23 +146,11 @@ document.addEventListener('DOMContentLoaded', () => {
       modalFeaturesList.innerHTML = p.features.map(f => `
         <div class="col-md-6 mb-2">
           <div class="d-flex align-items-center gap-2">
-            <i class="bi bi-check2-circle text-success fs-5"></i>
-            <span>${f}</span>
+            <i class="bi bi-check2-circle text-success fs-5 flex-shrink-0"></i>
+            <span class="text-main">${f}</span>
           </div>
         </div>
       `).join('');
-    }
-
-    // Repository folder info
-    const folderCodeEl = document.getElementById('modal-repo-folder');
-    if (folderCodeEl) {
-      folderCodeEl.textContent = `e:/all-repos/${p.id}`;
-    }
-
-    // Git command helper
-    const gitCodeEl = document.getElementById('modal-git-command');
-    if (gitCodeEl) {
-      gitCodeEl.textContent = `git clone https://github.com/your-username/${p.id}.git`;
     }
 
     detailModal.show();
@@ -210,6 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Theme Toggle (Dark / Light)
   const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
   document.documentElement.setAttribute('data-theme', savedTheme);
+  document.documentElement.setAttribute('data-bs-theme', savedTheme);
   updateThemeIcon(savedTheme);
 
   if (themeToggleBtn) {
@@ -217,6 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const current = document.documentElement.getAttribute('data-theme') || 'dark';
       const next = current === 'dark' ? 'light' : 'dark';
       document.documentElement.setAttribute('data-theme', next);
+      document.documentElement.setAttribute('data-bs-theme', next);
       localStorage.setItem('portfolio-theme', next);
       updateThemeIcon(next);
     });
