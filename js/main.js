@@ -120,10 +120,22 @@ document.addEventListener('DOMContentLoaded', () => {
         <li><i class="bi bi-check-circle-fill"></i> <span>${f}</span></li>
       `).join('');
 
+      const imgHtml = p.image 
+        ? `<div class="project-img-thumb-wrapper mb-3">
+             <img src="${p.image}" alt="${p.title}" class="project-img-thumb" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'project-placeholder-thumb\\'><i class=\\'bi ${catIcon}\\'></i><span>${p.category}</span></div>';">
+           </div>`
+        : `<div class="project-img-thumb-wrapper mb-3">
+             <div class="project-placeholder-thumb">
+               <i class="bi ${catIcon}"></i>
+               <span>${p.category}</span>
+             </div>
+           </div>`;
+
       return `
         <div class="col-md-6 col-lg-4 mb-4">
           <div class="project-card ${p.is_flagship ? 'flagship-card' : ''}">
             <div>
+              ${imgHtml}
               <div class="d-flex justify-content-between align-items-start mb-2">
                 <span class="project-category-badge ${catClass}">
                   <i class="bi ${catIcon} me-1"></i> ${p.category}
@@ -236,6 +248,22 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('modal-stack').textContent = p.stack;
     document.getElementById('modal-desc').textContent = p.description;
     
+    // Project image preview in modal
+    const modalImgContainer = document.getElementById('modal-img-container');
+    if (modalImgContainer) {
+      if (p.image) {
+        modalImgContainer.innerHTML = `
+          <div class="modal-img-preview-wrapper mb-3">
+            <img src="${p.image}" alt="${p.title}" class="modal-img-preview" onerror="this.parentElement.style.display='none';">
+          </div>
+        `;
+        modalImgContainer.classList.remove('d-none');
+      } else {
+        modalImgContainer.innerHTML = '';
+        modalImgContainer.classList.add('d-none');
+      }
+    }
+
     // Features list in modal
     const modalFeaturesList = document.getElementById('modal-features');
     if (modalFeaturesList && p.features) {
@@ -259,16 +287,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const SERVICES_DATA = {
     skripsi: {
       title: 'Asistensi & Bimbingan Skripsi / Tugas Akhir IT',
-      target: 'KHUSUS JURUSAN IT / ILMU KOMPUTER',
+      target: '🔴 KHUSUS JURUSAN IT / ILMU KOMPUTER',
       targetBadgeClass: 'bg-danger-subtle text-danger border border-danger-subtle',
       desc: 'Layanan asistensi dan pendampingan komprehensif pembuatan program skripsi, tugas akhir (TA), dan capstone project dari nol atau melanjutkan sistem yang bermasalah/error sampai tuntas dan siap disidangkan.',
       scope: [
-        'Pembuatan sistem aplikasi berbasis Web (Laravel, CodeIgniter, Vue.js, React, Node.js, PHP Native)',
+        'Pembuatan sistem aplikasi Web (Laravel, CodeIgniter, Vue.js, React, Node.js, PHP Native)',
         'Aplikasi Mobile (Flutter, Android Java, Kotlin)',
-        'Sistem Pendukung Keputusan / SPK (Certainty Factor, SAW, WASPAS, AHP, TOPSIS, SMART, Promethee)',
-        'Machine Learning, Data Mining & NLP (Klasifikasi, Clustering, Analisis Sentimen, Prediksi / Forecasting)',
-        'Perancangan arsitektur basis data (ERD, Normalisasi, Relasi Tabel, Query Optimization)',
-        'Pembuatan Diagram UML (Use Case, Activity, Sequence, Class Diagram) & DFD',
+        'Sistem Pendukung Keputusan / SPK (Certainty Factor, SAW, WASPAS, AHP, TOPSIS, SMART)',
+        'Machine Learning & Deep Learning Python (CNN, ResNet, VGG16, PyTorch, TensorFlow, SVM, Random Forest)',
+        'NLP & Text Mining (Analisis Sentimen, Klasifikasi Berita, Wordcloud, Preprocessing)',
+        'Perancangan basis data relasional (ERD, Normalisasi, Relasi Tabel, Query Optimization MySQL/PostgreSQL)',
+        'Pembuatan Diagram Sistem (UML Use Case, Activity, Sequence, Class Diagram & DFD)',
         'Bedah logika kodingan & mentoring 1-on-1 agar mahasiswa siap menjawab pertanyaan dosen penguji saat sidang'
       ],
       deliverables: [
@@ -281,7 +310,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     website: {
       title: 'Jasa Pembuatan Website & WordPress',
-      target: 'TERBUKA UNTUK SEMUA JURUSAN & BISNIS',
+      target: '🟢 TERBUKA UNTUK SEMUA JURUSAN & BISNIS',
       targetBadgeClass: 'bg-success-subtle text-success border border-success-subtle',
       desc: 'Layanan pembuatan website siap online dengan desain modern, cepat, dan mobile-friendly untuk instansi, pelaku usaha UMKM, organisasi kampus, portofolio karir, maupun tugas kuliah.',
       scope: [
@@ -302,19 +331,21 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     tugas: {
       title: 'Bantuan Pengerjaan Tugas Harian & Laporan Praktikum',
-      target: 'TERBUKA UNTUK SEMUA JURUSAN',
+      target: '🟢 TERBUKA UNTUK SEMUA JURUSAN (IT, Ekonomi, Teknik, Medis, Sosial, dll.)',
       targetBadgeClass: 'bg-success-subtle text-success border border-success-subtle',
-      desc: 'Layanan bantuan penyelesaian tugas-tugas kuliah harian, modul praktikum komputer, tugas pemrograman, maupun tugas pengolahan data dengan pengerjaan kilat dan hasil rapi siap kumpul.',
+      desc: 'Layanan bantuan pengerjaan tugas kuliah harian, modul praktikum, tugas pemrograman, maupun pengolahan data spreadsheet dengan pengerjaan kilat dan hasil rapi siap kumpul.',
       scope: [
-        'Tugas Pemrograman Dasar & Lanjutan (PHP, Python, Java, C++, JavaScript, HTML/CSS)',
-        'Tugas Basis Data & Query SQL (MySQL, PostgreSQL, Oracle)',
-        'Penyusunan Laporan Praktikum Komputer / Modul Kuliah dengan format penulisan baku',
-        'Pengolahan Data & Formula Spreadsheet (Microsoft Excel, Google Sheets)',
-        'Pengetikan & perapihan format dokumen makalah/tugas kuliah sesuai pedoman kampus',
+        'Tugas Pemrograman Python (Data Science, Machine Learning, Deep Learning CNN, Analisis Data, Automasi Script)',
+        'Tugas Pemrograman Java (Aplikasi Desktop GUI CRUD NetBeans/Swing, Koneksi Database JDBC MySQL, OOP)',
+        'Tugas Pemrograman C++ (Perancangan Alur Sistem Logika, Kasir/Antrian CLI, Pointer, Linked List, Sorting & Searching)',
+        'Tugas Pemrograman Web (PHP Native, Laravel, CodeIgniter, HTML/CSS/JavaScript, REST API)',
+        'Tugas Basis Data & Query SQL (MySQL, PostgreSQL, Oracle, Desain ERD & Relasi)',
+        'Tugas Pengolahan Data & Formula Spreadsheet (Microsoft Excel, Google Sheets, Olah Data Statistik)',
+        'Penyusunan Laporan Praktikum Komputer / Modul Kuliah dengan format penulisan baku akademis',
         'Bisa request pengerjaan kilat (deadline mepet / same-day service)'
       ],
       deliverables: [
-        'File master pekerjaan (.docx, .pdf, .xlsx, atau source code)',
+        'File master pekerjaan (.docx, .pdf, .xlsx, .ipynb, .java, .cpp, atau source code)',
         'Tangkapan layar (screenshot) bukti hasil eksekusi/running program',
         'Penjelasan singkat poin-poin penting agar mahasiswa paham isi tugasnya',
         'Garansi cek dan revisi jika ada instruksi tugas yang perlu disesuaikan'
@@ -323,11 +354,11 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     ppt: {
       title: 'Desain Slide Presentasi Sidang PPT & Pitch Deck Interaktif',
-      target: 'TERBUKA UNTUK SEMUA JURUSAN',
+      target: '🟢 TERBUKA UNTUK SEMUA JURUSAN (Sidang Skripsi, Sempro, Bisnis, Lomba)',
       targetBadgeClass: 'bg-success-subtle text-success border border-success-subtle',
-      desc: 'Layanan desain slide presentasi PowerPoint dan Canva profesional. Kami merangkum materi laporan kamu yang padat menjadi slide visual yang elegan, fokus pada poin kunci, dan memukau audiens.',
+      desc: 'Layanan desain slide presentasi PowerPoint dan Canva profesional untuk SEMUA JURUSAN. Kami merangkum materi laporan kamu yang padat menjadi slide visual yang elegan, fokus pada poin kunci, dan memukau audiens.',
       scope: [
-        'Slide Presentasi Sidang Skripsi & Tugas Akhir (Semua Jurusan)',
+        'Slide Presentasi Sidang Skripsi & Tugas Akhir (Semua Jurusan: Teknik, Ekonomi, Medis, Sosial, dll.)',
         'Slide Seminar Proposal (Sempro) & Kolokium Akademik',
         'Pitch Deck Presentasi Bisnis, Proposal Pendanaan, & Lomba Bisnis Plan',
         'Visualisasi infografis, bagan alur proses, dan grafik perbandingan data',
@@ -344,7 +375,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     design: {
       title: 'UI/UX Design & Desain Grafis Digital',
-      target: 'TERBUKA UNTUK SEMUA JURUSAN & UMUM',
+      target: '🟢 TERBUKA UNTUK SEMUA JURUSAN & UMUM',
       targetBadgeClass: 'bg-success-subtle text-success border border-success-subtle',
       desc: 'Layanan pembuatan aset visual digital dan antarmuka aplikasi. Meliputi mockup antarmuka prototipe Figma untuk tugas kuliah maupun materi publikasi visual promosi.',
       scope: [
@@ -479,6 +510,108 @@ document.addEventListener('DOMContentLoaded', () => {
       themeToggleBtn.title = 'Beralih ke Light Mode';
     }
   }
+
+  // Python Notebooks Modal Logic
+  const notebookModalEl = document.getElementById('notebookModal');
+  const notebookModal = notebookModalEl ? new bootstrap.Modal(notebookModalEl) : null;
+  const notebookSearchInput = document.getElementById('notebook-search-input');
+  const notebookCategoryPills = document.getElementById('notebook-category-pills');
+  const notebookListContainer = document.getElementById('notebook-list-container');
+  const notebookCountEl = document.getElementById('notebook-count');
+
+  let currentNotebookCategory = 'all';
+  let notebookSearchQuery = '';
+
+  function renderNotebooks() {
+    if (!window.NOTEBOOKS_DATA || !notebookListContainer) return;
+    
+    const filtered = NOTEBOOKS_DATA.filter(n => {
+      const matchCat = currentNotebookCategory === 'all' || n.category === currentNotebookCategory;
+      const matchSearch = notebookSearchQuery.trim() === '' || 
+        n.title.toLowerCase().includes(notebookSearchQuery.toLowerCase()) ||
+        n.category.toLowerCase().includes(notebookSearchQuery.toLowerCase());
+      return matchCat && matchSearch;
+    });
+
+    if (notebookCountEl) {
+      notebookCountEl.textContent = `Menampilkan ${filtered.length} dari total ${NOTEBOOKS_DATA.length} notebook`;
+    }
+
+    if (filtered.length === 0) {
+      notebookListContainer.innerHTML = `
+        <div class="text-center py-4 text-muted">
+          <i class="bi bi-search fs-3 mb-2 d-block"></i>
+          <p>Tidak ada notebook yang sesuai dengan kata kunci "${notebookSearchQuery}".</p>
+        </div>
+      `;
+      return;
+    }
+
+    notebookListContainer.innerHTML = filtered.map(n => {
+      let icon = 'bi-filetype-py';
+      let badgeClass = 'text-info';
+      if (n.category.includes('Deep Learning')) { icon = 'bi-gpu-card'; badgeClass = 'text-warning'; }
+      else if (n.category.includes('Machine Learning')) { icon = 'bi-cpu-fill'; badgeClass = 'text-success'; }
+      else if (n.category.includes('Clustering')) { icon = 'bi-diagram-3-fill'; badgeClass = 'text-primary'; }
+      else if (n.category.includes('Regresi')) { icon = 'bi-graph-up-arrow'; badgeClass = 'text-danger'; }
+
+      return `
+        <div class="notebook-item-card">
+          <div>
+            <div class="d-flex align-items-center gap-2 mb-1">
+              <span class="badge bg-secondary-subtle ${badgeClass} small fw-bold">
+                <i class="bi ${icon} me-1"></i> ${n.category}
+              </span>
+            </div>
+            <div class="notebook-item-title">${n.title}</div>
+            <div class="notebook-item-category"><i class="bi bi-file-earmark-code text-muted me-1"></i> Jupyter Notebook (.ipynb)</div>
+          </div>
+          <a href="${n.url}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-custom py-1 px-3 flex-shrink-0 text-nowrap">
+            <span>Buka File</span>
+            <i class="bi bi-box-arrow-up-right ms-1"></i>
+          </a>
+        </div>
+      `;
+    }).join('');
+  }
+
+  function initNotebookCategories() {
+    if (!window.NOTEBOOKS_DATA || !notebookCategoryPills) return;
+    const cats = ['all', ...new Set(NOTEBOOKS_DATA.map(n => n.category))];
+    
+    notebookCategoryPills.innerHTML = cats.map(c => `
+      <button class="notebook-filter-btn ${c === currentNotebookCategory ? 'active' : ''}" data-cat="${c}">
+        ${c === 'all' ? 'Semua Topik' : c}
+      </button>
+    `).join('');
+
+    notebookCategoryPills.querySelectorAll('.notebook-filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        notebookCategoryPills.querySelectorAll('.notebook-filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentNotebookCategory = btn.getAttribute('data-cat');
+        renderNotebooks();
+      });
+    });
+  }
+
+  if (notebookSearchInput) {
+    notebookSearchInput.addEventListener('input', (e) => {
+      notebookSearchQuery = e.target.value;
+      renderNotebooks();
+    });
+  }
+
+  window.openNotebookModal = function() {
+    if (notebookModal) {
+      currentNotebookCategory = 'all';
+      notebookSearchQuery = '';
+      if (notebookSearchInput) notebookSearchInput.value = '';
+      initNotebookCategories();
+      renderNotebooks();
+      notebookModal.show();
+    }
+  };
 
   // Render initial projects
   renderProjects();

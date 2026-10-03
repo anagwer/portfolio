@@ -1,6 +1,6 @@
 /**
  * Complete Portfolio Project Database (73 Projects)
- * Generated from local repositories in e:\all-repos
+ * Generated from local repositories in e:\\all-repos with Screenshot Assets
  */
 const PROJECTS_DATA = [
   {
@@ -15,7 +15,8 @@ const PROJECTS_DATA = [
       "Kalkulasi tagihan bill pesanan",
       "CRUD kategori menu dinamis"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": null
   },
   {
     "id": "GiWeb",
@@ -29,7 +30,8 @@ const PROJECTS_DATA = [
       "Laporan dan rekapitulasi data",
       "Keamanan akses pengguna"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": "assets/screenshots/GiWeb.jpg"
   },
   {
     "id": "Inventory-Barang",
@@ -43,7 +45,8 @@ const PROJECTS_DATA = [
       "Cetak bukti tanda terima barang",
       "Filter pencarian barang cepat"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": "assets/screenshots/Inventory-Barang.png"
   },
   {
     "id": "LAH_vue",
@@ -57,7 +60,8 @@ const PROJECTS_DATA = [
       "Mobile-first responsive design",
       "Optimalisasi bundle performa tinggi"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": "assets/screenshots/LAH_vue.png"
   },
   {
     "id": "Prediksi-Kelas-Data",
@@ -71,7 +75,8 @@ const PROJECTS_DATA = [
       "Kalkulasi prediksi kelas target",
       "Visualisasi matriks akurasi"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": null
   },
   {
     "id": "PrintAutoCount",
@@ -85,7 +90,8 @@ const PROJECTS_DATA = [
       "Sinkronisasi socket data real-time",
       "Log audit operator percetakan"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": null
   },
   {
     "id": "PrintAutoCount-web",
@@ -99,7 +105,8 @@ const PROJECTS_DATA = [
       "Deteksi downtime mesin cetak",
       "Laporan produksi per operator"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": "assets/screenshots/PrintAutoCount-web.png"
   },
   {
     "id": "absensi_tempuran",
@@ -113,7 +120,8 @@ const PROJECTS_DATA = [
       "Kalkulasi potongan keterlambatan",
       "Cetak rekap absensi bulanan ASN"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": "assets/screenshots/absensi_tempuran.png"
   },
   {
     "id": "abstract-java",
@@ -127,7 +135,8 @@ const PROJECTS_DATA = [
       "Unit testing logic",
       "Dokumentasi struktur OOP"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": null
   },
   {
     "id": "administrasi_santri",
@@ -141,7 +150,8 @@ const PROJECTS_DATA = [
       "Billing iuran SPP / syahriah",
       "Rekap data demografi santri"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": "assets/screenshots/administrasi_santri.jpg"
   },
   {
     "id": "anagwer",
@@ -155,7 +165,8 @@ const PROJECTS_DATA = [
       "Laporan dan rekapitulasi data",
       "Keamanan akses pengguna"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": null
   },
   {
     "id": "antrian_klinik",
@@ -169,7 +180,8 @@ const PROJECTS_DATA = [
       "Display layar antrian ruang tunggu",
       "Rekap jumlah kunjungan pasien per hari"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": "assets/screenshots/antrian_klinik.png"
   },
   {
     "id": "blt_magelang",
@@ -183,7 +195,8 @@ const PROJECTS_DATA = [
       "Pencatatan status penyaluran dana",
       "Cetak kartu bukti penerima manfaat"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": "assets/screenshots/blt_magelang.png"
   },
   {
     "id": "doc-control",
@@ -197,7 +210,8 @@ const PROJECTS_DATA = [
       "Watermark otomatis status dokumen (Controlled/Obsolete)",
       "Log riwayat perubahan dokumen"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": "assets/screenshots/doc-control.png"
   },
   {
     "id": "e-laundry",
@@ -211,7 +225,8 @@ const PROJECTS_DATA = [
       "Perhitungan otomatis berat x tarif paket",
       "Kirim notifikasi cucian selesai"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": "assets/screenshots/e-laundry.jpg"
   },
   {
     "id": "first_flutter_app",
@@ -225,7 +240,8 @@ const PROJECTS_DATA = [
       "Navigasi routing mobile",
       "Integrasi API data eksternal"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": "assets/screenshots/first_flutter_app.png"
   },
   {
     "id": "forecasting_iphone",
@@ -239,7 +255,8 @@ const PROJECTS_DATA = [
       "Grafik proyeksi penjualan ke depan",
       "Export hasil estimasi kebutuhan stok"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": "assets/screenshots/forecasting_iphone.png"
   },
   {
     "id": "hbd-1",
@@ -253,7 +270,8 @@ const PROJECTS_DATA = [
       "Laporan dan rekapitulasi data",
       "Keamanan akses pengguna"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": "assets/screenshots/hbd-1.jpeg"
   },
   {
     "id": "hbd2u",
@@ -267,7 +285,8 @@ const PROJECTS_DATA = [
       "Laporan dan rekapitulasi data",
       "Keamanan akses pengguna"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": "assets/screenshots/hbd2u.png"
   },
   {
     "id": "hizetblue",
@@ -281,7 +300,8 @@ const PROJECTS_DATA = [
       "Laporan dan rekapitulasi data",
       "Keamanan akses pengguna"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": "assets/screenshots/hizetblue.png"
   },
   {
     "id": "hondasakti-stockopname",
@@ -295,7 +315,8 @@ const PROJECTS_DATA = [
       "Log mutasi masuk/keluar sparepart",
       "Laporan rekonsiliasi audit bulanan"
     ],
-    "is_flagship": true
+    "is_flagship": true,
+    "image": "assets/screenshots/hondasakti-stockopname.png"
   },
   {
     "id": "hub",
@@ -309,7 +330,8 @@ const PROJECTS_DATA = [
       "Laporan dan rekapitulasi data",
       "Keamanan akses pengguna"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": "assets/screenshots/hub.jpg"
   },
   {
     "id": "industri_native",
@@ -323,7 +345,8 @@ const PROJECTS_DATA = [
       "Laporan dan rekapitulasi data",
       "Keamanan akses pengguna"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": null
   },
   {
     "id": "inventorySholikah",
@@ -337,7 +360,8 @@ const PROJECTS_DATA = [
       "Rekap transaksi harian & bulanan",
       "Sistem backup database"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": null
   },
   {
     "id": "inventory_gita",
@@ -351,7 +375,8 @@ const PROJECTS_DATA = [
       "Laporan mutasi per departemen",
       "Cetak invoice surat jalan"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": "assets/screenshots/inventory_gita.PNG"
   },
   {
     "id": "inventoryweb-laravel",
@@ -365,7 +390,8 @@ const PROJECTS_DATA = [
       "Riwayat barang masuk (Inbound) & keluar (Outbound)",
       "Export data barang ke format Excel & PDF"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": "assets/screenshots/inventoryweb-laravel.jpg"
   },
   {
     "id": "invtrio",
@@ -379,7 +405,8 @@ const PROJECTS_DATA = [
       "Laporan konsolidasi penjualan",
       "Manajemen hak akses kasir & supervisor"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": "assets/screenshots/invtrio.jpg"
   },
   {
     "id": "jilqu",
@@ -393,7 +420,8 @@ const PROJECTS_DATA = [
       "Laporan dan rekapitulasi data",
       "Keamanan akses pengguna"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": "assets/screenshots/jilqu.jpg"
   },
   {
     "id": "kebabdotcom",
@@ -407,7 +435,8 @@ const PROJECTS_DATA = [
       "Hitung estimasi subtotal belanja",
       "Katalog promo mingguan"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": "assets/screenshots/kebabdotcom.jpeg"
   },
   {
     "id": "kedai_baleni_ci",
@@ -421,7 +450,8 @@ const PROJECTS_DATA = [
       "Metode pembayaran tunai & QRIS",
       "Laporan tutup buku harian"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": "assets/screenshots/kedai_baleni_ci.png"
   },
   {
     "id": "kedai_djoenang",
@@ -435,7 +465,8 @@ const PROJECTS_DATA = [
       "Cetak bill struk",
       "Manajemen diskon member"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": "assets/screenshots/kedai_djoenang.webp"
   },
   {
     "id": "kedai_djoenang-lucuk",
@@ -449,7 +480,8 @@ const PROJECTS_DATA = [
       "Animasi UI interaktif ramah pelanggan",
       "Responsive design smartphone"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": "assets/screenshots/kedai_djoenang-lucuk.png"
   },
   {
     "id": "lah-tki",
@@ -463,7 +495,8 @@ const PROJECTS_DATA = [
       "Laporan dan rekapitulasi data",
       "Keamanan akses pengguna"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": "assets/screenshots/lah-tki.png"
   },
   {
     "id": "laravel_inventory",
@@ -477,7 +510,8 @@ const PROJECTS_DATA = [
       "Approval request pengambilan barang",
       "Dashboard grafik pergerakan stok"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": null
   },
   {
     "id": "laundry_native",
@@ -491,7 +525,8 @@ const PROJECTS_DATA = [
       "Status pengambilan pakaian",
       "Export data transaksi"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": "assets/screenshots/laundry_native.png"
   },
   {
     "id": "lbg-email-sender-api",
@@ -505,7 +540,8 @@ const PROJECTS_DATA = [
       "Fallback SMTP server",
       "Logging deliverability & status pengiriman"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": null
   },
   {
     "id": "lbg-new",
@@ -519,7 +555,8 @@ const PROJECTS_DATA = [
       "Laporan dan rekapitulasi data",
       "Keamanan akses pengguna"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": "assets/screenshots/lbg-new.png"
   },
   {
     "id": "letger",
@@ -533,7 +570,8 @@ const PROJECTS_DATA = [
       "Laporan saldo akhir periode",
       "Filter transaksi tanggal dinamis"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": null
   },
   {
     "id": "mabel_gm",
@@ -547,7 +585,8 @@ const PROJECTS_DATA = [
       "Form pemesanan custom ukuran",
       "Integrasi kontak admin WhatsApp"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": "assets/screenshots/mabel_gm.jpg"
   },
   {
     "id": "man1magelang",
@@ -561,7 +600,8 @@ const PROJECTS_DATA = [
       "Galeri foto & video kegiatan",
       "Desain responsif ramah mobile"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": "assets/screenshots/man1magelang.png"
   },
   {
     "id": "monitoring",
@@ -575,7 +615,8 @@ const PROJECTS_DATA = [
       "Alert status offline server",
       "Manajemen IP dan domain endpoint"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": "assets/screenshots/monitoring.png"
   },
   {
     "id": "monitoring_boiler",
@@ -589,7 +630,8 @@ const PROJECTS_DATA = [
       "Pencatatan log historis per menit",
       "Export log inspeksi industri"
     ],
-    "is_flagship": true
+    "is_flagship": true,
+    "image": "assets/screenshots/monitoring_boiler.png"
   },
   {
     "id": "myproject",
@@ -603,7 +645,8 @@ const PROJECTS_DATA = [
       "Laporan dan rekapitulasi data",
       "Keamanan akses pengguna"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": null
   },
   {
     "id": "myproject_2233061",
@@ -617,7 +660,8 @@ const PROJECTS_DATA = [
       "Laporan dan rekapitulasi data",
       "Keamanan akses pengguna"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": "assets/screenshots/myproject_2233061.jpg"
   },
   {
     "id": "native-pengiriman-barang",
@@ -631,7 +675,8 @@ const PROJECTS_DATA = [
       "Pencetakan label resi pengiriman",
       "Kalkulasi ongkos kirim"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": null
   },
   {
     "id": "newqr",
@@ -645,7 +690,8 @@ const PROJECTS_DATA = [
       "Download file PNG/SVG",
       "Live camera QR scanner"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": "assets/screenshots/newqr.jpg"
   },
   {
     "id": "nextjs-portfolio-pageview-counter",
@@ -659,7 +705,8 @@ const PROJECTS_DATA = [
       "Laporan dan rekapitulasi data",
       "Keamanan akses pengguna"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": "assets/screenshots/nextjs-portfolio-pageview-counter.png"
   },
   {
     "id": "nocturnal_ci",
@@ -673,7 +720,8 @@ const PROJECTS_DATA = [
       "Testimoni klien & showcase brand",
       "Formulir pesan kontak terhubung email"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": "assets/screenshots/nocturnal_ci.png"
   },
   {
     "id": "pembayaranTU_CI3",
@@ -687,7 +735,8 @@ const PROJECTS_DATA = [
       "Laporan penerimaan kas harian kasir TU",
       "Rekap tunggakan pembayaran siswa"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": "assets/screenshots/pembayaranTU_CI3.png"
   },
   {
     "id": "ppdb-musamu",
@@ -701,7 +750,8 @@ const PROJECTS_DATA = [
       "Verifikasi admin & penetapan kelulusan",
       "Cetak bukti tanda pendaftaran resmi"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": "assets/screenshots/ppdb-musamu.jpg"
   },
   {
     "id": "rent-nodejs",
@@ -715,7 +765,8 @@ const PROJECTS_DATA = [
       "Kalkulasi tarif per jam / harian",
       "Manajemen data pelanggan & sewa"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": "assets/screenshots/rent-nodejs.jpg"
   },
   {
     "id": "risma_laundry_CI",
@@ -729,7 +780,8 @@ const PROJECTS_DATA = [
       "Cetak nota struk kasir kecil",
       "Filter transaksi belum lunas"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": "assets/screenshots/risma_laundry_CI.png"
   },
   {
     "id": "roblox",
@@ -743,7 +795,8 @@ const PROJECTS_DATA = [
       "Laporan dan rekapitulasi data",
       "Keamanan akses pengguna"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": null
   },
   {
     "id": "sablon_gind_CI",
@@ -757,7 +810,8 @@ const PROJECTS_DATA = [
       "Progress tracking pengerjaan pesanan",
       "Invoice Down Payment (DP) & Pelunasan"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": "assets/screenshots/sablon_gind_CI.png"
   },
   {
     "id": "saw_perawat",
@@ -771,7 +825,8 @@ const PROJECTS_DATA = [
       "Perangkingan perawat teladan",
       "Rekap penilaian berkala per periode"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": "assets/screenshots/saw_perawat.png"
   },
   {
     "id": "sentimen_analysis_tb_nativ",
@@ -785,7 +840,8 @@ const PROJECTS_DATA = [
       "Visualisasi Wordcloud & diagram sentimen",
       "Evaluasi akurasi confusion matrix"
     ],
-    "is_flagship": true
+    "is_flagship": true,
+    "image": "assets/screenshots/sentimen_analysis_tb_nativ.png"
   },
   {
     "id": "si_rocket_chicken",
@@ -799,7 +855,8 @@ const PROJECTS_DATA = [
       "Cetak struk kasir thermal",
       "Laporan omset harian & menu terlaris"
     ],
-    "is_flagship": true
+    "is_flagship": true,
+    "image": "assets/screenshots/si_rocket_chicken.png"
   },
   {
     "id": "siakad_sd_alfirdaus",
@@ -813,7 +870,8 @@ const PROJECTS_DATA = [
       "Jadwal pelajaran & pembagian kelas",
       "Cetak lembar rapor siswa PDF"
     ],
-    "is_flagship": true
+    "is_flagship": true,
+    "image": "assets/screenshots/siakad_sd_alfirdaus.png"
   },
   {
     "id": "sikel_vue",
@@ -827,7 +885,8 @@ const PROJECTS_DATA = [
       "Client-side routing tanpa reload halaman",
       "Form validation real-time"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": "assets/screenshots/sikel_vue.png"
   },
   {
     "id": "sinarjo-vue",
@@ -841,7 +900,8 @@ const PROJECTS_DATA = [
       "Integrasi token authentication (JWT)",
       "Komponen data table responsive"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": null
   },
   {
     "id": "sjb_timbangan_api",
@@ -855,7 +915,8 @@ const PROJECTS_DATA = [
       "Logging transaksi muatan truk (Netto/Tara/Bruto)",
       "Integritas data anti-manipulasi timbangan"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": null
   },
   {
     "id": "sp-kopi-certainty-Factor",
@@ -869,7 +930,8 @@ const PROJECTS_DATA = [
       "Rekomendasi tindakan pencegahan & obat",
       "Laporan hasil konsultasi cetak PDF"
     ],
-    "is_flagship": true
+    "is_flagship": true,
+    "image": "assets/screenshots/sp-kopi-certainty-Factor.png"
   },
   {
     "id": "sp_jurusan",
@@ -883,7 +945,8 @@ const PROJECTS_DATA = [
       "Output rekomendasi jurusan utama & alternatif",
       "Dashboard admin sekolah"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": "assets/screenshots/sp_jurusan.png"
   },
   {
     "id": "sp_kopi",
@@ -897,7 +960,8 @@ const PROJECTS_DATA = [
       "Laporan dan rekapitulasi data",
       "Keamanan akses pengguna"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": "assets/screenshots/sp_kopi.png"
   },
   {
     "id": "sp_penyakit_anak",
@@ -911,7 +975,8 @@ const PROJECTS_DATA = [
       "Edukasi pertolongan pertama",
       "History riwayat konsultasi orang tua"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": null
   },
   {
     "id": "spk-saw",
@@ -925,7 +990,8 @@ const PROJECTS_DATA = [
       "Perangkingan skor preferensi",
       "Export rekap keputusan"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": "assets/screenshots/spk-saw.png"
   },
   {
     "id": "spk_waspas",
@@ -939,7 +1005,8 @@ const PROJECTS_DATA = [
       "Perankingan alternatif komparatif",
       "Visualisasi grafik peringkat"
     ],
-    "is_flagship": true
+    "is_flagship": true,
+    "image": "assets/screenshots/spk_waspas.png"
   },
   {
     "id": "statkes303",
@@ -953,7 +1020,8 @@ const PROJECTS_DATA = [
       "Laporan bulanan dinas kesehatan",
       "Penyaringan data per wilayah dusun/desa"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": "assets/screenshots/statkes303.jpg"
   },
   {
     "id": "summit_adventure",
@@ -967,7 +1035,8 @@ const PROJECTS_DATA = [
       "Tracking pengembalian & denda telat",
       "Cetak surat perjanjian sewa"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": "assets/screenshots/summit_adventure.jpg"
   },
   {
     "id": "teras_genz_CI",
@@ -981,7 +1050,8 @@ const PROJECTS_DATA = [
       "Kategori signature drinks & snacks",
       "Pencetakan nota pembayaran"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": "assets/screenshots/teras_genz_CI.jpg"
   },
   {
     "id": "testing",
@@ -995,7 +1065,8 @@ const PROJECTS_DATA = [
       "Laporan dan rekapitulasi data",
       "Keamanan akses pengguna"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": null
   },
   {
     "id": "ujian-online-laravel-vue",
@@ -1009,7 +1080,8 @@ const PROJECTS_DATA = [
       "Auto-grading nilai otomatis",
       "Monitoring live pengerjaan siswa"
     ],
-    "is_flagship": true
+    "is_flagship": true,
+    "image": "assets/screenshots/ujian-online-laravel-vue.png"
   },
   {
     "id": "website_cms_UTS2233073",
@@ -1023,6 +1095,7 @@ const PROJECTS_DATA = [
       "Kategori & tag artikel bertingkat",
       "Panel kontrol moderasi konten"
     ],
-    "is_flagship": false
+    "is_flagship": false,
+    "image": "assets/screenshots/website_cms_UTS2233073.jpg"
   }
 ];
