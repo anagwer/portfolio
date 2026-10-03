@@ -1,138 +1,18 @@
 const PROJECTS_DATA = [
   {
-    "id": "CRUD-Restoran",
-    "title": "Restaurant Table & Menu Management System",
-    "category": "Retail, POS & FnB",
-    "stack": "PHP Native / MySQL",
-    "description": "Aplikasi reservasi meja makan dan pemesanan menu makanan restoran dengan alur pesanan ke dapur.",
-    "features": [
-      "Katalog menu makanan & minuman",
-      "Status ketersediaan meja makan",
-      "Kalkulasi tagihan bill pesanan",
-      "CRUD kategori menu dinamis"
-    ],
-    "is_flagship": false,
-    "image": "assets/screenshots/CRUD-Restoran.png"
-  },
-  {
-    "id": "GiWeb",
-    "title": "Giweb",
-    "category": "Web Application",
-    "stack": "PHP Native",
-    "description": "Sistem aplikasi web application berbasis PHP Native yang dirancang untuk efisiensi operasional dan manajemen data.",
-    "features": [
-      "Manajemen data & transaksi sistem",
-      "Antarmuka pengguna responsif",
-      "Laporan dan rekapitulasi data",
-      "Keamanan akses pengguna"
-    ],
-    "is_flagship": false,
-    "image": "assets/screenshots/GiWeb.png"
-  },
-  {
-    "id": "Inventory-Barang",
-    "title": "Sistem Informasi Inventaris Barang Terpadu",
-    "category": "Enterprise & Inventory",
-    "stack": "CodeIgniter / PHP / MySQL",
-    "description": "Aplikasi pencatatan stok barang masuk dan keluar dengan kategorisasi barang, supplier, dan monitoring sisa stok.",
-    "features": [
-      "CRUD master barang & supplier",
-      "Pencatatan transaksi mutasi harian",
-      "Cetak bukti tanda terima barang",
-      "Filter pencarian barang cepat"
-    ],
-    "is_flagship": false,
-    "image": "assets/screenshots/Inventory-Barang.png"
-  },
-  {
-    "id": "LAH_vue",
-    "title": "LAH App - Interactive Vue Web Experience",
-    "category": "Modern Web & SPA",
-    "stack": "Vue.js / Vite / JavaScript",
-    "description": "Web aplikasi interaktif berbasis komponen Vue.js yang menyajikan pengalaman pengguna yang halus dan responsif.",
-    "features": [
-      "Komponen reaktif modular",
-      "Animasi transisi halus",
-      "Mobile-first responsive design",
-      "Optimalisasi bundle performa tinggi"
-    ],
-    "is_flagship": false,
-    "image": "assets/screenshots/LAH_vue.png"
-  },
-  {
-    "id": "Prediksi-Kelas-Data",
-    "title": "Sistem Prediksi Klasifikasi Data Mining",
-    "category": "Data Science & AI",
-    "stack": "Python / PHP / Machine Learning",
-    "description": "Aplikasi implementasi algoritma klasifikasi data mining untuk pengelompokan dan prediksi pola data historis.",
-    "features": [
-      "Upload dataset CSV / Excel dinamis",
-      "Pembagian training vs testing data",
-      "Kalkulasi prediksi kelas target",
-      "Visualisasi matriks akurasi"
-    ],
-    "is_flagship": false,
-    "image": null
-  },
-  {
-    "id": "PrintAutoCount",
-    "title": "PrintAutoCount Desktop Bridge Service",
-    "category": "IoT, Monitoring & Industri",
-    "stack": "Node.js / Electron / Desktop",
-    "description": "Aplikasi utilitas bridge untuk otomasi penghitungan lembar cetak mesin printer dan sinkronisasi ke server data produksi.",
-    "features": [
-      "Monitoring spooler print queue",
-      "Otomatisasi counter lembar cetak",
-      "Sinkronisasi socket data real-time",
-      "Log audit operator percetakan"
-    ],
-    "is_flagship": false,
-    "image": "assets/screenshots/PrintAutoCount.png"
-  },
-  {
-    "id": "PrintAutoCount-web",
-    "title": "PrintAutoCount Production Monitoring Web",
-    "category": "IoT, Monitoring & Industri",
-    "stack": "PHP / JavaScript / WebSocket",
-    "description": "Dashboard monitoring berbasis web untuk melihat produktivitas mesin cetak dan rekap konsumsi kertas per shift.",
-    "features": [
-      "Live dashboard kuota cetak percetakan",
-      "Visualisasi grafik produktivitas mesin",
-      "Deteksi downtime mesin cetak",
-      "Laporan produksi per operator"
-    ],
-    "is_flagship": false,
-    "image": "assets/screenshots/PrintAutoCount-web.png"
-  },
-  {
-    "id": "absensi_tempuran",
-    "title": "Sistem Absensi Pegawai Berbasis Lokasi / Web",
+    "id": "antrian_klinik",
+    "title": "Sistem Antrian & Pendaftaran Pasien Klinik",
     "category": "Kesehatan & Layanan Publik",
-    "stack": "PHP Native / MySQL",
-    "description": "Aplikasi pencatatan absensi pegawai kantor kecamatan dengan rekapitulasi jam hadir, jam pulang, dan perhitungan keterlambatan.",
+    "stack": "PHP Native / MySQL / Web Speech API",
+    "description": "Sistem antrian loket dan poli klinik terintegrasi dengan pemanggilan suara antrian otomatis dan display layar tunggu.",
     "features": [
-      "Pencatatan jam masuk & pulang real-time",
-      "Manajemen izin & cuti pegawai",
-      "Kalkulasi potongan keterlambatan",
-      "Cetak rekap absensi bulanan ASN"
+      "Cetak tiket nomor antrian poli",
+      "Audio pemanggilan suara otomatis (TTS)",
+      "Display layar antrian ruang tunggu",
+      "Rekap jumlah kunjungan pasien per hari"
     ],
-    "is_flagship": false,
-    "image": "assets/screenshots/absensi_tempuran.png"
-  },
-  {
-    "id": "abstract-java",
-    "title": "Object-Oriented Design Pattern Showcase (Java)",
-    "category": "Mobile & Desktop",
-    "stack": "Java / OOP / Design Patterns",
-    "description": "Implementasi konsep Object-Oriented Programming (OOP) tingkat lanjut mencakup Abstraction, Polymorphism, dan Encapsulation.",
-    "features": [
-      "Desain arsitektur abstract class & interface",
-      "Implementasi Clean Code & Design Patterns",
-      "Unit testing logic",
-      "Dokumentasi struktur OOP"
-    ],
-    "is_flagship": false,
-    "image": null
+    "is_flagship": true,
+    "image": "assets/screenshots/antrian_klinik.png"
   },
   {
     "id": "administrasi_santri",
@@ -146,773 +26,8 @@ const PROJECTS_DATA = [
       "Billing iuran SPP / syahriah",
       "Rekap data demografi santri"
     ],
-    "is_flagship": false,
+    "is_flagship": true,
     "image": "assets/screenshots/administrasi_santri.png"
-  },
-  {
-    "id": "anagwer",
-    "title": "Anagwer",
-    "category": "Web Application",
-    "stack": "Native / Other",
-    "description": "- 👋 Hi, I’m @anagwer - 👀 I’m interested in coding - 🌱 I’m currently learning to be happy",
-    "features": [
-      "Manajemen data & transaksi sistem",
-      "Antarmuka pengguna responsif",
-      "Laporan dan rekapitulasi data",
-      "Keamanan akses pengguna"
-    ],
-    "is_flagship": false,
-    "image": null
-  },
-  {
-    "id": "antrian_klinik",
-    "title": "Sistem Antrian & Pendaftaran Pasien Klinik",
-    "category": "Kesehatan & Layanan Publik",
-    "stack": "PHP Native / MySQL / Web Speech API",
-    "description": "Sistem antrian loket dan poli klinik terintegrasi dengan pemanggilan suara antrian otomatis dan display layar tunggu.",
-    "features": [
-      "Cetak tiket nomor antrian poli",
-      "Audio pemanggilan suara otomatis (TTS)",
-      "Display layar antrian ruang tunggu",
-      "Rekap jumlah kunjungan pasien per hari"
-    ],
-    "is_flagship": false,
-    "image": "assets/screenshots/antrian_klinik.png"
-  },
-  {
-    "id": "blt_magelang",
-    "title": "Sistem Pendataan & Penyaluran BLT Magelang",
-    "category": "Kesehatan & Layanan Publik",
-    "stack": "CodeIgniter / MySQL",
-    "description": "Sistem informasi verifikasi kelayakan penerima Bantuan Langsung Tunai (BLT) untuk memastikan bansos tepat sasaran.",
-    "features": [
-      "Scoring kriteria kemiskinan penerima bansos",
-      "Deteksi duplikasi data NIK",
-      "Pencatatan status penyaluran dana",
-      "Cetak kartu bukti penerima manfaat"
-    ],
-    "is_flagship": false,
-    "image": "assets/screenshots/blt_magelang.png"
-  },
-  {
-    "id": "doc-control",
-    "title": "ISO Document Control & Compliance System",
-    "category": "IoT, Monitoring & Industri",
-    "stack": "Laravel / PHP / MySQL",
-    "description": "Sistem manajemen dokumen mutu perusahaan (SOP, WI, Formulir) dengan alur revisi, persetujuan bertingkat, dan watermark.",
-    "features": [
-      "Versioning dokumen terkendali",
-      "Multi-level approval workflow",
-      "Watermark otomatis status dokumen (Controlled/Obsolete)",
-      "Log riwayat perubahan dokumen"
-    ],
-    "is_flagship": false,
-    "image": "assets/screenshots/doc-control.png"
-  },
-  {
-    "id": "e-laundry",
-    "title": "E-Laundry Online & Tracking Cuci Kiloan",
-    "category": "Retail, POS & FnB",
-    "stack": "PHP / CodeIgniter / MySQL",
-    "description": "Aplikasi manajemen laundry kiloan dan satuan dengan fitur tracking status pengerjaan (Antri, Cuci, Setrika, Selesai).",
-    "features": [
-      "Pemberian nomor nota laundry unik",
-      "Tracking status cucian pelanggan online",
-      "Perhitungan otomatis berat x tarif paket",
-      "Kirim notifikasi cucian selesai"
-    ],
-    "is_flagship": false,
-    "image": "assets/screenshots/e-laundry.png"
-  },
-  {
-    "id": "first_flutter_app",
-    "title": "Cross-Platform Mobile Application (Flutter)",
-    "category": "Mobile & Desktop",
-    "stack": "Flutter / Dart / Android",
-    "description": "Aplikasi mobile cross-platform (Android/iOS) berbasis Flutter & Dart dengan tampilan Material 3.",
-    "features": [
-      "Tampilan responsif multi-device",
-      "Stateful interactive widgets",
-      "Navigasi routing mobile",
-      "Integrasi API data eksternal"
-    ],
-    "is_flagship": false,
-    "image": "assets/screenshots/first_flutter_app.png"
-  },
-  {
-    "id": "forecasting_iphone",
-    "title": "Forecasting Penjualan iPhone (Metode Time Series)",
-    "category": "Data Science & AI",
-    "stack": "PHP / Python / Data Science",
-    "description": "Sistem prediksi tren penjualan unit smartphone menggunakan algoritma peramalan data deret berkala untuk perencanaan stok.",
-    "features": [
-      "Kalkulasi peramalan tren waktu (Moving Average / Holt)",
-      "Perhitungan nilai error MAPE / MAD",
-      "Grafik proyeksi penjualan ke depan",
-      "Export hasil estimasi kebutuhan stok"
-    ],
-    "is_flagship": false,
-    "image": "assets/screenshots/forecasting_iphone.png"
-  },
-  {
-    "id": "hbd-1",
-    "title": "Hbd 1",
-    "category": "Web Application",
-    "stack": "Native / Other",
-    "description": "Sistem aplikasi web application berbasis Native / Other yang dirancang untuk efisiensi operasional dan manajemen data.",
-    "features": [
-      "Manajemen data & transaksi sistem",
-      "Antarmuka pengguna responsif",
-      "Laporan dan rekapitulasi data",
-      "Keamanan akses pengguna"
-    ],
-    "is_flagship": false,
-    "image": "assets/screenshots/hbd-1.png"
-  },
-  {
-    "id": "hbd2u",
-    "title": "Hbd2U",
-    "category": "Web Application",
-    "stack": "Native / Other",
-    "description": "A responsive website used to wish someone a happy birthday. Created using HTML, Tailwind CSS, and JavaScript.",
-    "features": [
-      "Manajemen data & transaksi sistem",
-      "Antarmuka pengguna responsif",
-      "Laporan dan rekapitulasi data",
-      "Keamanan akses pengguna"
-    ],
-    "is_flagship": false,
-    "image": "assets/screenshots/hbd2u.png"
-  },
-  {
-    "id": "hizetblue",
-    "title": "Hizetblue",
-    "category": "Web Application",
-    "stack": "Native / Other",
-    "description": "Sistem aplikasi web application berbasis Native / Other yang dirancang untuk efisiensi operasional dan manajemen data.",
-    "features": [
-      "Manajemen data & transaksi sistem",
-      "Antarmuka pengguna responsif",
-      "Laporan dan rekapitulasi data",
-      "Keamanan akses pengguna"
-    ],
-    "is_flagship": false,
-    "image": "assets/screenshots/hizetblue.png"
-  },
-  {
-    "id": "hondasakti-stockopname",
-    "title": "Honda Sakti Stock Opname & Inventory Control",
-    "category": "Enterprise & Inventory",
-    "stack": "Laravel / MySQL / Bootstrap",
-    "description": "Sistem enterprise pengelolaan stok fisik vs sistem (stock opname) dealer resmi Honda untuk meminimalisir selisih inventaris suku cadang.",
-    "features": [
-      "Stock opname barcode scanner scan",
-      "Audit selisih stok (varian minus/plus)",
-      "Log mutasi masuk/keluar sparepart",
-      "Laporan rekonsiliasi audit bulanan"
-    ],
-    "is_flagship": true,
-    "image": "assets/screenshots/hondasakti-stockopname.png"
-  },
-  {
-    "id": "hub",
-    "title": "Hub",
-    "category": "Web Application",
-    "stack": "Native / Other",
-    "description": "Sistem aplikasi web application berbasis Native / Other yang dirancang untuk efisiensi operasional dan manajemen data.",
-    "features": [
-      "Manajemen data & transaksi sistem",
-      "Antarmuka pengguna responsif",
-      "Laporan dan rekapitulasi data",
-      "Keamanan akses pengguna"
-    ],
-    "is_flagship": false,
-    "image": "assets/screenshots/hub.png"
-  },
-  {
-    "id": "industri_native",
-    "title": "Industri Native",
-    "category": "Web Application",
-    "stack": "Native / Other",
-    "description": "Sistem aplikasi web application berbasis Native / Other yang dirancang untuk efisiensi operasional dan manajemen data.",
-    "features": [
-      "Manajemen data & transaksi sistem",
-      "Antarmuka pengguna responsif",
-      "Laporan dan rekapitulasi data",
-      "Keamanan akses pengguna"
-    ],
-    "is_flagship": false,
-    "image": null
-  },
-  {
-    "id": "inventorySholikah",
-    "title": "Inventory Management & Rekap Stok UMKM",
-    "category": "Enterprise & Inventory",
-    "stack": "PHP Native / MySQL",
-    "description": "Solusi pencatatan stok dagang untuk efisiensi pembukuan persediaan barang dagangan UMKM.",
-    "features": [
-      "Katalog produk & varian harga",
-      "Perhitungan laba kotor penjualan",
-      "Rekap transaksi harian & bulanan",
-      "Sistem backup database"
-    ],
-    "is_flagship": false,
-    "image": null
-  },
-  {
-    "id": "inventory_gita",
-    "title": "Aplikasi Manajemen Stok & Pengadaan",
-    "category": "Enterprise & Inventory",
-    "stack": "PHP Native / MySQL",
-    "description": "Aplikasi pencatatan alur pengadaan barang dari supplier hingga distribusi ke unit-unit kerja.",
-    "features": [
-      "Pengajuan restock barang",
-      "Validasi penerimaan barang gudang",
-      "Laporan mutasi per departemen",
-      "Cetak invoice surat jalan"
-    ],
-    "is_flagship": false,
-    "image": "assets/screenshots/inventory_gita.PNG"
-  },
-  {
-    "id": "inventoryweb-laravel",
-    "title": "Warehouse & Inventory Management System",
-    "category": "Enterprise & Inventory",
-    "stack": "Laravel / Blade / MySQL",
-    "description": "Sistem manajemen pergudangan komprehensif dengan tracking SKU, minimum stock alert, dan alur purchase order ke supplier.",
-    "features": [
-      "Role access (Admin, Gudang, Manajer)",
-      "Automated low stock notification",
-      "Riwayat barang masuk (Inbound) & keluar (Outbound)",
-      "Export data barang ke format Excel & PDF"
-    ],
-    "is_flagship": false,
-    "image": "assets/screenshots/inventoryweb-laravel.png"
-  },
-  {
-    "id": "invtrio",
-    "title": "InvTrio - Multi-Branch Inventory System",
-    "category": "Enterprise & Inventory",
-    "stack": "PHP Native / MySQL",
-    "description": "Sistem inventaris multi-cabang untuk sinkronisasi persediaan barang di berbagai lokasi toko.",
-    "features": [
-      "Multi-outlet inventory tracking",
-      "Transfer stok antar cabang",
-      "Laporan konsolidasi penjualan",
-      "Manajemen hak akses kasir & supervisor"
-    ],
-    "is_flagship": false,
-    "image": "assets/screenshots/invtrio.png"
-  },
-  {
-    "id": "jilqu",
-    "title": "Jilqu",
-    "category": "Web Application",
-    "stack": "PHP Native",
-    "description": "Website jualan jilbab dan aksesorisnya",
-    "features": [
-      "Manajemen data & transaksi sistem",
-      "Antarmuka pengguna responsif",
-      "Laporan dan rekapitulasi data",
-      "Keamanan akses pengguna"
-    ],
-    "is_flagship": false,
-    "image": "assets/screenshots/jilqu.png"
-  },
-  {
-    "id": "kebabdotcom",
-    "title": "KebabDotCom Delivery & Franchise Ordering",
-    "category": "Retail, POS & FnB",
-    "stack": "PHP / Bootstrap / MySQL",
-    "description": "Website pemesanan online kebab dan franchise order untuk memudahkan pelanggan memesan varian rasa dan topping.",
-    "features": [
-      "Kustomisasi pesanan (level pedas & topping)",
-      "Integrasi order via WhatsApp otomatis",
-      "Hitung estimasi subtotal belanja",
-      "Katalog promo mingguan"
-    ],
-    "is_flagship": false,
-    "image": "assets/screenshots/kebabdotcom.png"
-  },
-  {
-    "id": "kedai_baleni_ci",
-    "title": "Sistem Kasir Kedai Baleni Coffee & Eatery",
-    "category": "Retail, POS & FnB",
-    "stack": "CodeIgniter / MySQL",
-    "description": "Aplikasi kasir kedai kopi untuk pencatatan pesanan barista, kitchen order ticket (KOT), dan rekonsiliasi kas kasir.",
-    "features": [
-      "Split bill pesanan meja",
-      "Order ticket otomatis ke dapur",
-      "Metode pembayaran tunai & QRIS",
-      "Laporan tutup buku harian"
-    ],
-    "is_flagship": false,
-    "image": "assets/screenshots/kedai_baleni_ci.png"
-  },
-  {
-    "id": "kedai_djoenang",
-    "title": "Kedai Djoenang POS & Inventory Kitchen",
-    "category": "Retail, POS & FnB",
-    "stack": "PHP Native / MySQL",
-    "description": "Sistem operasional resto mencakup pesanan pelanggan, manajemen stok bahan baku dapur, dan laporan laba kotor.",
-    "features": [
-      "Pemotongan stok bahan baku otomatis per pesanan",
-      "Dashboard grafik penjualan harian",
-      "Cetak bill struk",
-      "Manajemen diskon member"
-    ],
-    "is_flagship": false,
-    "image": "assets/screenshots/kedai_djoenang.png"
-  },
-  {
-    "id": "kedai_djoenang-lucuk",
-    "title": "Kedai Djoenang Front-End UI Interactive",
-    "category": "Retail, POS & FnB",
-    "stack": "HTML5 / CSS3 / JavaScript",
-    "description": "Antarmuka pemesanan mandiri (self-order) dengan tampilan interaktif, animasi ceria, dan pemilihan menu interaktif.",
-    "features": [
-      "Menu visual card interaktif",
-      "Keranjang belanja instan",
-      "Animasi UI interaktif ramah pelanggan",
-      "Responsive design smartphone"
-    ],
-    "is_flagship": false,
-    "image": "assets/screenshots/kedai_djoenang-lucuk.png"
-  },
-  {
-    "id": "lah-tki",
-    "title": "Lah Tki",
-    "category": "Web Application",
-    "stack": "Native / Other",
-    "description": "Sistem aplikasi web application berbasis Native / Other yang dirancang untuk efisiensi operasional dan manajemen data.",
-    "features": [
-      "Manajemen data & transaksi sistem",
-      "Antarmuka pengguna responsif",
-      "Laporan dan rekapitulasi data",
-      "Keamanan akses pengguna"
-    ],
-    "is_flagship": false,
-    "image": "assets/screenshots/lah-tki.png"
-  },
-  {
-    "id": "laravel_inventory",
-    "title": "Smart Asset & Inventory Tracker",
-    "category": "Enterprise & Inventory",
-    "stack": "Laravel / MySQL / Tailwind",
-    "description": "Platform pelacakan aset dan stok internal perusahaan berbasis Laravel dengan riwayat mutasi perpindahan aset.",
-    "features": [
-      "QR Code / Labeling generator",
-      "Pencatatan depresiasi aset",
-      "Approval request pengambilan barang",
-      "Dashboard grafik pergerakan stok"
-    ],
-    "is_flagship": false,
-    "image": "assets/screenshots/laravel_inventory.png"
-  },
-  {
-    "id": "laundry_native",
-    "title": "Sistem Kasir Laundry Kilat Native",
-    "category": "Retail, POS & FnB",
-    "stack": "PHP Native / MySQL",
-    "description": "Aplikasi ringan kasir laundry dengan kecepatan transaksi tinggi untuk operasional toko harian.",
-    "features": [
-      "Input cepat berat cucian",
-      "Pencatatan nama & kontak pelanggan",
-      "Status pengambilan pakaian",
-      "Export data transaksi"
-    ],
-    "is_flagship": false,
-    "image": "assets/screenshots/laundry_native.png"
-  },
-  {
-    "id": "lbg-email-sender-api",
-    "title": "Automated Transactional Email Service API",
-    "category": "IoT, Monitoring & Industri",
-    "stack": "Node.js / Express / Nodemailer",
-    "description": "Microservice pengiriman email otomatis (OTP, invoice, notifikasi sistem) dengan antrian pengiriman terjamin.",
-    "features": [
-      "Endpoint REST API pengiriman email",
-      "Template email HTML responsif",
-      "Fallback SMTP server",
-      "Logging deliverability & status pengiriman"
-    ],
-    "is_flagship": false,
-    "image": "assets/screenshots/lbg-email-sender-api.png"
-  },
-  {
-    "id": "lbg-new",
-    "title": "Lbg New",
-    "category": "Web Application",
-    "stack": "Vue.js",
-    "description": "TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. TODO: Guide users through getting your code up and r",
-    "features": [
-      "Manajemen data & transaksi sistem",
-      "Antarmuka pengguna responsif",
-      "Laporan dan rekapitulasi data",
-      "Keamanan akses pengguna"
-    ],
-    "is_flagship": false,
-    "image": "assets/screenshots/lbg-new.png"
-  },
-  {
-    "id": "letger",
-    "title": "Ledger & Stock Valuation Tracker",
-    "category": "Enterprise & Inventory",
-    "stack": "PHP / Web",
-    "description": "Aplikasi buku besar stok dan valuasi nilai persediaan barang berdasarkan metode pencatatan persediaan.",
-    "features": [
-      "Jurnal pencatatan mutasi barang",
-      "Perhitungan total valuasi aset",
-      "Laporan saldo akhir periode",
-      "Filter transaksi tanggal dinamis"
-    ],
-    "is_flagship": false,
-    "image": "assets/screenshots/letger.png"
-  },
-  {
-    "id": "mabel_gm",
-    "title": "Katalog & Transaksi Mebel Jepara GM",
-    "category": "Retail, POS & FnB",
-    "stack": "PHP Native / Bootstrap",
-    "description": "Aplikasi showcase katalog furnitur kayu jati dan pemesanan kustom mebel untuk showroom UMKM mebel.",
-    "features": [
-      "Katalog produk mebel berfoto HD",
-      "Detail spesifikasi kayu & finishing",
-      "Form pemesanan custom ukuran",
-      "Integrasi kontak admin WhatsApp"
-    ],
-    "is_flagship": false,
-    "image": "assets/screenshots/mabel_gm.png"
-  },
-  {
-    "id": "man1magelang",
-    "title": "Portal Web & Profil MAN 1 Magelang",
-    "category": "Pendidikan & Akademik",
-    "stack": "PHP / Bootstrap / MySQL",
-    "description": "Website profil instansi madrasah untuk publikasi berita, pengumuman sekolah, galeri kegiatan, dan prestasi siswa.",
-    "features": [
-      "Content Management System (CMS)",
-      "Publikasi artikel & agenda madrasah",
-      "Galeri foto & video kegiatan",
-      "Desain responsif ramah mobile"
-    ],
-    "is_flagship": false,
-    "image": "assets/screenshots/man1magelang.png"
-  },
-  {
-    "id": "monitoring",
-    "title": "Server & Network Service Health Monitoring",
-    "category": "IoT, Monitoring & Industri",
-    "stack": "PHP / AJAX / Shell",
-    "description": "Aplikasi pemantauan ketersediaan server dan layanan jaringan dengan visualisasi uptime dan latency ping.",
-    "features": [
-      "Ping status check otomatis",
-      "Grafik response time server",
-      "Alert status offline server",
-      "Manajemen IP dan domain endpoint"
-    ],
-    "is_flagship": false,
-    "image": "assets/screenshots/monitoring.png"
-  },
-  {
-    "id": "monitoring_boiler",
-    "title": "Industrial Boiler Monitoring & Telemetry System",
-    "category": "IoT, Monitoring & Industri",
-    "stack": "PHP / JavaScript / Chart.js / IoT",
-    "description": "Sistem pemantauan parameter suhu dan tekanan boiler industri secara real-time untuk menjamin keamanan operasional pabrik.",
-    "features": [
-      "Visualisasi gauge & chart grafik real-time",
-      "Batas ambang alarm suhu/tekanan kritis",
-      "Pencatatan log historis per menit",
-      "Export log inspeksi industri"
-    ],
-    "is_flagship": true,
-    "image": "assets/screenshots/monitoring_boiler.png"
-  },
-  {
-    "id": "myproject",
-    "title": "Myproject",
-    "category": "Web Application",
-    "stack": "CodeIgniter (PHP)",
-    "description": "Sistem aplikasi web application berbasis CodeIgniter (PHP) yang dirancang untuk efisiensi operasional dan manajemen data.",
-    "features": [
-      "Manajemen data & transaksi sistem",
-      "Antarmuka pengguna responsif",
-      "Laporan dan rekapitulasi data",
-      "Keamanan akses pengguna"
-    ],
-    "is_flagship": false,
-    "image": "assets/screenshots/myproject.png"
-  },
-  {
-    "id": "myproject_2233061",
-    "title": "Myproject 2233061",
-    "category": "Web Application",
-    "stack": "CodeIgniter (PHP)",
-    "description": "Sistem aplikasi web application berbasis CodeIgniter (PHP) yang dirancang untuk efisiensi operasional dan manajemen data.",
-    "features": [
-      "Manajemen data & transaksi sistem",
-      "Antarmuka pengguna responsif",
-      "Laporan dan rekapitulasi data",
-      "Keamanan akses pengguna"
-    ],
-    "is_flagship": false,
-    "image": "assets/screenshots/myproject_2233061.png"
-  },
-  {
-    "id": "native-pengiriman-barang",
-    "title": "Sistem Ekspedisi & Tracking Pengiriman Barang",
-    "category": "Enterprise & Inventory",
-    "stack": "PHP Native / MySQL",
-    "description": "Aplikasi manajemen logistik pengiriman barang dengan fitur generate nomor resi dan tracking status pengantaran kurir.",
-    "features": [
-      "Generate nomor resi unik",
-      "Update status pengiriman (Manifest, Transit, Delivered)",
-      "Pencetakan label resi pengiriman",
-      "Kalkulasi ongkos kirim"
-    ],
-    "is_flagship": false,
-    "image": "assets/screenshots/native-pengiriman-barang.png"
-  },
-  {
-    "id": "newqr",
-    "title": "Dynamic QR Code Generator & Scanner Web App",
-    "category": "Modern Web & SPA",
-    "stack": "JavaScript / HTML5 Canvas / Web API",
-    "description": "Aplikasi pembuatan dan pemindaian kode QR instan untuk URL, teks, vCard, dan data inventaris.",
-    "features": [
-      "Generate QR code beresolusi tinggi",
-      "Kustomisasi warna & logo QR",
-      "Download file PNG/SVG",
-      "Live camera QR scanner"
-    ],
-    "is_flagship": false,
-    "image": "assets/screenshots/newqr.png"
-  },
-  {
-    "id": "nextjs-portfolio-pageview-counter",
-    "title": "Nextjs Portfolio Pageview Counter",
-    "category": "Web Application",
-    "stack": "React / Next.js",
-    "description": "<div align=\"center\"> <a href=\"https://chronark.com\"><h1 align=\"center\">chronark.com</h1></a> My personal website, built with [Next.js](https://nextjs.org/), [Tailwind CSS](https://",
-    "features": [
-      "Manajemen data & transaksi sistem",
-      "Antarmuka pengguna responsif",
-      "Laporan dan rekapitulasi data",
-      "Keamanan akses pengguna"
-    ],
-    "is_flagship": false,
-    "image": "assets/screenshots/nextjs-portfolio-pageview-counter.png"
-  },
-  {
-    "id": "nocturnal_ci",
-    "title": "Nocturnal Studio Creative Agency Portfolio Web",
-    "category": "Modern Web & SPA",
-    "stack": "CodeIgniter / CSS3 / JavaScript",
-    "description": "Website profil kreatif studio dengan galeri karya interaktif, daftar layanan produksi, dan form konsultasi klien.",
-    "features": [
-      "Filter portofolio desain & fotografi",
-      "Animasi scrolling interaktif",
-      "Testimoni klien & showcase brand",
-      "Formulir pesan kontak terhubung email"
-    ],
-    "is_flagship": false,
-    "image": "assets/screenshots/nocturnal_ci.png"
-  },
-  {
-    "id": "pembayaranTU_CI3",
-    "title": "Sistem Informasi Pembayaran TU & SPP Sekolah",
-    "category": "Pendidikan & Akademik",
-    "stack": "CodeIgniter 3 / MySQL",
-    "description": "Aplikasi loket pembayaran Tata Usaha (TU) sekolah untuk pembayaran SPP, uang gedung, dan administrasi seragam.",
-    "features": [
-      "Pencatatan tagihan per siswa",
-      "Cetak kuitansi pembayaran resmi",
-      "Laporan penerimaan kas harian kasir TU",
-      "Rekap tunggakan pembayaran siswa"
-    ],
-    "is_flagship": false,
-    "image": "assets/screenshots/pembayaranTU_CI3.png"
-  },
-  {
-    "id": "ppdb-musamu",
-    "title": "PPDB Online Musamu (Penerimaan Peserta Didik Baru)",
-    "category": "Pendidikan & Akademik",
-    "stack": "CodeIgniter / MySQL / Bootstrap",
-    "description": "Portal pendaftaran siswa baru secara daring dengan alur verifikasi berkas, pengumuman seleksi, dan cetak kartu peserta.",
-    "features": [
-      "Formulir pendaftaran multi-step",
-      "Upload berkas (KK, Akta, Ijazah)",
-      "Verifikasi admin & penetapan kelulusan",
-      "Cetak bukti tanda pendaftaran resmi"
-    ],
-    "is_flagship": false,
-    "image": "assets/screenshots/ppdb-musamu.png"
-  },
-  {
-    "id": "rent-nodejs",
-    "title": "Car & Vehicle Rental Booking API Backend",
-    "category": "Modern Web & SPA",
-    "stack": "Node.js / Express / MongoDB / MySQL",
-    "description": "Backend layanan penyewaan armada kendaraan dengan manajemen ketersediaan mobil, durasi rental, dan kalkulasi tarif.",
-    "features": [
-      "Arsitektur REST API dengan Express.js",
-      "Validasi jadwal ketersediaan armada",
-      "Kalkulasi tarif per jam / harian",
-      "Manajemen data pelanggan & sewa"
-    ],
-    "is_flagship": false,
-    "image": "assets/screenshots/rent-nodejs.png"
-  },
-  {
-    "id": "risma_laundry_CI",
-    "title": "Risma Laundry Management System",
-    "category": "Retail, POS & FnB",
-    "stack": "CodeIgniter / MySQL",
-    "description": "Sistem pembukuan operasional usaha laundry dengan manajemen pelanggan, paket layanan, dan keuangan kasir.",
-    "features": [
-      "Manajemen deposit saldo member",
-      "Laporan penerimaan pendapatan laundry",
-      "Cetak nota struk kasir kecil",
-      "Filter transaksi belum lunas"
-    ],
-    "is_flagship": false,
-    "image": "assets/screenshots/risma_laundry_CI.png"
-  },
-  {
-    "id": "roblox",
-    "title": "Roblox",
-    "category": "Web Application",
-    "stack": "Python / Data Science",
-    "description": "Sistem aplikasi web application berbasis Python / Data Science yang dirancang untuk efisiensi operasional dan manajemen data.",
-    "features": [
-      "Manajemen data & transaksi sistem",
-      "Antarmuka pengguna responsif",
-      "Laporan dan rekapitulasi data",
-      "Keamanan akses pengguna"
-    ],
-    "is_flagship": false,
-    "image": null
-  },
-  {
-    "id": "sablon_gind_CI",
-    "title": "Sistem Order Sablon & Konveksi Kaos (Gind)",
-    "category": "Retail, POS & FnB",
-    "stack": "CodeIgniter / MySQL",
-    "description": "Aplikasi penerimaan pesanan sablon kaos custom dengan kalkulasi ukuran desain, jenis kain, dan estimasi waktu selesai.",
-    "features": [
-      "Upload file mockup desain sablon",
-      "Kalkulasi harga berdasarkan kuantitas & warna",
-      "Progress tracking pengerjaan pesanan",
-      "Invoice Down Payment (DP) & Pelunasan"
-    ],
-    "is_flagship": false,
-    "image": "assets/screenshots/sablon_gind_CI.png"
-  },
-  {
-    "id": "saw_perawat",
-    "title": "SPK Penilaian Kinerja Perawat Rumah Sakit (SAW)",
-    "category": "Sistem Pakar & SPK",
-    "stack": "PHP Native / MySQL",
-    "description": "Sistem evaluasi dan perankingan kinerja tenaga perawat berbasis kriteria KPI medis dan kedisiplinan kerja menggunakan metode SAW.",
-    "features": [
-      "Penilaian multi-kriteria medis & etik",
-      "Normalisasi matriks kinerja",
-      "Perangkingan perawat teladan",
-      "Rekap penilaian berkala per periode"
-    ],
-    "is_flagship": false,
-    "image": "assets/screenshots/saw_perawat.png"
-  },
-  {
-    "id": "sentimen_analysis_tb_nativ",
-    "title": "Analisis Sentimen Twitter/X Penyakit Tuberkulosis (TB)",
-    "category": "Data Science & AI",
-    "stack": "Python / PHP / NLP",
-    "description": "Aplikasi pengolahan bahasa alami (NLP) untuk menganalisis sentimen masyarakat mengenai penyuluhan dan bahaya penyakit TB di media sosial.",
-    "features": [
-      "Preprocessing teks (Cleaning, Stemming, Stopwords)",
-      "Klasifikasi sentimen (Positif, Negatif, Netral)",
-      "Visualisasi Wordcloud & diagram sentimen",
-      "Evaluasi akurasi confusion matrix"
-    ],
-    "is_flagship": true,
-    "image": "assets/screenshots/sentimen_analysis_tb_nativ.png"
-  },
-  {
-    "id": "si_rocket_chicken",
-    "title": "Sistem Kasir & Operasional Rocket Chicken",
-    "category": "Retail, POS & FnB",
-    "stack": "PHP / CodeIgniter / MySQL",
-    "description": "Sistem Point of Sale (POS) dan pengelolaan penjualan harian outlet kuliner cepat saji Rocket Chicken.",
-    "features": [
-      "Transaksi kasir cepat (POS touch-friendly)",
-      "Perhitungan kembalian & diskon promo",
-      "Cetak struk kasir thermal",
-      "Laporan omset harian & menu terlaris"
-    ],
-    "is_flagship": true,
-    "image": "assets/screenshots/si_rocket_chicken.png"
-  },
-  {
-    "id": "siakad_sd_alfirdaus",
-    "title": "SIAKAD SD Al-Firdaus (Sistem Akademik Terpadu)",
-    "category": "Pendidikan & Akademik",
-    "stack": "PHP / CodeIgniter / MySQL",
-    "description": "Sistem Informasi Akademik sekolah dasar untuk manajemen data santri/siswa, guru, penjadwalan kelas, dan e-Rapor.",
-    "features": [
-      "Manajemen nilai rapor K13 / Merdeka",
-      "Presensi kehadiran siswa",
-      "Jadwal pelajaran & pembagian kelas",
-      "Cetak lembar rapor siswa PDF"
-    ],
-    "is_flagship": true,
-    "image": "assets/screenshots/siakad_sd_alfirdaus.png"
-  },
-  {
-    "id": "sikel_vue",
-    "title": "Sikel - Single Page App Management System",
-    "category": "Modern Web & SPA",
-    "stack": "Vue.js / JavaScript / CSS3",
-    "description": "Aplikasi modern berbasis Vue.js dengan arsitektur reaktif SPA (Single Page Application) dan integrasi RESTful backend.",
-    "features": [
-      "State management Vuex / Pinia",
-      "Dynamic reactive UI components",
-      "Client-side routing tanpa reload halaman",
-      "Form validation real-time"
-    ],
-    "is_flagship": false,
-    "image": "assets/screenshots/sikel_vue.png"
-  },
-  {
-    "id": "sinarjo-vue",
-    "title": "Sinarjo Portal & Enterprise Dashboard",
-    "category": "Modern Web & SPA",
-    "stack": "Vue.js / JavaScript / Tailwind",
-    "description": "Antarmuka enterprise dashboard interaktif berbasis Vue.js untuk visualisasi data operasional dan manajemen akun pengguna.",
-    "features": [
-      "Dashboard widget analitik dinamis",
-      "Multi-level navigation sidebar",
-      "Integrasi token authentication (JWT)",
-      "Komponen data table responsive"
-    ],
-    "is_flagship": false,
-    "image": null
-  },
-  {
-    "id": "sjb_timbangan_api",
-    "title": "SJB Digital Scale Weighbridge API Service",
-    "category": "IoT, Monitoring & Industri",
-    "stack": "Node.js / Express / REST API",
-    "description": "REST API backend untuk menjembatani perangkat jembatan timbang (weighbridge) pabrik dengan sistem database perusahaan.",
-    "features": [
-      "RESTful API serial weight parsing",
-      "Autentikasi API key & token",
-      "Logging transaksi muatan truk (Netto/Tara/Bruto)",
-      "Integritas data anti-manipulasi timbangan"
-    ],
-    "is_flagship": false,
-    "image": "assets/screenshots/sjb_timbangan_api.png"
   },
   {
     "id": "sp-kopi-certainty-Factor",
@@ -941,8 +56,263 @@ const PROJECTS_DATA = [
       "Output rekomendasi jurusan utama & alternatif",
       "Dashboard admin sekolah"
     ],
-    "is_flagship": false,
+    "is_flagship": true,
     "image": "assets/screenshots/sp_jurusan.png"
+  },
+  {
+    "id": "teras_genz_CI",
+    "title": "Teras Gen-Z Cafe Order & Billing",
+    "category": "Retail, POS & FnB",
+    "stack": "CodeIgniter / Bootstrap",
+    "description": "Sistem kasir dan pemesanan cafe anak muda dengan alur pesanan meja dan rekap omset harian kasir.",
+    "features": [
+      "Billing pesanan meja cafe",
+      "Rekap omset shift kerja barista",
+      "Kategori signature drinks & snacks",
+      "Pencetakan nota pembayaran"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/teras_genz_CI.png"
+  },
+  {
+    "id": "mabel_gm",
+    "title": "Katalog & Transaksi Mebel Jepara GM",
+    "category": "Retail, POS & FnB",
+    "stack": "PHP Native / Bootstrap",
+    "description": "Aplikasi showcase katalog furnitur kayu jati dan pemesanan kustom mebel untuk showroom UMKM mebel.",
+    "features": [
+      "Katalog produk mebel berfoto HD",
+      "Detail spesifikasi kayu & finishing",
+      "Form pemesanan custom ukuran",
+      "Integrasi kontak admin WhatsApp"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/mabel_gm.png"
+  },
+  {
+    "id": "sablon_gind_CI",
+    "title": "Sistem Order Sablon & Konveksi Kaos (Gind)",
+    "category": "Retail, POS & FnB",
+    "stack": "CodeIgniter / MySQL",
+    "description": "Aplikasi penerimaan pesanan sablon kaos custom dengan kalkulasi ukuran desain, jenis kain, dan estimasi waktu selesai.",
+    "features": [
+      "Upload file mockup desain sablon",
+      "Kalkulasi harga berdasarkan kuantitas & warna",
+      "Progress tracking pengerjaan pesanan",
+      "Invoice Down Payment (DP) & Pelunasan"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/sablon_gind_CI.png"
+  },
+  {
+    "id": "siakad_sd_alfirdaus",
+    "title": "SIAKAD SD Al-Firdaus (Sistem Akademik Terpadu)",
+    "category": "Pendidikan & Akademik",
+    "stack": "PHP / CodeIgniter / MySQL",
+    "description": "Sistem Informasi Akademik sekolah dasar untuk manajemen data santri/siswa, guru, penjadwalan kelas, dan e-Rapor.",
+    "features": [
+      "Manajemen nilai rapor K13 / Merdeka",
+      "Presensi kehadiran siswa",
+      "Jadwal pelajaran & pembagian kelas",
+      "Cetak lembar rapor siswa PDF"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/siakad_sd_alfirdaus.png"
+  },
+  {
+    "id": "man1magelang",
+    "title": "Portal Web & Profil MAN 1 Magelang",
+    "category": "Pendidikan & Akademik",
+    "stack": "PHP / Bootstrap / MySQL",
+    "description": "Website profil instansi madrasah untuk publikasi berita, pengumuman sekolah, galeri kegiatan, dan prestasi siswa.",
+    "features": [
+      "Content Management System (CMS)",
+      "Publikasi artikel & agenda madrasah",
+      "Galeri foto & video kegiatan",
+      "Desain responsif ramah mobile"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/man1magelang.png"
+  },
+  {
+    "id": "kebabdotcom",
+    "title": "KebabDotCom Delivery & Franchise Ordering",
+    "category": "Retail, POS & FnB",
+    "stack": "PHP / Bootstrap / MySQL",
+    "description": "Website pemesanan online kebab dan franchise order untuk memudahkan pelanggan memesan varian rasa dan topping.",
+    "features": [
+      "Kustomisasi pesanan (level pedas & topping)",
+      "Integrasi order via WhatsApp otomatis",
+      "Hitung estimasi subtotal belanja",
+      "Katalog promo mingguan"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/kebabdotcom.png"
+  },
+  {
+    "id": "monitoring_boiler",
+    "title": "Industrial Boiler Monitoring & Telemetry System",
+    "category": "IoT, Monitoring & Industri",
+    "stack": "PHP / JavaScript / Chart.js / IoT",
+    "description": "Sistem pemantauan parameter suhu dan tekanan boiler industri secara real-time untuk menjamin keamanan operasional pabrik.",
+    "features": [
+      "Visualisasi gauge & chart grafik real-time",
+      "Batas ambang alarm suhu/tekanan kritis",
+      "Pencatatan log historis per menit",
+      "Export log inspeksi industri"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/monitoring_boiler.png"
+  },
+  {
+    "id": "letger",
+    "title": "Ledger & Stock Valuation Tracker",
+    "category": "Enterprise & Inventory",
+    "stack": "PHP / Web",
+    "description": "Aplikasi buku besar stok dan valuasi nilai persediaan barang berdasarkan metode pencatatan persediaan.",
+    "features": [
+      "Jurnal pencatatan mutasi barang",
+      "Perhitungan total valuasi aset",
+      "Laporan saldo akhir periode",
+      "Filter transaksi tanggal dinamis"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/letger.png"
+  },
+  {
+    "id": "absensi_tempuran",
+    "title": "Sistem Absensi Pegawai Berbasis Lokasi / Web",
+    "category": "Kesehatan & Layanan Publik",
+    "stack": "PHP Native / MySQL",
+    "description": "Aplikasi pencatatan absensi pegawai kantor kecamatan dengan rekapitulasi jam hadir, jam pulang, dan perhitungan keterlambatan.",
+    "features": [
+      "Pencatatan jam masuk & pulang real-time",
+      "Manajemen izin & cuti pegawai",
+      "Kalkulasi potongan keterlambatan",
+      "Cetak rekap absensi bulanan ASN"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/absensi_tempuran.png"
+  },
+  {
+    "id": "blt_magelang",
+    "title": "Sistem Pendataan & Penyaluran BLT Magelang",
+    "category": "Kesehatan & Layanan Publik",
+    "stack": "CodeIgniter / MySQL",
+    "description": "Sistem informasi verifikasi kelayakan penerima Bantuan Langsung Tunai (BLT) untuk memastikan bansos tepat sasaran.",
+    "features": [
+      "Scoring kriteria kemiskinan penerima bansos",
+      "Deteksi duplikasi data NIK",
+      "Pencatatan status penyaluran dana",
+      "Cetak kartu bukti penerima manfaat"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/blt_magelang.png"
+  },
+  {
+    "id": "hizetblue",
+    "title": "Hizetblue",
+    "category": "Web Application",
+    "stack": "Native / Other",
+    "description": "Sistem aplikasi web application berbasis Native / Other yang dirancang untuk efisiensi operasional dan manajemen data.",
+    "features": [
+      "Manajemen data & transaksi sistem",
+      "Antarmuka pengguna responsif",
+      "Laporan dan rekapitulasi data",
+      "Keamanan akses pengguna"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/hizetblue.png"
+  },
+  {
+    "id": "hub",
+    "title": "Hub",
+    "category": "Web Application",
+    "stack": "Native / Other",
+    "description": "Sistem aplikasi web application berbasis Native / Other yang dirancang untuk efisiensi operasional dan manajemen data.",
+    "features": [
+      "Manajemen data & transaksi sistem",
+      "Antarmuka pengguna responsif",
+      "Laporan dan rekapitulasi data",
+      "Keamanan akses pengguna"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/hub.png"
+  },
+  {
+    "id": "forecasting_iphone",
+    "title": "Forecasting Penjualan iPhone (Metode Time Series)",
+    "category": "Data Science & AI",
+    "stack": "PHP / Python / Data Science",
+    "description": "Sistem prediksi tren penjualan unit smartphone menggunakan algoritma peramalan data deret berkala untuk perencanaan stok.",
+    "features": [
+      "Kalkulasi peramalan tren waktu (Moving Average / Holt)",
+      "Perhitungan nilai error MAPE / MAD",
+      "Grafik proyeksi penjualan ke depan",
+      "Export hasil estimasi kebutuhan stok"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/forecasting_iphone.png"
+  },
+  {
+    "id": "statkes303",
+    "title": "Statistik Kesehatan Masyarakat & Rekap Medis",
+    "category": "Kesehatan & Layanan Publik",
+    "stack": "PHP Native / MySQL",
+    "description": "Aplikasi rekapitulasi data surveilans epidemiologi dan statistik penyakit di fasilitas kesehatan tingkat pertama.",
+    "features": [
+      "Pendataan morbiditas & 10 penyakit terbanyak",
+      "Visualisasi diagram sebaran penyakit",
+      "Laporan bulanan dinas kesehatan",
+      "Penyaringan data per wilayah dusun/desa"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/statkes303.png"
+  },
+  {
+    "id": "ppdb-musamu",
+    "title": "PPDB Online Musamu (Penerimaan Peserta Didik Baru)",
+    "category": "Pendidikan & Akademik",
+    "stack": "CodeIgniter / MySQL / Bootstrap",
+    "description": "Portal pendaftaran siswa baru secara daring dengan alur verifikasi berkas, pengumuman seleksi, dan cetak kartu peserta.",
+    "features": [
+      "Formulir pendaftaran multi-step",
+      "Upload berkas (KK, Akta, Ijazah)",
+      "Verifikasi admin & penetapan kelulusan",
+      "Cetak bukti tanda pendaftaran resmi"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/ppdb-musamu.png"
+  },
+  {
+    "id": "newqr",
+    "title": "Dynamic QR Code Generator & Scanner Web App",
+    "category": "Modern Web & SPA",
+    "stack": "JavaScript / HTML5 Canvas / Web API",
+    "description": "Aplikasi pembuatan dan pemindaian kode QR instan untuk URL, teks, vCard, dan data inventaris.",
+    "features": [
+      "Generate QR code beresolusi tinggi",
+      "Kustomisasi warna & logo QR",
+      "Download file PNG/SVG",
+      "Live camera QR scanner"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/newqr.png"
+  },
+  {
+    "id": "saw_perawat",
+    "title": "SPK Penilaian Kinerja Perawat Rumah Sakit (SAW)",
+    "category": "Sistem Pakar & SPK",
+    "stack": "PHP Native / MySQL",
+    "description": "Sistem evaluasi dan perankingan kinerja tenaga perawat berbasis kriteria KPI medis dan kedisiplinan kerja menggunakan metode SAW.",
+    "features": [
+      "Penilaian multi-kriteria medis & etik",
+      "Normalisasi matriks kinerja",
+      "Perangkingan perawat teladan",
+      "Rekap penilaian berkala per periode"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/saw_perawat.png"
   },
   {
     "id": "sp_kopi",
@@ -1001,23 +371,158 @@ const PROJECTS_DATA = [
       "Perankingan alternatif komparatif",
       "Visualisasi grafik peringkat"
     ],
-    "is_flagship": true,
+    "is_flagship": false,
     "image": "assets/screenshots/spk_waspas.png"
   },
   {
-    "id": "statkes303",
-    "title": "Statistik Kesehatan Masyarakat & Rekap Medis",
-    "category": "Kesehatan & Layanan Publik",
-    "stack": "PHP Native / MySQL",
-    "description": "Aplikasi rekapitulasi data surveilans epidemiologi dan statistik penyakit di fasilitas kesehatan tingkat pertama.",
+    "id": "hondasakti-stockopname",
+    "title": "Honda Sakti Stock Opname & Inventory Control",
+    "category": "Enterprise & Inventory",
+    "stack": "Laravel / MySQL / Bootstrap",
+    "description": "Sistem enterprise pengelolaan stok fisik vs sistem (stock opname) dealer resmi Honda untuk meminimalisir selisih inventaris suku cadang.",
     "features": [
-      "Pendataan morbiditas & 10 penyakit terbanyak",
-      "Visualisasi diagram sebaran penyakit",
-      "Laporan bulanan dinas kesehatan",
-      "Penyaringan data per wilayah dusun/desa"
+      "Stock opname barcode scanner scan",
+      "Audit selisih stok (varian minus/plus)",
+      "Log mutasi masuk/keluar sparepart",
+      "Laporan rekonsiliasi audit bulanan"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/statkes303.png"
+    "image": "assets/screenshots/hondasakti-stockopname.png"
+  },
+  {
+    "id": "ujian-online-laravel-vue",
+    "title": "Platform Ujian Online & CBT (Computer Based Test)",
+    "category": "Pendidikan & Akademik",
+    "stack": "Laravel / Vue.js / SPA / MySQL",
+    "description": "Aplikasi Computer-Based Testing modern dengan arsitektur Laravel API dan antarmuka interaktif Vue.js untuk ujian real-time tanpa lag.",
+    "features": [
+      "Timer countdown anti-cheat",
+      "Bank soal multi-tipe (Pilihan Ganda & Essay)",
+      "Auto-grading nilai otomatis",
+      "Monitoring live pengerjaan siswa"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/ujian-online-laravel-vue.png"
+  },
+  {
+    "id": "Inventory-Barang",
+    "title": "Sistem Informasi Inventaris Barang Terpadu",
+    "category": "Enterprise & Inventory",
+    "stack": "CodeIgniter / PHP / MySQL",
+    "description": "Aplikasi pencatatan stok barang masuk dan keluar dengan kategorisasi barang, supplier, dan monitoring sisa stok.",
+    "features": [
+      "CRUD master barang & supplier",
+      "Pencatatan transaksi mutasi harian",
+      "Cetak bukti tanda terima barang",
+      "Filter pencarian barang cepat"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/Inventory-Barang.png"
+  },
+  {
+    "id": "GiWeb",
+    "title": "Giweb",
+    "category": "Web Application",
+    "stack": "PHP Native",
+    "description": "Sistem aplikasi web application berbasis PHP Native yang dirancang untuk efisiensi operasional dan manajemen data.",
+    "features": [
+      "Manajemen data & transaksi sistem",
+      "Antarmuka pengguna responsif",
+      "Laporan dan rekapitulasi data",
+      "Keamanan akses pengguna"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/GiWeb.png"
+  },
+  {
+    "id": "e-laundry",
+    "title": "E-Laundry Online & Tracking Cuci Kiloan",
+    "category": "Retail, POS & FnB",
+    "stack": "PHP / CodeIgniter / MySQL",
+    "description": "Aplikasi manajemen laundry kiloan dan satuan dengan fitur tracking status pengerjaan (Antri, Cuci, Setrika, Selesai).",
+    "features": [
+      "Pemberian nomor nota laundry unik",
+      "Tracking status cucian pelanggan online",
+      "Perhitungan otomatis berat x tarif paket",
+      "Kirim notifikasi cucian selesai"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/e-laundry.png"
+  },
+  {
+    "id": "kedai_baleni_ci",
+    "title": "Sistem Kasir Kedai Baleni Coffee & Eatery",
+    "category": "Retail, POS & FnB",
+    "stack": "CodeIgniter / MySQL",
+    "description": "Aplikasi kasir kedai kopi untuk pencatatan pesanan barista, kitchen order ticket (KOT), dan rekonsiliasi kas kasir.",
+    "features": [
+      "Split bill pesanan meja",
+      "Order ticket otomatis ke dapur",
+      "Metode pembayaran tunai & QRIS",
+      "Laporan tutup buku harian"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/kedai_baleni_ci.png"
+  },
+  {
+    "id": "kedai_djoenang",
+    "title": "Kedai Djoenang POS & Inventory Kitchen",
+    "category": "Retail, POS & FnB",
+    "stack": "PHP Native / MySQL",
+    "description": "Sistem operasional resto mencakup pesanan pelanggan, manajemen stok bahan baku dapur, dan laporan laba kotor.",
+    "features": [
+      "Pemotongan stok bahan baku otomatis per pesanan",
+      "Dashboard grafik penjualan harian",
+      "Cetak bill struk",
+      "Manajemen diskon member"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/kedai_djoenang.png"
+  },
+  {
+    "id": "kedai_djoenang-lucuk",
+    "title": "Kedai Djoenang Front-End UI Interactive",
+    "category": "Retail, POS & FnB",
+    "stack": "HTML5 / CSS3 / JavaScript",
+    "description": "Antarmuka pemesanan mandiri (self-order) dengan tampilan interaktif, animasi ceria, dan pemilihan menu interaktif.",
+    "features": [
+      "Menu visual card interaktif",
+      "Keranjang belanja instan",
+      "Animasi UI interaktif ramah pelanggan",
+      "Responsive design smartphone"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/kedai_djoenang-lucuk.png"
+  },
+  {
+    "id": "laundry_native",
+    "title": "Sistem Kasir Laundry Kilat Native",
+    "category": "Retail, POS & FnB",
+    "stack": "PHP Native / MySQL",
+    "description": "Aplikasi ringan kasir laundry dengan kecepatan transaksi tinggi untuk operasional toko harian.",
+    "features": [
+      "Input cepat berat cucian",
+      "Pencatatan nama & kontak pelanggan",
+      "Status pengambilan pakaian",
+      "Export data transaksi"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/laundry_native.png"
+  },
+  {
+    "id": "risma_laundry_CI",
+    "title": "Risma Laundry Management System",
+    "category": "Retail, POS & FnB",
+    "stack": "CodeIgniter / MySQL",
+    "description": "Sistem pembukuan operasional usaha laundry dengan manajemen pelanggan, paket layanan, dan keuangan kasir.",
+    "features": [
+      "Manajemen deposit saldo member",
+      "Laporan penerimaan pendapatan laundry",
+      "Cetak nota struk kasir kecil",
+      "Filter transaksi belum lunas"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/risma_laundry_CI.png"
   },
   {
     "id": "summit_adventure",
@@ -1035,19 +540,514 @@ const PROJECTS_DATA = [
     "image": "assets/screenshots/summit_adventure.png"
   },
   {
-    "id": "teras_genz_CI",
-    "title": "Teras Gen-Z Cafe Order & Billing",
-    "category": "Retail, POS & FnB",
-    "stack": "CodeIgniter / Bootstrap",
-    "description": "Sistem kasir dan pemesanan cafe anak muda dengan alur pesanan meja dan rekap omset harian kasir.",
+    "id": "website_cms_UTS2233073",
+    "title": "Custom Web CMS & Article Publishing Engine",
+    "category": "Modern Web & SPA",
+    "stack": "PHP / MySQL / Bootstrap",
+    "description": "Content Management System kustom untuk penerbitan artikel, manajemen kategori, dan kontrol hak akses editor.",
     "features": [
-      "Billing pesanan meja cafe",
-      "Rekap omset shift kerja barista",
-      "Kategori signature drinks & snacks",
-      "Pencetakan nota pembayaran"
+      "WYSIWYG Rich Text Editor",
+      "Upload media gambar aman",
+      "Kategori & tag artikel bertingkat",
+      "Panel kontrol moderasi konten"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/teras_genz_CI.png"
+    "image": "assets/screenshots/website_cms_UTS2233073.png"
+  },
+  {
+    "id": "pembayaranTU_CI3",
+    "title": "Sistem Informasi Pembayaran TU & SPP Sekolah",
+    "category": "Pendidikan & Akademik",
+    "stack": "CodeIgniter 3 / MySQL",
+    "description": "Aplikasi loket pembayaran Tata Usaha (TU) sekolah untuk pembayaran SPP, uang gedung, dan administrasi seragam.",
+    "features": [
+      "Pencatatan tagihan per siswa",
+      "Cetak kuitansi pembayaran resmi",
+      "Laporan penerimaan kas harian kasir TU",
+      "Rekap tunggakan pembayaran siswa"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/pembayaranTU_CI3.png"
+  },
+  {
+    "id": "nocturnal_ci",
+    "title": "Nocturnal Studio Creative Agency Portfolio Web",
+    "category": "Modern Web & SPA",
+    "stack": "CodeIgniter / CSS3 / JavaScript",
+    "description": "Website profil kreatif studio dengan galeri karya interaktif, daftar layanan produksi, dan form konsultasi klien.",
+    "features": [
+      "Filter portofolio desain & fotografi",
+      "Animasi scrolling interaktif",
+      "Testimoni klien & showcase brand",
+      "Formulir pesan kontak terhubung email"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/nocturnal_ci.png"
+  },
+  {
+    "id": "si_rocket_chicken",
+    "title": "Sistem Kasir & Operasional Rocket Chicken",
+    "category": "Retail, POS & FnB",
+    "stack": "PHP / CodeIgniter / MySQL",
+    "description": "Sistem Point of Sale (POS) dan pengelolaan penjualan harian outlet kuliner cepat saji Rocket Chicken.",
+    "features": [
+      "Transaksi kasir cepat (POS touch-friendly)",
+      "Perhitungan kembalian & diskon promo",
+      "Cetak struk kasir thermal",
+      "Laporan omset harian & menu terlaris"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/si_rocket_chicken.png"
+  },
+  {
+    "id": "monitoring",
+    "title": "Server & Network Service Health Monitoring",
+    "category": "IoT, Monitoring & Industri",
+    "stack": "PHP / AJAX / Shell",
+    "description": "Aplikasi pemantauan ketersediaan server dan layanan jaringan dengan visualisasi uptime dan latency ping.",
+    "features": [
+      "Ping status check otomatis",
+      "Grafik response time server",
+      "Alert status offline server",
+      "Manajemen IP dan domain endpoint"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/monitoring.png"
+  },
+  {
+    "id": "native-pengiriman-barang",
+    "title": "Sistem Ekspedisi & Tracking Pengiriman Barang",
+    "category": "Enterprise & Inventory",
+    "stack": "PHP Native / MySQL",
+    "description": "Aplikasi manajemen logistik pengiriman barang dengan fitur generate nomor resi dan tracking status pengantaran kurir.",
+    "features": [
+      "Generate nomor resi unik",
+      "Update status pengiriman (Manifest, Transit, Delivered)",
+      "Pencetakan label resi pengiriman",
+      "Kalkulasi ongkos kirim"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/native-pengiriman-barang.png"
+  },
+  {
+    "id": "myproject_2233061",
+    "title": "Myproject 2233061",
+    "category": "Web Application",
+    "stack": "CodeIgniter (PHP)",
+    "description": "Sistem aplikasi web application berbasis CodeIgniter (PHP) yang dirancang untuk efisiensi operasional dan manajemen data.",
+    "features": [
+      "Manajemen data & transaksi sistem",
+      "Antarmuka pengguna responsif",
+      "Laporan dan rekapitulasi data",
+      "Keamanan akses pengguna"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/myproject_2233061.png"
+  },
+  {
+    "id": "myproject",
+    "title": "Myproject",
+    "category": "Web Application",
+    "stack": "CodeIgniter (PHP)",
+    "description": "Sistem aplikasi web application berbasis CodeIgniter (PHP) yang dirancang untuk efisiensi operasional dan manajemen data.",
+    "features": [
+      "Manajemen data & transaksi sistem",
+      "Antarmuka pengguna responsif",
+      "Laporan dan rekapitulasi data",
+      "Keamanan akses pengguna"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/myproject.png"
+  },
+  {
+    "id": "invtrio",
+    "title": "InvTrio - Multi-Branch Inventory System",
+    "category": "Enterprise & Inventory",
+    "stack": "PHP Native / MySQL",
+    "description": "Sistem inventaris multi-cabang untuk sinkronisasi persediaan barang di berbagai lokasi toko.",
+    "features": [
+      "Multi-outlet inventory tracking",
+      "Transfer stok antar cabang",
+      "Laporan konsolidasi penjualan",
+      "Manajemen hak akses kasir & supervisor"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/invtrio.png"
+  },
+  {
+    "id": "jilqu",
+    "title": "Jilqu",
+    "category": "Web Application",
+    "stack": "PHP Native",
+    "description": "Website jualan jilbab dan aksesorisnya",
+    "features": [
+      "Manajemen data & transaksi sistem",
+      "Antarmuka pengguna responsif",
+      "Laporan dan rekapitulasi data",
+      "Keamanan akses pengguna"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/jilqu.png"
+  },
+  {
+    "id": "inventory_gita",
+    "title": "Aplikasi Manajemen Stok & Pengadaan",
+    "category": "Enterprise & Inventory",
+    "stack": "PHP Native / MySQL",
+    "description": "Aplikasi pencatatan alur pengadaan barang dari supplier hingga distribusi ke unit-unit kerja.",
+    "features": [
+      "Pengajuan restock barang",
+      "Validasi penerimaan barang gudang",
+      "Laporan mutasi per departemen",
+      "Cetak invoice surat jalan"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/inventory_gita.PNG"
+  },
+  {
+    "id": "doc-control",
+    "title": "ISO Document Control & Compliance System",
+    "category": "IoT, Monitoring & Industri",
+    "stack": "Laravel / PHP / MySQL",
+    "description": "Sistem manajemen dokumen mutu perusahaan (SOP, WI, Formulir) dengan alur revisi, persetujuan bertingkat, dan watermark.",
+    "features": [
+      "Versioning dokumen terkendali",
+      "Multi-level approval workflow",
+      "Watermark otomatis status dokumen (Controlled/Obsolete)",
+      "Log riwayat perubahan dokumen"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/doc-control.png"
+  },
+  {
+    "id": "hbd-1",
+    "title": "Hbd 1",
+    "category": "Web Application",
+    "stack": "Native / Other",
+    "description": "Sistem aplikasi web application berbasis Native / Other yang dirancang untuk efisiensi operasional dan manajemen data.",
+    "features": [
+      "Manajemen data & transaksi sistem",
+      "Antarmuka pengguna responsif",
+      "Laporan dan rekapitulasi data",
+      "Keamanan akses pengguna"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/hbd-1.png"
+  },
+  {
+    "id": "hbd2u",
+    "title": "Hbd2U",
+    "category": "Web Application",
+    "stack": "Native / Other",
+    "description": "A responsive website used to wish someone a happy birthday. Created using HTML, Tailwind CSS, and JavaScript.",
+    "features": [
+      "Manajemen data & transaksi sistem",
+      "Antarmuka pengguna responsif",
+      "Laporan dan rekapitulasi data",
+      "Keamanan akses pengguna"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/hbd2u.png"
+  },
+  {
+    "id": "CRUD-Restoran",
+    "title": "Restaurant Table & Menu Management System",
+    "category": "Retail, POS & FnB",
+    "stack": "PHP Native / MySQL",
+    "description": "Aplikasi reservasi meja makan dan pemesanan menu makanan restoran dengan alur pesanan ke dapur.",
+    "features": [
+      "Katalog menu makanan & minuman",
+      "Status ketersediaan meja makan",
+      "Kalkulasi tagihan bill pesanan",
+      "CRUD kategori menu dinamis"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/CRUD-Restoran.png"
+  },
+  {
+    "id": "first_flutter_app",
+    "title": "Cross-Platform Mobile Application (Flutter)",
+    "category": "Mobile & Desktop",
+    "stack": "Flutter / Dart / Android",
+    "description": "Aplikasi mobile cross-platform (Android/iOS) berbasis Flutter & Dart dengan tampilan Material 3.",
+    "features": [
+      "Tampilan responsif multi-device",
+      "Stateful interactive widgets",
+      "Navigasi routing mobile",
+      "Integrasi API data eksternal"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/first_flutter_app.png"
+  },
+  {
+    "id": "LAH_vue",
+    "title": "LAH App - Interactive Vue Web Experience",
+    "category": "Modern Web & SPA",
+    "stack": "Vue.js / Vite / JavaScript",
+    "description": "Web aplikasi interaktif berbasis komponen Vue.js yang menyajikan pengalaman pengguna yang halus dan responsif.",
+    "features": [
+      "Komponen reaktif modular",
+      "Animasi transisi halus",
+      "Mobile-first responsive design",
+      "Optimalisasi bundle performa tinggi"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/LAH_vue.png"
+  },
+  {
+    "id": "lah-tki",
+    "title": "Lah Tki",
+    "category": "Web Application",
+    "stack": "Native / Other",
+    "description": "Sistem aplikasi web application berbasis Native / Other yang dirancang untuk efisiensi operasional dan manajemen data.",
+    "features": [
+      "Manajemen data & transaksi sistem",
+      "Antarmuka pengguna responsif",
+      "Laporan dan rekapitulasi data",
+      "Keamanan akses pengguna"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/lah-tki.png"
+  },
+  {
+    "id": "PrintAutoCount-web",
+    "title": "PrintAutoCount Production Monitoring Web",
+    "category": "IoT, Monitoring & Industri",
+    "stack": "PHP / JavaScript / WebSocket",
+    "description": "Dashboard monitoring berbasis web untuk melihat produktivitas mesin cetak dan rekap konsumsi kertas per shift.",
+    "features": [
+      "Live dashboard kuota cetak percetakan",
+      "Visualisasi grafik produktivitas mesin",
+      "Deteksi downtime mesin cetak",
+      "Laporan produksi per operator"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/PrintAutoCount-web.png"
+  },
+  {
+    "id": "PrintAutoCount",
+    "title": "PrintAutoCount Desktop Bridge Service",
+    "category": "IoT, Monitoring & Industri",
+    "stack": "Node.js / Electron / Desktop",
+    "description": "Aplikasi utilitas bridge untuk otomasi penghitungan lembar cetak mesin printer dan sinkronisasi ke server data produksi.",
+    "features": [
+      "Monitoring spooler print queue",
+      "Otomatisasi counter lembar cetak",
+      "Sinkronisasi socket data real-time",
+      "Log audit operator percetakan"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/PrintAutoCount.png"
+  },
+  {
+    "id": "lbg-new",
+    "title": "Lbg New",
+    "category": "Web Application",
+    "stack": "Vue.js",
+    "description": "TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. TODO: Guide users through getting your code up and r",
+    "features": [
+      "Manajemen data & transaksi sistem",
+      "Antarmuka pengguna responsif",
+      "Laporan dan rekapitulasi data",
+      "Keamanan akses pengguna"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/lbg-new.png"
+  },
+  {
+    "id": "sikel_vue",
+    "title": "Sikel - Single Page App Management System",
+    "category": "Modern Web & SPA",
+    "stack": "Vue.js / JavaScript / CSS3",
+    "description": "Aplikasi modern berbasis Vue.js dengan arsitektur reaktif SPA (Single Page Application) dan integrasi RESTful backend.",
+    "features": [
+      "State management Vuex / Pinia",
+      "Dynamic reactive UI components",
+      "Client-side routing tanpa reload halaman",
+      "Form validation real-time"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/sikel_vue.png"
+  },
+  {
+    "id": "lbg-email-sender-api",
+    "title": "Automated Transactional Email Service API",
+    "category": "IoT, Monitoring & Industri",
+    "stack": "Node.js / Express / Nodemailer",
+    "description": "Microservice pengiriman email otomatis (OTP, invoice, notifikasi sistem) dengan antrian pengiriman terjamin.",
+    "features": [
+      "Endpoint REST API pengiriman email",
+      "Template email HTML responsif",
+      "Fallback SMTP server",
+      "Logging deliverability & status pengiriman"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/lbg-email-sender-api.png"
+  },
+  {
+    "id": "sjb_timbangan_api",
+    "title": "SJB Digital Scale Weighbridge API Service",
+    "category": "IoT, Monitoring & Industri",
+    "stack": "Node.js / Express / REST API",
+    "description": "REST API backend untuk menjembatani perangkat jembatan timbang (weighbridge) pabrik dengan sistem database perusahaan.",
+    "features": [
+      "RESTful API serial weight parsing",
+      "Autentikasi API key & token",
+      "Logging transaksi muatan truk (Netto/Tara/Bruto)",
+      "Integritas data anti-manipulasi timbangan"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/sjb_timbangan_api.png"
+  },
+  {
+    "id": "laravel_inventory",
+    "title": "Smart Asset & Inventory Tracker",
+    "category": "Enterprise & Inventory",
+    "stack": "Laravel / MySQL / Tailwind",
+    "description": "Platform pelacakan aset dan stok internal perusahaan berbasis Laravel dengan riwayat mutasi perpindahan aset.",
+    "features": [
+      "QR Code / Labeling generator",
+      "Pencatatan depresiasi aset",
+      "Approval request pengambilan barang",
+      "Dashboard grafik pergerakan stok"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/laravel_inventory.png"
+  },
+  {
+    "id": "inventoryweb-laravel",
+    "title": "Warehouse & Inventory Management System",
+    "category": "Enterprise & Inventory",
+    "stack": "Laravel / Blade / MySQL",
+    "description": "Sistem manajemen pergudangan komprehensif dengan tracking SKU, minimum stock alert, dan alur purchase order ke supplier.",
+    "features": [
+      "Role access (Admin, Gudang, Manajer)",
+      "Automated low stock notification",
+      "Riwayat barang masuk (Inbound) & keluar (Outbound)",
+      "Export data barang ke format Excel & PDF"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/inventoryweb-laravel.png"
+  },
+  {
+    "id": "rent-nodejs",
+    "title": "Car & Vehicle Rental Booking API Backend",
+    "category": "Modern Web & SPA",
+    "stack": "Node.js / Express / MongoDB / MySQL",
+    "description": "Backend layanan penyewaan armada kendaraan dengan manajemen ketersediaan mobil, durasi rental, dan kalkulasi tarif.",
+    "features": [
+      "Arsitektur REST API dengan Express.js",
+      "Validasi jadwal ketersediaan armada",
+      "Kalkulasi tarif per jam / harian",
+      "Manajemen data pelanggan & sewa"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/rent-nodejs.png"
+  },
+  {
+    "id": "sentimen_analysis_tb_nativ",
+    "title": "Analisis Sentimen Twitter/X Penyakit Tuberkulosis (TB)",
+    "category": "Data Science & AI",
+    "stack": "Python / PHP / NLP",
+    "description": "Aplikasi pengolahan bahasa alami (NLP) untuk menganalisis sentimen masyarakat mengenai penyuluhan dan bahaya penyakit TB di media sosial.",
+    "features": [
+      "Preprocessing teks (Cleaning, Stemming, Stopwords)",
+      "Klasifikasi sentimen (Positif, Negatif, Netral)",
+      "Visualisasi Wordcloud & diagram sentimen",
+      "Evaluasi akurasi confusion matrix"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/sentimen_analysis_tb_nativ.png"
+  },
+  {
+    "id": "sinarjo-vue",
+    "title": "Sinarjo Portal & Enterprise Dashboard",
+    "category": "Modern Web & SPA",
+    "stack": "Vue.js / JavaScript / Tailwind",
+    "description": "Antarmuka enterprise dashboard interaktif berbasis Vue.js untuk visualisasi data operasional dan manajemen akun pengguna.",
+    "features": [
+      "Dashboard widget analitik dinamis",
+      "Multi-level navigation sidebar",
+      "Integrasi token authentication (JWT)",
+      "Komponen data table responsive"
+    ],
+    "is_flagship": false,
+    "image": null
+  },
+  {
+    "id": "abstract-java",
+    "title": "Object-Oriented Design Pattern Showcase (Java)",
+    "category": "Mobile & Desktop",
+    "stack": "Java / OOP / Design Patterns",
+    "description": "Implementasi konsep Object-Oriented Programming (OOP) tingkat lanjut mencakup Abstraction, Polymorphism, dan Encapsulation.",
+    "features": [
+      "Desain arsitektur abstract class & interface",
+      "Implementasi Clean Code & Design Patterns",
+      "Unit testing logic",
+      "Dokumentasi struktur OOP"
+    ],
+    "is_flagship": false,
+    "image": null
+  },
+  {
+    "id": "inventorySholikah",
+    "title": "Inventory Management & Rekap Stok UMKM",
+    "category": "Enterprise & Inventory",
+    "stack": "PHP Native / MySQL",
+    "description": "Solusi pencatatan stok dagang untuk efisiensi pembukuan persediaan barang dagangan UMKM.",
+    "features": [
+      "Katalog produk & varian harga",
+      "Perhitungan laba kotor penjualan",
+      "Rekap transaksi harian & bulanan",
+      "Sistem backup database"
+    ],
+    "is_flagship": false,
+    "image": null
+  },
+  {
+    "id": "industri_native",
+    "title": "Industri Native",
+    "category": "Web Application",
+    "stack": "Native / Other",
+    "description": "Sistem aplikasi web application berbasis Native / Other yang dirancang untuk efisiensi operasional dan manajemen data.",
+    "features": [
+      "Manajemen data & transaksi sistem",
+      "Antarmuka pengguna responsif",
+      "Laporan dan rekapitulasi data",
+      "Keamanan akses pengguna"
+    ],
+    "is_flagship": false,
+    "image": null
+  },
+  {
+    "id": "Prediksi-Kelas-Data",
+    "title": "Sistem Prediksi Klasifikasi Data Mining",
+    "category": "Data Science & AI",
+    "stack": "Python / PHP / Machine Learning",
+    "description": "Aplikasi implementasi algoritma klasifikasi data mining untuk pengelompokan dan prediksi pola data historis.",
+    "features": [
+      "Upload dataset CSV / Excel dinamis",
+      "Pembagian training vs testing data",
+      "Kalkulasi prediksi kelas target",
+      "Visualisasi matriks akurasi"
+    ],
+    "is_flagship": false,
+    "image": null
+  },
+  {
+    "id": "nextjs-portfolio-pageview-counter",
+    "title": "Nextjs Portfolio Pageview Counter",
+    "category": "Web Application",
+    "stack": "React / Next.js",
+    "description": "<div align=\"center\"> <a href=\"https://chronark.com\"><h1 align=\"center\">chronark.com</h1></a> My personal website, built with [Next.js](https://nextjs.org/), [Tailwind CSS](https://",
+    "features": [
+      "Manajemen data & transaksi sistem",
+      "Antarmuka pengguna responsif",
+      "Laporan dan rekapitulasi data",
+      "Keamanan akses pengguna"
+    ],
+    "is_flagship": false,
+    "image": "assets/screenshots/nextjs-portfolio-pageview-counter.png"
   },
   {
     "id": "testing",
@@ -1065,33 +1065,33 @@ const PROJECTS_DATA = [
     "image": null
   },
   {
-    "id": "ujian-online-laravel-vue",
-    "title": "Platform Ujian Online & CBT (Computer Based Test)",
-    "category": "Pendidikan & Akademik",
-    "stack": "Laravel / Vue.js / SPA / MySQL",
-    "description": "Aplikasi Computer-Based Testing modern dengan arsitektur Laravel API dan antarmuka interaktif Vue.js untuk ujian real-time tanpa lag.",
+    "id": "roblox",
+    "title": "Roblox",
+    "category": "Web Application",
+    "stack": "Python / Data Science",
+    "description": "Sistem aplikasi web application berbasis Python / Data Science yang dirancang untuk efisiensi operasional dan manajemen data.",
     "features": [
-      "Timer countdown anti-cheat",
-      "Bank soal multi-tipe (Pilihan Ganda & Essay)",
-      "Auto-grading nilai otomatis",
-      "Monitoring live pengerjaan siswa"
-    ],
-    "is_flagship": true,
-    "image": "assets/screenshots/ujian-online-laravel-vue.png"
-  },
-  {
-    "id": "website_cms_UTS2233073",
-    "title": "Custom Web CMS & Article Publishing Engine",
-    "category": "Modern Web & SPA",
-    "stack": "PHP / MySQL / Bootstrap",
-    "description": "Content Management System kustom untuk penerbitan artikel, manajemen kategori, dan kontrol hak akses editor.",
-    "features": [
-      "WYSIWYG Rich Text Editor",
-      "Upload media gambar aman",
-      "Kategori & tag artikel bertingkat",
-      "Panel kontrol moderasi konten"
+      "Manajemen data & transaksi sistem",
+      "Antarmuka pengguna responsif",
+      "Laporan dan rekapitulasi data",
+      "Keamanan akses pengguna"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/website_cms_UTS2233073.png"
+    "image": null
+  },
+  {
+    "id": "anagwer",
+    "title": "Anagwer",
+    "category": "Web Application",
+    "stack": "Native / Other",
+    "description": "- 👋 Hi, I’m @anagwer - 👀 I’m interested in coding - 🌱 I’m currently learning to be happy",
+    "features": [
+      "Manajemen data & transaksi sistem",
+      "Antarmuka pengguna responsif",
+      "Laporan dan rekapitulasi data",
+      "Keamanan akses pengguna"
+    ],
+    "is_flagship": false,
+    "image": null
   }
 ];
