@@ -1,7 +1,3 @@
-/**
- * Complete Portfolio Project Database (73 Projects)
- * Generated from local repositories in e:\\all-repos with Screenshot Assets
- */
 const PROJECTS_DATA = [
   {
     "id": "CRUD-Restoran",
@@ -16,7 +12,7 @@ const PROJECTS_DATA = [
       "CRUD kategori menu dinamis"
     ],
     "is_flagship": false,
-    "image": null
+    "image": "assets/screenshots/CRUD-Restoran.png"
   },
   {
     "id": "GiWeb",
@@ -31,7 +27,7 @@ const PROJECTS_DATA = [
       "Keamanan akses pengguna"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/GiWeb.jpg"
+    "image": "assets/screenshots/GiWeb.png"
   },
   {
     "id": "Inventory-Barang",
@@ -91,7 +87,7 @@ const PROJECTS_DATA = [
       "Log audit operator percetakan"
     ],
     "is_flagship": false,
-    "image": null
+    "image": "assets/screenshots/PrintAutoCount.png"
   },
   {
     "id": "PrintAutoCount-web",
@@ -151,7 +147,7 @@ const PROJECTS_DATA = [
       "Rekap data demografi santri"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/administrasi_santri.jpg"
+    "image": "assets/screenshots/administrasi_santri.png"
   },
   {
     "id": "anagwer",
@@ -226,7 +222,7 @@ const PROJECTS_DATA = [
       "Kirim notifikasi cucian selesai"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/e-laundry.jpg"
+    "image": "assets/screenshots/e-laundry.png"
   },
   {
     "id": "first_flutter_app",
@@ -271,7 +267,7 @@ const PROJECTS_DATA = [
       "Keamanan akses pengguna"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/hbd-1.jpeg"
+    "image": "assets/screenshots/hbd-1.png"
   },
   {
     "id": "hbd2u",
@@ -331,7 +327,7 @@ const PROJECTS_DATA = [
       "Keamanan akses pengguna"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/hub.jpg"
+    "image": "assets/screenshots/hub.png"
   },
   {
     "id": "industri_native",
@@ -391,7 +387,7 @@ const PROJECTS_DATA = [
       "Export data barang ke format Excel & PDF"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/inventoryweb-laravel.jpg"
+    "image": "assets/screenshots/inventoryweb-laravel.png"
   },
   {
     "id": "invtrio",
@@ -406,7 +402,7 @@ const PROJECTS_DATA = [
       "Manajemen hak akses kasir & supervisor"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/invtrio.jpg"
+    "image": "assets/screenshots/invtrio.png"
   },
   {
     "id": "jilqu",
@@ -421,7 +417,7 @@ const PROJECTS_DATA = [
       "Keamanan akses pengguna"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/jilqu.jpg"
+    "image": "assets/screenshots/jilqu.png"
   },
   {
     "id": "kebabdotcom",
@@ -436,7 +432,7 @@ const PROJECTS_DATA = [
       "Katalog promo mingguan"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/kebabdotcom.jpeg"
+    "image": "assets/screenshots/kebabdotcom.png"
   },
   {
     "id": "kedai_baleni_ci",
@@ -466,7 +462,7 @@ const PROJECTS_DATA = [
       "Manajemen diskon member"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/kedai_djoenang.webp"
+    "image": "assets/screenshots/kedai_djoenang.png"
   },
   {
     "id": "kedai_djoenang-lucuk",
@@ -511,7 +507,7 @@ const PROJECTS_DATA = [
       "Dashboard grafik pergerakan stok"
     ],
     "is_flagship": false,
-    "image": null
+    "image": "assets/screenshots/laravel_inventory.png"
   },
   {
     "id": "laundry_native",
@@ -541,7 +537,7 @@ const PROJECTS_DATA = [
       "Logging deliverability & status pengiriman"
     ],
     "is_flagship": false,
-    "image": null
+    "image": "assets/screenshots/lbg-email-sender-api.png"
   },
   {
     "id": "lbg-new",
@@ -571,7 +567,7 @@ const PROJECTS_DATA = [
       "Filter transaksi tanggal dinamis"
     ],
     "is_flagship": false,
-    "image": null
+    "image": "assets/screenshots/letger.png"
   },
   {
     "id": "mabel_gm",
@@ -586,7 +582,7 @@ const PROJECTS_DATA = [
       "Integrasi kontak admin WhatsApp"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/mabel_gm.jpg"
+    "image": "assets/screenshots/mabel_gm.png"
   },
   {
     "id": "man1magelang",
@@ -646,7 +642,7 @@ const PROJECTS_DATA = [
       "Keamanan akses pengguna"
     ],
     "is_flagship": false,
-    "image": null
+    "image": "assets/screenshots/myproject.png"
   },
   {
     "id": "myproject_2233061",
@@ -661,7 +657,7 @@ const PROJECTS_DATA = [
       "Keamanan akses pengguna"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/myproject_2233061.jpg"
+    "image": "assets/screenshots/myproject_2233061.png"
   },
   {
     "id": "native-pengiriman-barang",
@@ -676,7 +672,7 @@ const PROJECTS_DATA = [
       "Kalkulasi ongkos kirim"
     ],
     "is_flagship": false,
-    "image": null
+    "image": "assets/screenshots/native-pengiriman-barang.png"
   },
   {
     "id": "newqr",
@@ -691,7 +687,7 @@ const PROJECTS_DATA = [
       "Live camera QR scanner"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/newqr.jpg"
+    "image": "assets/screenshots/newqr.png"
   },
   {
     "id": "nextjs-portfolio-pageview-counter",
@@ -751,7 +747,7 @@ const PROJECTS_DATA = [
       "Cetak bukti tanda pendaftaran resmi"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/ppdb-musamu.jpg"
+    "image": "assets/screenshots/ppdb-musamu.png"
   },
   {
     "id": "rent-nodejs",
@@ -766,7 +762,7 @@ const PROJECTS_DATA = [
       "Manajemen data pelanggan & sewa"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/rent-nodejs.jpg"
+    "image": "assets/screenshots/rent-nodejs.png"
   },
   {
     "id": "risma_laundry_CI",
@@ -916,7 +912,7 @@ const PROJECTS_DATA = [
       "Integritas data anti-manipulasi timbangan"
     ],
     "is_flagship": false,
-    "image": null
+    "image": "assets/screenshots/sjb_timbangan_api.png"
   },
   {
     "id": "sp-kopi-certainty-Factor",
@@ -976,7 +972,7 @@ const PROJECTS_DATA = [
       "History riwayat konsultasi orang tua"
     ],
     "is_flagship": false,
-    "image": null
+    "image": "assets/screenshots/sp_penyakit_anak.png"
   },
   {
     "id": "spk-saw",
@@ -1021,7 +1017,7 @@ const PROJECTS_DATA = [
       "Penyaringan data per wilayah dusun/desa"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/statkes303.jpg"
+    "image": "assets/screenshots/statkes303.png"
   },
   {
     "id": "summit_adventure",
@@ -1036,7 +1032,7 @@ const PROJECTS_DATA = [
       "Cetak surat perjanjian sewa"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/summit_adventure.jpg"
+    "image": "assets/screenshots/summit_adventure.png"
   },
   {
     "id": "teras_genz_CI",
@@ -1051,7 +1047,7 @@ const PROJECTS_DATA = [
       "Pencetakan nota pembayaran"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/teras_genz_CI.jpg"
+    "image": "assets/screenshots/teras_genz_CI.png"
   },
   {
     "id": "testing",
@@ -1096,6 +1092,6 @@ const PROJECTS_DATA = [
       "Panel kontrol moderasi konten"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/website_cms_UTS2233073.jpg"
+    "image": "assets/screenshots/website_cms_UTS2233073.png"
   }
 ];
