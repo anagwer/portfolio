@@ -146,6 +146,10 @@ document.addEventListener('DOMContentLoaded', () => {
               <div class="project-stack-tag">
                 <i class="bi bi-code-slash text-primary"></i> ${p.stack}
               </div>
+              <div class="project-algo-badge">
+                <i class="bi bi-cpu-fill text-warning"></i>
+                <span><strong>Metode:</strong> ${(p.algorithm || 'Arsitektur MVC').split('+')[0].trim()}</span>
+              </div>
               <p class="project-desc">${p.description}</p>
               
               <ul class="project-features-list">
@@ -242,12 +246,86 @@ document.addEventListener('DOMContentLoaded', () => {
     const p = PROJECTS_DATA.find(item => item.id === projectId);
     if (!p) return;
 
-    document.getElementById('modal-title').textContent = p.title;
-    document.getElementById('modal-cat-badge').textContent = p.category;
-    document.getElementById('modal-cat-badge').className = `project-category-badge ${getCategoryClass(p.category)}`;
-    document.getElementById('modal-stack').textContent = p.stack;
-    document.getElementById('modal-desc').textContent = p.description;
-    
+    // Header info
+    const titleEl = document.getElementById('modal-title');
+    if (titleEl) titleEl.textContent = p.title;
+
+    const catBadge = document.getElementById('modal-cat-badge');
+    if (catBadge) {
+      catBadge.textContent = p.category;
+      catBadge.className = `project-category-badge ${getCategoryClass(p.category)}`;
+    }
+
+    const flagshipBadge = document.getElementById('modal-flagship-badge');
+    if (flagshipBadge) {
+      if (p.is_flagship) {
+        flagshipBadge.classList.remove('d-none');
+      } else {
+        flagshipBadge.classList.add('d-none');
+      }
+    }
+
+    // 1. Algoritma & Logika Komputasi
+    const algoNameEl = document.getElementById('modal-algo-name');
+    if (algoNameEl) {
+      algoNameEl.textContent = p.algorithm || 'Model-View-Controller (MVC) Architectural Pattern';
+    }
+
+    const algoDescEl = document.getElementById('modal-algo-desc');
+    if (algoDescEl) {
+      algoDescEl.textContent = p.algorithm_desc || 'Sistem dirancang dengan arsitektur terstruktur dan pemisahan logika bisnis untuk menjamin integritas data serta performa eksekusi yang optimal.';
+    }
+
+    // 2. Arsitektur & Spesifikasi Teknologi
+    const techLangEl = document.getElementById('modal-tech-languages');
+    if (techLangEl) {
+      const langs = (p.languages && p.languages.length > 0) ? p.languages : ['PHP', 'JavaScript', 'HTML5', 'CSS3'];
+      techLangEl.innerHTML = langs.map(l => `<span class="tech-badge-chip">${l}</span>`).join('');
+    }
+
+    const techFwEl = document.getElementById('modal-tech-frameworks');
+    if (techFwEl) {
+      const fws = (p.frameworks && p.frameworks.length > 0) ? p.frameworks : ['Bootstrap', 'jQuery', 'AJAX'];
+      techFwEl.innerHTML = fws.map(f => `<span class="tech-badge-chip">${f}</span>`).join('');
+    }
+
+    const techDbEl = document.getElementById('modal-tech-database');
+    if (techDbEl) {
+      techDbEl.innerHTML = `<span class="tech-badge-chip">${p.database || 'MySQL Relational Database'}</span>`;
+    }
+
+    // 3. Modul & Fitur Fungsional
+    const modulesContainer = document.getElementById('modal-modules-container');
+    if (modulesContainer) {
+      if (p.modules && p.modules.length > 0) {
+        modulesContainer.innerHTML = p.modules.map(m => `
+          <div class="modal-module-card">
+            <div class="module-card-title">
+              <i class="bi ${m.icon || 'bi-check-circle-fill'}"></i>
+              <span>${m.title}</span>
+            </div>
+            <div class="module-card-desc">${m.desc}</div>
+          </div>
+        `).join('');
+      } else if (p.features && p.features.length > 0) {
+        modulesContainer.innerHTML = p.features.map(f => `
+          <div class="modal-module-card">
+            <div class="module-card-title">
+              <i class="bi bi-check-circle-fill"></i>
+              <span>${f}</span>
+            </div>
+            <div class="module-card-desc">Modul fitur terintegrasi dengan validasi sistem menyeluruh.</div>
+          </div>
+        `).join('');
+      } else {
+        modulesContainer.innerHTML = '';
+      }
+    }
+
+    // 4. Deskripsi & Nilai Solusi Bisnis
+    const descEl = document.getElementById('modal-desc');
+    if (descEl) descEl.textContent = p.description;
+
     // Project image preview in modal
     const modalImgContainer = document.getElementById('modal-img-container');
     if (modalImgContainer) {
@@ -264,17 +342,11 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    // Features list in modal
-    const modalFeaturesList = document.getElementById('modal-features');
-    if (modalFeaturesList && p.features) {
-      modalFeaturesList.innerHTML = p.features.map(f => `
-        <div class="col-md-6 mb-2">
-          <div class="d-flex align-items-center gap-2">
-            <i class="bi bi-check2-circle text-success fs-5 flex-shrink-0"></i>
-            <span class="text-main">${f}</span>
-          </div>
-        </div>
-      `).join('');
+    // Dynamic WhatsApp consultation link
+    const waBtn = document.getElementById('modal-project-wa-btn');
+    if (waBtn) {
+      const waText = `Halo anagwer, saya melihat portofolio proyek: *${p.title}* (${p.stack}) dengan algoritma *${p.algorithm || 'MVC'}*. Saya tertarik untuk konsultasi implementasi/asistensi serupa.`;
+      waBtn.href = `https://wa.me/628988865557?text=${encodeURIComponent(waText)}`;
     }
 
     detailModal.show();

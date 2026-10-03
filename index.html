@@ -32,7 +32,7 @@
     <div class="container">
       <a class="navbar-brand navbar-brand-badge" href="#">
         <i class="bi bi-code-square text-primary"></i>
-        <span>anagwer<span class="text-primary">.dev</span></span>
+        <span>anagwer</span>
       </a>
 
       <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-label="Toggle navigation">
@@ -352,10 +352,6 @@
             </div>
 
             <div>
-              <button class="btn btn-outline-custom w-100 justify-content-center py-2 mb-2" onclick="openNotebookModal()">
-                <i class="bi bi-journal-code text-info me-1"></i>
-                <span>Buka 119+ Katalog Notebook (.ipynb)</span>
-              </button>
               <a href="https://wa.me/628988865557?text=Halo%20anagwer,%20saya%20mau%20konsultasi%20mengenai%20Tugas%20atau%20Proyek%20Python%20Data%20Science%20/%20Machine%20Learning" target="_blank" class="btn btn-card-detail">
                 <i class="bi bi-whatsapp text-success"></i>
                 <span>Konsultasi Proyek Python AI</span>
@@ -747,36 +743,71 @@
     <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
-          <div>
-            <span id="modal-cat-badge" class="project-category-badge cat-web mb-2">Category</span>
+          <div class="w-100 pe-3">
+            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-2">
+              <span id="modal-cat-badge" class="project-category-badge cat-web">Category</span>
+              <span id="modal-flagship-badge" class="badge badge-flagship d-none"><i class="bi bi-star-fill text-warning me-1"></i> Proyek Flagship</span>
+            </div>
             <h4 class="modal-title fw-bold" id="modal-title">Nama Proyek</h4>
-            <div class="text-muted small">
-              <i class="bi bi-code-slash text-primary me-1"></i> <span id="modal-stack" class="text-main fw-semibold">Tech Stack</span>
+            <div class="d-flex align-items-center gap-2 flex-wrap mt-2">
+              <span class="badge-status-pill"><span class="pulsing-dot me-1"></span> 100% Production-Grade Code</span>
+              <span class="badge-status-pill"><i class="bi bi-shield-check text-success me-1"></i> Arsitektur Clean MVC</span>
+              <span class="badge-status-pill"><i class="bi bi-cpu-fill text-warning me-1"></i> Logika & Algoritma Teruji</span>
             </div>
           </div>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close align-self-start mt-1" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
 
         <div class="modal-body">
+          <!-- Project Image Preview -->
           <div id="modal-img-container" class="d-none"></div>
-          <h6 class="fw-bold text-highlight mb-2">Deskripsi & Nilai Solusi:</h6>
-          <p id="modal-desc" class="modal-desc-text mb-4 leading-relaxed"></p>
 
-          <h6 class="fw-bold text-highlight mb-2">Fitur Utama & Modul Fungsional:</h6>
-          <div id="modal-features" class="row mb-3">
-            <!-- Features populated by JS -->
+          <!-- 1. Algoritma & Logika Sistem -->
+          <div class="modal-algo-box">
+            <div class="algo-box-header">
+              <i class="bi bi-cpu-fill text-warning fs-5"></i>
+              <div>
+                <div class="small text-warning text-uppercase fw-bold" style="font-size: 0.68rem; letter-spacing: 0.05em;">Algoritma & Metode Komputasi:</div>
+                <div id="modal-algo-name" class="algo-name-title">Metode Algoritma</div>
+              </div>
+            </div>
+            <p id="modal-algo-desc" class="algo-box-desc">Penjelasan komputasi algoritma.</p>
           </div>
 
-          <div class="project-modal-summary-box p-3 rounded-3 mt-3">
-            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
-              <span class="small text-muted"><i class="bi bi-shield-check text-success me-1"></i> Arsitektur & Logika Sistem Teruji</span>
-              <span class="small text-muted"><i class="bi bi-check-circle-fill text-primary me-1"></i> anagwer Verified Project</span>
+          <!-- 2. Arsitektur & Spesifikasi Teknologi -->
+          <div class="modal-tech-box">
+            <h6 class="fw-bold text-highlight mb-3"><i class="bi bi-layers-fill text-primary me-2"></i>Spesifikasi Bahasa & Arsitektur Teknologi:</h6>
+            <div class="tech-spec-row">
+              <div class="tech-spec-label"><i class="bi bi-code-slash text-info"></i> Bahasa:</div>
+              <div id="modal-tech-languages" class="tech-spec-value"></div>
+            </div>
+            <div class="tech-spec-row">
+              <div class="tech-spec-label"><i class="bi bi-box-seam text-primary"></i> Framework:</div>
+              <div id="modal-tech-frameworks" class="tech-spec-value"></div>
+            </div>
+            <div class="tech-spec-row">
+              <div class="tech-spec-label"><i class="bi bi-database text-success"></i> Database:</div>
+              <div id="modal-tech-database" class="tech-spec-value text-main small"></div>
             </div>
           </div>
+
+          <!-- 3. Modul & Fitur Unggulan -->
+          <h6 class="fw-bold text-highlight mb-2"><i class="bi bi-grid-1x2-fill text-info me-2"></i>Modul & Fitur Fungsional Sistem:</h6>
+          <div id="modal-modules-container" class="modal-module-grid">
+            <!-- Populated dynamically by JS -->
+          </div>
+
+          <!-- 4. Deskripsi & Nilai Solusi -->
+          <h6 class="fw-bold text-highlight mb-2"><i class="bi bi-info-circle-fill text-primary me-2"></i>Deskripsi & Nilai Solusi Bisnis:</h6>
+          <p id="modal-desc" class="modal-desc-text mb-4 leading-relaxed"></p>
         </div>
 
-        <div class="modal-footer">
+        <div class="modal-footer d-flex justify-content-between flex-wrap gap-2">
           <button type="button" class="btn btn-outline-custom" data-bs-dismiss="modal">Tutup</button>
+          <a id="modal-project-wa-btn" href="https://wa.me/628988865557" target="_blank" class="btn btn-whatsapp-glow">
+            <i class="bi bi-whatsapp"></i>
+            <span>Konsultasikan Proyek Ini via WA</span>
+          </a>
         </div>
       </div>
     </div>
@@ -833,55 +864,7 @@
     </div>
   </div>
 
-  <!-- Python Notebook Catalog Modal -->
-  <div class="modal fade" id="notebookModal" tabindex="-1" aria-labelledby="modal-notebook-title" aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header">
-          <div>
-            <span class="badge bg-info-subtle text-info border border-info-subtle fw-bold mb-2">
-              <i class="bi bi-filetype-py me-1"></i> Python Data Science & ML Hub
-            </span>
-            <h4 class="modal-title fw-bold" id="modal-notebook-title">Katalog 119+ Notebook Eksperimen Python AI</h4>
-            <div class="text-muted small">
-              Eksplorasi kode implementasi langsung di Google Drive / Colab (Deep Learning, CNN, SVM, Clustering, Prediksi).
-            </div>
-          </div>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
 
-        <div class="modal-body">
-          <div class="row g-3 mb-3">
-            <div class="col-md-7">
-              <div class="search-box">
-                <i class="bi bi-search"></i>
-                <input type="text" id="notebook-search-input" class="form-control search-input" placeholder="Cari notebook (misal: CNN, ResNet, Sayur, Saham, SVM, K-Means)...">
-              </div>
-            </div>
-            <div class="col-md-5 d-flex align-items-center justify-content-md-end">
-              <span id="notebook-count" class="small text-muted fw-semibold">Menampilkan 119 notebook</span>
-            </div>
-          </div>
-
-          <div class="notebook-filter-pills mb-3" id="notebook-category-pills">
-            <!-- Filter buttons generated by JS -->
-          </div>
-
-          <div class="notebook-list-container" id="notebook-list-container">
-            <!-- Populated by JS -->
-          </div>
-        </div>
-
-        <div class="modal-footer d-flex justify-content-between flex-wrap gap-2">
-          <button type="button" class="btn btn-outline-custom" data-bs-dismiss="modal">Tutup</button>
-          <a href="https://wa.me/628988865557?text=Halo%20anagwer,%20saya%20mau%20konsultasi%20mengenai%20proyek%20Python%20AI%20/%20Notebook" target="_blank" class="btn btn-whatsapp-glow">
-            <i class="bi bi-whatsapp"></i>
-            <span>Konsultasi Proyek Python via WA</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- Footer -->
   <footer class="text-center">

@@ -12,7 +12,40 @@ const PROJECTS_DATA = [
       "Rekap jumlah kunjungan pasien per hari"
     ],
     "is_flagship": true,
-    "image": "assets/screenshots/antrian_klinik.png"
+    "image": "assets/screenshots/antrian_klinik.png",
+    "algorithm": "FIFO (First-In, First-Out) Queue Scheduling + Pattern Auto-Fill",
+    "algorithm_desc": "Mengatur antrean pasien secara berurutan dan transparan berdasarkan timestamp kedatangan (FIFO). Dilengkapi logika validasi format NIK 16 digit dan sinkronisasi status pemanggilan per poli dokter secara asinkron (AJAX long-polling).",
+    "languages": [
+      "PHP 8.x",
+      "JavaScript (ES6+)",
+      "SQL",
+      "HTML5/CSS3"
+    ],
+    "frameworks": [
+      "CodeIgniter 3 (MVC Architecture)",
+      "Bootstrap 5",
+      "jQuery AJAX",
+      "SweetAlert2"
+    ],
+    "database": "MySQL (InnoDB, Relasi Tabel Pasien, Terapis, Poliklinik, dan Transaksi Antrean)",
+    "modules": [
+      {
+        "title": "Modul Auto-Fill & Pendaftaran",
+        "desc": "Input form pendaftaran cepat dengan simulasi data KTP dan validasi identitas pasien."
+      },
+      {
+        "title": "Modul Multi-Poli & Layanan Terpadu",
+        "desc": "Pilihan poli tujuan ganda (multi-layanan) dengan alokasi otomatis terapis dan dokter yang bertugas."
+      },
+      {
+        "title": "Modul Pemanggilan Antrean Real-Time",
+        "desc": "Dashboard loket pemanggilan nomor urut pasien per poli dengan pembaruan status dinamis."
+      },
+      {
+        "title": "Modul Rekapitulasi & Riwayat Kunjungan",
+        "desc": "Laporan data pasien harian/bulanan beserta riwayat keluhan untuk rekam medis klinik."
+      }
+    ]
   },
   {
     "id": "administrasi_santri",
@@ -27,7 +60,40 @@ const PROJECTS_DATA = [
       "Rekap data demografi santri"
     ],
     "is_flagship": true,
-    "image": "assets/screenshots/administrasi_santri.png"
+    "image": "assets/screenshots/administrasi_santri.png",
+    "algorithm": "Role-Based Access Control (RBAC) + Hierarchical Relational Data Mapping",
+    "algorithm_desc": "Otorisasi bertingkat memisahkan hak akses Pengurus, Wali Santri, dan Pimpinan Pondok. Menggunakan algoritma hash password satu arah (Bcrypt/MD5) untuk proteksi akun serta query filtering multi-parameter data santri.",
+    "languages": [
+      "PHP 8.x",
+      "JavaScript",
+      "SQL",
+      "HTML5/CSS3"
+    ],
+    "frameworks": [
+      "CodeIgniter 3",
+      "Bootstrap 4/5",
+      "LineIcons",
+      "DataTables.js"
+    ],
+    "database": "MySQL (Tabel Santri, Wali, Pembayaran Iuran, Legalitas SK Kemenag, dan Jadwal)",
+    "modules": [
+      {
+        "title": "Modul Profil & Legalitas Kemenag",
+        "desc": "Penyajian profil institusi, legalitas resmi SK Kemenag, NSPP, dan struktur kepengurusan pondok."
+      },
+      {
+        "title": "Modul Pendaftaran Santri Baru (Online)",
+        "desc": "Pendaftaran daring calon santri dengan upload berkas dan generate bukti formulir digital."
+      },
+      {
+        "title": "Modul Manajemen Data Santri & Kamar",
+        "desc": "Pendataan santri mukim, pembagian asrama/kamar, serta data riwayat perizinan santri."
+      },
+      {
+        "title": "Modul Agenda & Jadwal Harian",
+        "desc": "Pusat informasi kegiatan taklim, sholat berjamaah, dan jadwal kurikulum kepesantrenan."
+      }
+    ]
   },
   {
     "id": "sp-kopi-certainty-Factor",
@@ -42,7 +108,39 @@ const PROJECTS_DATA = [
       "Laporan hasil konsultasi cetak PDF"
     ],
     "is_flagship": true,
-    "image": "assets/screenshots/sp-kopi-certainty-Factor.png"
+    "image": "assets/screenshots/sp-kopi-certainty-Factor.png",
+    "algorithm": "Certainty Factor (CF) Inference Engine (Kombinasi Multi-Gejala)",
+    "algorithm_desc": "Mengkuantifikasi derajat kepastian pakar botani dan pengguna melalui formula CF(H,E) = MB(H,E) - MD(H,E). CF kombinasi dihitung berantai: CF_gabungan = CF1 + CF2 * (1 - CF1) untuk menghasilkan persentase keyakinan diagnosis tertinggi.",
+    "languages": [
+      "PHP 8.x",
+      "JavaScript",
+      "SQL",
+      "HTML5/CSS3"
+    ],
+    "frameworks": [
+      "PHP Native OOP/Procedural",
+      "Bootstrap 5",
+      "Custom CSS Glassmorphism"
+    ],
+    "database": "MySQL (Tabel Hama/Penyakit, Gejala, Aturan Bobot Pakar CF, dan Riwayat Diagnosa)",
+    "modules": [
+      {
+        "title": "Inference Engine Certainty Factor",
+        "desc": "Kalkulator inferensi matematis yang memproses gejala terpilih dengan bobot keyakinan pengguna."
+      },
+      {
+        "title": "Modul Rule-Base & Master Gejala",
+        "desc": "Manajemen data basis pengetahuan gejala (symptom) dan hama/penyakit tanaman kopi."
+      },
+      {
+        "title": "Modul Hasil Konsultasi & Solusi",
+        "desc": "Menampilkan diagnosis penyakit dominan, nilai persentase CF, serta instruksi penanganan fungisida/tindakan petani."
+      },
+      {
+        "title": "Modul FAQ & Edukasi Budidaya",
+        "desc": "Ensiklopedia panduan pencegahan penyakit kopi dan teknik perawatan tanaman berkala."
+      }
+    ]
   },
   {
     "id": "sp_jurusan",
@@ -57,7 +155,39 @@ const PROJECTS_DATA = [
       "Dashboard admin sekolah"
     ],
     "is_flagship": true,
-    "image": "assets/screenshots/sp_jurusan.png"
+    "image": "assets/screenshots/sp_jurusan.png",
+    "algorithm": "Forward Chaining Rule-Based Expert System + Affinity Scoring",
+    "algorithm_desc": "Penalaran maju (Forward Chaining) mencocokkan fakta-fakta minat dan bakat yang dipilih pengguna terhadap sekumpulan rule base untuk menyimpulkan jurusan studi lanjutan (IPA, IPS, Bahasa, atau Jurusan Kuliah Spesifik) dengan nilai kesesuaian tertinggi.",
+    "languages": [
+      "PHP 8.x",
+      "JavaScript",
+      "SQL",
+      "HTML5/CSS3"
+    ],
+    "frameworks": [
+      "PHP Native",
+      "Bootstrap 5",
+      "jQuery"
+    ],
+    "database": "MySQL (Tabel Minat, Bakat, Jurusan, Rule Implikasi IF-THEN, dan Riwayat Siswa)",
+    "modules": [
+      {
+        "title": "Kuisioner Penelusuran Minat & Bakat",
+        "desc": "Form interaktif pilihan preferensi bidang logika, sosial, sains, seni, dan kepemimpinan."
+      },
+      {
+        "title": "Mesin Inferensi Forward Chaining",
+        "desc": "Pencocokan runut maju fakta kriteria pengguna terhadap basis aturan penjurusan."
+      },
+      {
+        "title": "Laporan Hasil & Rekomendasi Karir",
+        "desc": "Rangkuman jurusan yang paling sesuai beserta prospek profesi di masa depan."
+      },
+      {
+        "title": "Modul Manajemen Aturan (Admin)",
+        "desc": "Fleksibilitas guru BK untuk menambah atau mengubah bobot kriteria dan jurusan baru."
+      }
+    ]
   },
   {
     "id": "teras_genz_CI",
@@ -72,7 +202,40 @@ const PROJECTS_DATA = [
       "Pencetakan nota pembayaran"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/teras_genz_CI.png"
+    "image": "assets/screenshots/teras_genz_CI.png",
+    "algorithm": "Multi-Item Cart Calculation Engine & Category-Driven Dynamic Filtering",
+    "algorithm_desc": "Komputasi keranjang belanja dinamis berbasis session dengan kalkulasi diskon otomatis, subtotal varian (ukuran, topping, gula/es), dan generate pesanan langsung terintegrasi WhatsApp Order Gateway.",
+    "languages": [
+      "PHP 8.x",
+      "JavaScript",
+      "SQL",
+      "HTML5/CSS3"
+    ],
+    "frameworks": [
+      "CodeIgniter 3",
+      "Bootstrap 5",
+      "jQuery AJAX",
+      "SweetAlert2"
+    ],
+    "database": "MySQL (Tabel Menu Minuman, Kategori, Varian Topping, dan Transaksi Pemesanan)",
+    "modules": [
+      {
+        "title": "Katalog Menu Interaktif & Promo",
+        "desc": "Filter dinamis kategori (Boba, Tea, Milk Tea, Buah Asli, Kopi) dengan badge diskon 15%."
+      },
+      {
+        "title": "Modul Custom Varian & Topping",
+        "desc": "Pilihan level gula, takaran es, dan tambahan topping per item dengan kalkulasi harga seketika."
+      },
+      {
+        "title": "Keranjang & Checkout WhatsApp",
+        "desc": "Penyusunan ringkasan order rapi dan pembuatan pesan langsung ke kontak kasir gerai."
+      },
+      {
+        "title": "Dashboard Pengelolaan Menu (Admin)",
+        "desc": "Kelola ketersediaan stok bahan dan status aktif menu harian."
+      }
+    ]
   },
   {
     "id": "mabel_gm",
@@ -87,7 +250,40 @@ const PROJECTS_DATA = [
       "Integrasi kontak admin WhatsApp"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/mabel_gm.png"
+    "image": "assets/screenshots/mabel_gm.png",
+    "algorithm": "Automated Cost of Goods Sold (HPP) Calculation Algorithm & Production Sizing",
+    "algorithm_desc": "Algoritma estimasi biaya produksi mebel presisi: Menghitung kubikasi bahan baku plywood meranti 18mm, luas lapisan HPL, aksesoris engsel hidrolik, dan ongkos tenaga kerja dengan margin markup transparan.",
+    "languages": [
+      "PHP 8.x",
+      "JavaScript",
+      "SQL",
+      "HTML5/CSS3"
+    ],
+    "frameworks": [
+      "CodeIgniter 3",
+      "Bootstrap 4/5",
+      "FontAwesome",
+      "DataTables"
+    ],
+    "database": "MySQL (Tabel Produk Custom, Estimasi Bahan, Pesanan Klien, dan Tracking Produksi)",
+    "modules": [
+      {
+        "title": "Katalog & Transparansi Bahan",
+        "desc": "Koleksi produk mebel dengan breakdown spesifikasi material tanpa manipulasi mutu."
+      },
+      {
+        "title": "Kalkulator Estimasi Biaya Custom",
+        "desc": "Simulasi perhitungan anggaran Kitchen Set, Lemari Sliding, dan Meja sesuai ukuran ruangan."
+      },
+      {
+        "title": "Sistem Pelacakan Pesanan Real-Time",
+        "desc": "Fitur tracking progres pembuatan furniture khusus pelanggan hanya dengan nomor invoice."
+      },
+      {
+        "title": "Modul Manajemen Produksi Workshop",
+        "desc": "Pencatatan alokasi bahan baku dan jadwal pengerjaan tukang kayu."
+      }
+    ]
   },
   {
     "id": "sablon_gind_CI",
@@ -102,7 +298,40 @@ const PROJECTS_DATA = [
       "Invoice Down Payment (DP) & Pelunasan"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/sablon_gind_CI.png"
+    "image": "assets/screenshots/sablon_gind_CI.png",
+    "algorithm": "State-Machine Production Workflow Tracking & Token-Based Public Querying",
+    "algorithm_desc": "Mesin pelacak status produksi berfase teratur (Pending -> Antrean Jahit -> Sablon Manual/DTF -> QC Finishing -> Siap Ambil) dengan token unik anti-duplikasi untuk verifikasi pemesan tanpa perlu login.",
+    "languages": [
+      "PHP 8.x",
+      "JavaScript",
+      "SQL",
+      "HTML5/CSS3"
+    ],
+    "frameworks": [
+      "CodeIgniter 3",
+      "Bootstrap 5",
+      "jQuery AJAX",
+      "SweetAlert"
+    ],
+    "database": "MySQL (Tabel Pesanan, Alur Produksi, Katalog Kaos, Pelanggan, dan Pembayaran DP/Lunas)",
+    "modules": [
+      {
+        "title": "Pelacakan Status Tanpa Login",
+        "desc": "Input kode invoice pesanan untuk mengetahui tahap pengerjaan kaos secara transparan."
+      },
+      {
+        "title": "Katalog Bahan Kaos & Sablon",
+        "desc": "Edukasi ragam bahan (Cotton Combed 24s/30s, Heavyweight) dan jenis tinta sablon."
+      },
+      {
+        "title": "Formulir Pemesanan Custom",
+        "desc": "Pengunggahan file desain, rincian ukuran (S, M, L, XL, XXL), dan pemilihan jenis tinta."
+      },
+      {
+        "title": "Dashboard Manajer Produksi",
+        "desc": "Pengendalian alur kerja workshop konveksi dan pencatatan kas bon serta pelunasan."
+      }
+    ]
   },
   {
     "id": "siakad_sd_alfirdaus",
@@ -117,7 +346,40 @@ const PROJECTS_DATA = [
       "Cetak lembar rapor siswa PDF"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/siakad_sd_alfirdaus.png"
+    "image": "assets/screenshots/siakad_sd_alfirdaus.png",
+    "algorithm": "Weighted Academic Grading Aggregator & Report Card Compiler",
+    "algorithm_desc": "Perhitungan akumulasi nilai akhir siswa berdasarkan bobot tugas, penilaian harian (UH), PTS, dan PAS sesuai standar Kurikulum Merdeka, serta pemeringkatan prestasi otomatis per kelas.",
+    "languages": [
+      "PHP 8.x",
+      "JavaScript",
+      "SQL",
+      "HTML5/CSS3"
+    ],
+    "frameworks": [
+      "PHP Native Custom MVC",
+      "Bootstrap 4",
+      "DataTables.js",
+      "FPDF"
+    ],
+    "database": "MySQL (Tabel Siswa, Guru, Mata Pelajaran, Nilai Akademik, dan Pengumuman)",
+    "modules": [
+      {
+        "title": "Portal Akademik & Profil Sekolah",
+        "desc": "Informasi visi misi, berita sekolah, ekstrakurikuler, dan kalender pendidikan."
+      },
+      {
+        "title": "Modul Penginputan Nilai Guru",
+        "desc": "Input ledger nilai mata pelajaran, catatan sikap spiritual/sosial, dan kehadiran."
+      },
+      {
+        "title": "Cetak Rapor & Ledger Nilai",
+        "desc": "Ekspor rapor digital format PDF siap print untuk wali murid saat kenaikan kelas."
+      },
+      {
+        "title": "Manajemen Data Siswa & Kelas",
+        "desc": "Pembagian rombongan belajar (rombel) dan mutasi siswa per tahun ajaran."
+      }
+    ]
   },
   {
     "id": "man1magelang",
@@ -132,7 +394,39 @@ const PROJECTS_DATA = [
       "Desain responsif ramah mobile"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/man1magelang.png"
+    "image": "assets/screenshots/man1magelang.png",
+    "algorithm": "Asynchronous Content Routing & Multi-Section Information Architecture",
+    "algorithm_desc": "Struktur arsitektur informasi modular Pelayanan Terpadu Satu Pintu (PTSP) dengan pemisahan komponen statis dan dinamis untuk akses cepat pada koneksi mobile rendah bandwidth.",
+    "languages": [
+      "HTML5",
+      "CSS3",
+      "JavaScript (ES6+)"
+    ],
+    "frameworks": [
+      "Vanilla CSS Modern Tokens",
+      "Bootstrap Grid",
+      "Owl Carousel",
+      "Feather Icons"
+    ],
+    "database": "Static JSON / Local Storage Metadata",
+    "modules": [
+      {
+        "title": "Portal Pelayanan PTSP Madrasah",
+        "desc": "Akses cepat permohonan legalisir ijazah, surat rekomendasi, dan mutasi siswa."
+      },
+      {
+        "title": "Profil & Sambutan Kepala Madrasah",
+        "desc": "Pemaparan visi misi, prestasi santri/madrasah, dan sarana prasarana penunjang."
+      },
+      {
+        "title": "Galeri Prestasi & Berita Terkini",
+        "desc": "Slider foto kegiatan ekstrakurikuler, olimpiade sains, dan keagamaan."
+      },
+      {
+        "title": "Informasi Kontak & Lokasi Terpadu",
+        "desc": "Tautan komunikasi cepat layanan humas dan integrasi denah kampus madrasah."
+      }
+    ]
   },
   {
     "id": "kebabdotcom",
@@ -147,7 +441,40 @@ const PROJECTS_DATA = [
       "Katalog promo mingguan"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/kebabdotcom.png"
+    "image": "assets/screenshots/kebabdotcom.png",
+    "algorithm": "POS Real-time Transaction Ledger & Split-Item Subtotal Computation",
+    "algorithm_desc": "Mesin kalkulasi transaksi kasir cepat (Point of Sale) dengan komputasi kembalian tunai/QRIS otomatis, pemotongan stok bahan baku (kulit kebab, daging, saus), dan pembukuan kasir harian.",
+    "languages": [
+      "PHP 8.x",
+      "JavaScript",
+      "SQL",
+      "HTML5/CSS3"
+    ],
+    "frameworks": [
+      "CodeIgniter 3",
+      "Bootstrap 4",
+      "jQuery",
+      "Thermal Print Library"
+    ],
+    "database": "MySQL (Tabel Menu Kebab, Transaksi Kasir, Detail Item, dan Log Shift Kasir)",
+    "modules": [
+      {
+        "title": "Antarmuka Kasir POS Cepat",
+        "desc": "Pemilihan menu visual layar sentuh untuk kasir melayani pembeli antrean cepat."
+      },
+      {
+        "title": "Modul Cetak Struk Belanja",
+        "desc": "Format layout struk thermal 58mm/80mm dengan detail item dan pesan terima kasih."
+      },
+      {
+        "title": "Laporan Penjualan Shift Kasir",
+        "desc": "Rekonsiliasi omzet harian antara uang fisik laci kasir dan catatan sistem."
+      },
+      {
+        "title": "Pengaturan Harga & Varian Menu",
+        "desc": "Penambahan menu varian porsi (Small, Medium, Monster) dan ekstra keju."
+      }
+    ]
   },
   {
     "id": "monitoring_boiler",
@@ -162,7 +489,40 @@ const PROJECTS_DATA = [
       "Export log inspeksi industri"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/monitoring_boiler.png"
+    "image": "assets/screenshots/monitoring_boiler.png",
+    "algorithm": "Threshold Telemetry Checking & Moving Average Temperature Smoothing",
+    "algorithm_desc": "Monitoring telemetri sensor suhu, kelembaban, dan gas amonia pada peternakan ayam boiler. Menerapkan batas ambang (threshold alert) untuk memicu alarm peringatan dini saat suhu melebihi standar aman brooding.",
+    "languages": [
+      "PHP 8.x",
+      "JavaScript",
+      "SQL",
+      "HTML5/CSS3"
+    ],
+    "frameworks": [
+      "CodeIgniter 3",
+      "Bootstrap 4",
+      "Chart.js",
+      "AJAX Telemetry Polling"
+    ],
+    "database": "MySQL (Tabel Log Sensor Suhu, Riwayat Kematian/Afkir, Kandang, dan Operator)",
+    "modules": [
+      {
+        "title": "Dashboard Grafik Sensor Real-Time",
+        "desc": "Visualisasi kurva fluktuasi temperatur dan kelembaban kandang 24 jam nonstop."
+      },
+      {
+        "title": "Sistem Peringatan Dini (Alerting)",
+        "desc": "Status indikator bahaya saat suhu ruang boiler drop atau overheat."
+      },
+      {
+        "title": "Pencatatan Mortalitas & Pakan",
+        "desc": "Log harian tingkat kematian ayam, konsumsi pakan harian, dan bobot rata-rata (FCR)."
+      },
+      {
+        "title": "Laporan Performa Siklus Panen",
+        "desc": "Analisis efisiensi biaya pemanas boiler versus indeks performa produksi unggas."
+      }
+    ]
   },
   {
     "id": "letger",
@@ -177,7 +537,39 @@ const PROJECTS_DATA = [
       "Filter transaksi tanggal dinamis"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/letger.png"
+    "image": "assets/screenshots/letger.png",
+    "algorithm": "FIFO Inventory Valuation & Real-time Unrealized Capital Gain/Loss Evaluation",
+    "algorithm_desc": "Perhitungan valuasi portofolio emas fisik dengan metode First-In First-Out (FIFO). Mengkalkulasi break-even point (BEP), selisih spread harga beli versus harga buyback Antam hari ini secara otomatis.",
+    "languages": [
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3 Vanilla"
+    ],
+    "frameworks": [
+      "Modern Glassmorphism UI",
+      "Local Storage Persistence",
+      "Chart.js",
+      "CSS Grid"
+    ],
+    "database": "Local Client-Side Encrypted Storage / JSON Schema",
+    "modules": [
+      {
+        "title": "Kalkulator Portfolio Logam Mulia",
+        "desc": "Ringkasan total gramasi emas, modal akumulatif, dan nilai aset pasar saat ini."
+      },
+      {
+        "title": "Pencatatan Lot Beli Bertahap (DCA)",
+        "desc": "Input transaksi pembelian dengan tanggal, gramasi, harga per gram, dan biaya cetak."
+      },
+      {
+        "title": "Simulasi Keuntungan & Penjualan",
+        "desc": "Analisis keuntungan bersih (net gain) jika menjual pada harga buyback hari ini."
+      },
+      {
+        "title": "Grafik Tren Akumulasi Gramasi",
+        "desc": "Diagram pertumbuhan cadangan tabungan emas dari waktu ke waktu."
+      }
+    ]
   },
   {
     "id": "absensi_tempuran",
@@ -192,7 +584,40 @@ const PROJECTS_DATA = [
       "Cetak rekap absensi bulanan ASN"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/absensi_tempuran.png"
+    "image": "assets/screenshots/absensi_tempuran.png",
+    "algorithm": "Geofencing Coordinate Validation (Haversine Formula) & Work-Hour Calculation",
+    "algorithm_desc": "Validasi kehadiran pegawai berbasis radius jarak lokasi kantor kecamatan (Geofencing) dan pemindaian QR/kamera, mencatat keterlambatan secara otomatis berdasarkan jam kerja resmi.",
+    "languages": [
+      "PHP 8.x",
+      "JavaScript",
+      "SQL",
+      "HTML5/CSS3"
+    ],
+    "frameworks": [
+      "PHP Native",
+      "Bootstrap 4",
+      "HTML5 Geolocation API",
+      "Webcam.js"
+    ],
+    "database": "MySQL (Tabel Pegawai, Presensi Harian, Izin/Cuti, dan Titik Koordinat Kantor)",
+    "modules": [
+      {
+        "title": "Presensi Masuk & Pulang Terverifikasi",
+        "desc": "Pencatatan jam kerja otomatis dengan capture foto wajah dan lokasi GPS akurat."
+      },
+      {
+        "title": "Modul Pengajuan Izin & Cuti Sakit",
+        "desc": "Form upload surat keterangan dokter atau permohonan dinas luar secara online."
+      },
+      {
+        "title": "Rekapitulasi Kehadiran Bulanan",
+        "desc": "Laporan persentase kehadiran pegawai untuk penentuan tunjangan kinerja (TPP)."
+      },
+      {
+        "title": "Panel Kelola Data Pegawai & Unit",
+        "desc": "Master data NIP, jabatan seksi kecamatan, dan jadwal jam kerja fleksibel."
+      }
+    ]
   },
   {
     "id": "blt_magelang",
@@ -207,7 +632,40 @@ const PROJECTS_DATA = [
       "Cetak kartu bukti penerima manfaat"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/blt_magelang.png"
+    "image": "assets/screenshots/blt_magelang.png",
+    "algorithm": "Multi-Criteria Poverty Index Scoring & Priority Beneficiary Sorting",
+    "algorithm_desc": "Penentuan kelayakan penerima Bantuan Langsung Tunai (BLT) desa berdasarkan indikator ekonomi BPS (kondisi dinding rumah, lantai, pendapatan kepala keluarga, jumlah tanggungan, dan daya listrik).",
+    "languages": [
+      "PHP 8.x",
+      "JavaScript",
+      "SQL",
+      "HTML5/CSS3"
+    ],
+    "frameworks": [
+      "PHP Native",
+      "Bootstrap 4",
+      "DataTables.js",
+      "FPDF"
+    ],
+    "database": "MySQL (Tabel Warga/KK, Kriteria Kemiskinan, Skor Kelayakan, dan Daftar Penerima)",
+    "modules": [
+      {
+        "title": "Pendataan Kepala Keluarga Calon Penerima",
+        "desc": "Form survei parameter sosial ekonomi rumah tangga warga desa terpadu."
+      },
+      {
+        "title": "Scoring Kelayakan Bantuan Otomatis",
+        "desc": "Kalkulasi poin kemiskinan objektif untuk meminimalisir salah sasaran penerima bantuan."
+      },
+      {
+        "title": "Daftar Nominatif Penerima BLT",
+        "desc": "Perankingan urutan prioritas penerima dana bantuan sesuai kuota pagu anggaran."
+      },
+      {
+        "title": "Ekspor Dokumen Berita Acara Desa",
+        "desc": "Cetak berkas daftar penerima bantuan bertanda tangan kepala desa siap arsip."
+      }
+    ]
   },
   {
     "id": "hizetblue",
@@ -222,7 +680,37 @@ const PROJECTS_DATA = [
       "Keamanan akses pengguna"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/hizetblue.png"
+    "image": "assets/screenshots/hizetblue.png",
+    "languages": [
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3"
+    ],
+    "frameworks": [
+      "Native",
+      "Other"
+    ],
+    "database": "Local State / Indexed Storage",
+    "algorithm": "MVC Architecture & Asynchronous Event-Driven Processing",
+    "algorithm_desc": "Pemisahan logika model, view, dan controller untuk pemrosesan data responsif, modular, dan terstruktur rapi.",
+    "modules": [
+      {
+        "title": "Modul Otentikasi & Hak Akses",
+        "desc": "Sistem keamanan akun pengguna dengan enkripsi kredensial dan validasi hak akses."
+      },
+      {
+        "title": "Modul Pemrosesan Logika Sistem",
+        "desc": "Pengolahan alur kerja utama aplikasi sesuai aturan bisnis yang diterapkan."
+      },
+      {
+        "title": "Modul Antarmuka Responsif & Interaktif",
+        "desc": "Tampilan antarmuka dinamis yang nyaman diakses pada perangkat desktop maupun mobile."
+      },
+      {
+        "title": "Modul Rekapitulasi Data & Ekspor",
+        "desc": "Penyajian ringkasan data operasional dan kemudahan pengelolaan arsip."
+      }
+    ]
   },
   {
     "id": "hub",
@@ -237,7 +725,37 @@ const PROJECTS_DATA = [
       "Keamanan akses pengguna"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/hub.png"
+    "image": "assets/screenshots/hub.png",
+    "languages": [
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3"
+    ],
+    "frameworks": [
+      "Native",
+      "Other"
+    ],
+    "database": "Local State / Indexed Storage",
+    "algorithm": "MVC Architecture & Asynchronous Event-Driven Processing",
+    "algorithm_desc": "Pemisahan logika model, view, dan controller untuk pemrosesan data responsif, modular, dan terstruktur rapi.",
+    "modules": [
+      {
+        "title": "Modul Otentikasi & Hak Akses",
+        "desc": "Sistem keamanan akun pengguna dengan enkripsi kredensial dan validasi hak akses."
+      },
+      {
+        "title": "Modul Pemrosesan Logika Sistem",
+        "desc": "Pengolahan alur kerja utama aplikasi sesuai aturan bisnis yang diterapkan."
+      },
+      {
+        "title": "Modul Antarmuka Responsif & Interaktif",
+        "desc": "Tampilan antarmuka dinamis yang nyaman diakses pada perangkat desktop maupun mobile."
+      },
+      {
+        "title": "Modul Rekapitulasi Data & Ekspor",
+        "desc": "Penyajian ringkasan data operasional dan kemudahan pengelolaan arsip."
+      }
+    ]
   },
   {
     "id": "forecasting_iphone",
@@ -252,7 +770,40 @@ const PROJECTS_DATA = [
       "Export hasil estimasi kebutuhan stok"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/forecasting_iphone.png"
+    "image": "assets/screenshots/forecasting_iphone.png",
+    "algorithm": "Single Exponential Smoothing (SES) & Weighted Moving Average (WMA)",
+    "algorithm_desc": "Peramalan volume penjualan unit smartphone iPhone untuk periode berikutnya dengan parameter alpha optimal. Dilengkapi komputasi metrik akurasi MAPE (Mean Absolute Percentage Error) dan MSE.",
+    "languages": [
+      "PHP 8.x",
+      "JavaScript",
+      "SQL",
+      "HTML5/CSS3"
+    ],
+    "frameworks": [
+      "CodeIgniter 3",
+      "Bootstrap 4",
+      "Chart.js",
+      "DataTables.js"
+    ],
+    "database": "MySQL (Tabel Seri iPhone, Data Penjualan Historis, Hasil Forecast, dan Evaluasi Error)",
+    "modules": [
+      {
+        "title": "Input Deret Waktu Historis (Time Series)",
+        "desc": "Pencatatan data penjualan bulanan per tipe unit iPhone (Pro, Pro Max, Standar)."
+      },
+      {
+        "title": "Mesin Hitung Peramalan SES / WMA",
+        "desc": "Kalkulasi matematis proyeksi permintaan stok untuk bulan berikutnya."
+      },
+      {
+        "title": "Grafik Komparasi Aktual vs Prediksi",
+        "desc": "Visualisasi tren riil penjualan berbanding garis estimasi ramalan stok."
+      },
+      {
+        "title": "Evaluasi Toleransi Akurasi MAPE",
+        "desc": "Penentuan tingkat keandalan model peramalan dalam mendukung keputusan pembelian grosir."
+      }
+    ]
   },
   {
     "id": "statkes303",
@@ -267,7 +818,39 @@ const PROJECTS_DATA = [
       "Penyaringan data per wilayah dusun/desa"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/statkes303.png"
+    "image": "assets/screenshots/statkes303.png",
+    "languages": [
+      "PHP 8.x",
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3",
+      "SQL"
+    ],
+    "frameworks": [
+      "PHP Native",
+      "MySQL"
+    ],
+    "database": "MySQL / MariaDB (Relational Schema & Indexed Foreign Keys)",
+    "algorithm": "FIFO (First-In First-Out) Scheduling & Queue Coordination",
+    "algorithm_desc": "Penjadwalan antrean waktu nyata dengan pemrosesan urutan teratur dan sinkronisasi status loket secara asinkron.",
+    "modules": [
+      {
+        "title": "Modul Otentikasi & Hak Akses",
+        "desc": "Sistem keamanan akun pengguna dengan enkripsi kredensial dan validasi hak akses."
+      },
+      {
+        "title": "Modul Pemrosesan Logika Sistem",
+        "desc": "Pengolahan alur kerja utama aplikasi sesuai aturan bisnis yang diterapkan."
+      },
+      {
+        "title": "Modul Antarmuka Responsif & Interaktif",
+        "desc": "Tampilan antarmuka dinamis yang nyaman diakses pada perangkat desktop maupun mobile."
+      },
+      {
+        "title": "Modul Rekapitulasi Data & Ekspor",
+        "desc": "Penyajian ringkasan data operasional dan kemudahan pengelolaan arsip."
+      }
+    ]
   },
   {
     "id": "ppdb-musamu",
@@ -282,7 +865,40 @@ const PROJECTS_DATA = [
       "Cetak bukti tanda pendaftaran resmi"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/ppdb-musamu.png"
+    "image": "assets/screenshots/ppdb-musamu.png",
+    "algorithm": "Online Admission Verification Workflow & Academic Weighted Assessment",
+    "algorithm_desc": "Sistem penerimaan peserta didik baru madrasah dengan verifikasi NISN, upload berkas digital, penilaian skor gabungan nilai rapor + tes wawancara, dan pengumuman seleksi real-time.",
+    "languages": [
+      "PHP 8.x",
+      "JavaScript",
+      "SQL",
+      "HTML5/CSS3"
+    ],
+    "frameworks": [
+      "PHP Native Custom Architecture",
+      "Bootstrap 4",
+      "SweetAlert2",
+      "FPDF"
+    ],
+    "database": "MySQL (Tabel Calon Siswa, Orang Tua, Nilai Seleksi, Jalur Pendaftaran, dan Status Kelulusan)",
+    "modules": [
+      {
+        "title": "Formulir Registrasi Daring Mandiri",
+        "desc": "Pengisian data biodata calon santri baru dan pemilihan jalur reguler / prestasi."
+      },
+      {
+        "title": "Verifikasi Berkas Administrasi Panitia",
+        "desc": "Panel pengawas PPDB untuk memvalidasi kartu keluarga, akta lahir, dan bukti transfer."
+      },
+      {
+        "title": "Pengumuman Hasil Seleksi Online",
+        "desc": "Pengecekan kelulusan cukup dengan mengetik nomor pendaftaran peserta."
+      },
+      {
+        "title": "Cetak Kartu Ujian & Formulir Registrasi",
+        "desc": "Penerbitan dokumen pendaftaran resmi berpasfoto dan QR verifikasi panitia."
+      }
+    ]
   },
   {
     "id": "newqr",
@@ -297,7 +913,39 @@ const PROJECTS_DATA = [
       "Live camera QR scanner"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/newqr.png"
+    "image": "assets/screenshots/newqr.png",
+    "algorithm": "Dynamic 2D QR Code Matrix Encoding & AX ERP Identifier Mapping",
+    "algorithm_desc": "Generate kode QR matriks resolusi tinggi dengan error-correction level H (High 30%). Mendukung pemindaian instan untuk pelacakan batch lot industri dan integrasi Microsoft Dynamics AX.",
+    "languages": [
+      "PHP 8.x",
+      "JavaScript",
+      "HTML5/CSS3"
+    ],
+    "frameworks": [
+      "CodeIgniter 3",
+      "PHP QR Code Library",
+      "Bootstrap 5",
+      "Canvas API"
+    ],
+    "database": "MySQL (Tabel Batch Serial, Log Pemindaian, dan Parameter Format Label)",
+    "modules": [
+      {
+        "title": "Generator QR Code Kustom",
+        "desc": "Pembuatan QR code instan dengan penyesuaian ukuran piksel, margin, dan data teks/link."
+      },
+      {
+        "title": "Batch Printing Label Barcode",
+        "desc": "Tata letak cetak stiker label QR massal sesuai format kertas stiker barcode industri."
+      },
+      {
+        "title": "Scanner & Decoder Terintegrasi",
+        "desc": "Fitur uji baca kode QR via kamera webcam untuk memastikan keterbacaan data."
+      },
+      {
+        "title": "Log Riwayat Pembuatan Serial",
+        "desc": "Penyimpanan arsip kode serial yang telah dicetak untuk mencegah kode ganda."
+      }
+    ]
   },
   {
     "id": "saw_perawat",
@@ -312,7 +960,40 @@ const PROJECTS_DATA = [
       "Rekap penilaian berkala per periode"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/saw_perawat.png"
+    "image": "assets/screenshots/saw_perawat.png",
+    "algorithm": "Simple Additive Weighting (SAW) Method with Matrix Normalization",
+    "algorithm_desc": "Mengevaluasi kinerja tenaga medis/perawat melalui normalisasi matriks R (kriteria benefit dan cost), dikalikan dengan bobot preferensi kriteria W untuk menghasilkan skor ranking V perawat terbaik.",
+    "languages": [
+      "PHP 8.x",
+      "JavaScript",
+      "SQL",
+      "HTML5/CSS3"
+    ],
+    "frameworks": [
+      "CodeIgniter 3",
+      "Bootstrap 4",
+      "DataTables",
+      "Math Logic Engine"
+    ],
+    "database": "MySQL (Tabel Perawat, Kriteria Kinerja, Nilai Matriks, dan Hasil Perangkingan)",
+    "modules": [
+      {
+        "title": "Pembobotan Kriteria Penilaian",
+        "desc": "Pengaturan bobot disiplin, keterampilan klinis, komunikasi, empati, dan kehadiran."
+      },
+      {
+        "title": "Normalisasi Matriks Kinerja R",
+        "desc": "Proses transformasi nilai riil ke skala komparatif 0 hingga 1 secara otomatis."
+      },
+      {
+        "title": "Perhitungan Skor Preferensi Akhir V",
+        "desc": "Perkalian matriks dan penjumlahan terbobot untuk menentukan perawat teladan."
+      },
+      {
+        "title": "Cetak SK Hasil Evaluasi Manajemen",
+        "desc": "Laporan rekapitulasi penilaian kinerja tahunan untuk rujukan kenaikan jenjang karir."
+      }
+    ]
   },
   {
     "id": "sp_kopi",
@@ -327,7 +1008,38 @@ const PROJECTS_DATA = [
       "Keamanan akses pengguna"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/sp_kopi.png"
+    "image": "assets/screenshots/sp_kopi.png",
+    "languages": [
+      "PHP 8.x",
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3",
+      "SQL"
+    ],
+    "frameworks": [
+      "PHP Native"
+    ],
+    "database": "Local State / Indexed Storage",
+    "algorithm": "MVC Architecture & Asynchronous Event-Driven Processing",
+    "algorithm_desc": "Pemisahan logika model, view, dan controller untuk pemrosesan data responsif, modular, dan terstruktur rapi.",
+    "modules": [
+      {
+        "title": "Modul Otentikasi & Hak Akses",
+        "desc": "Sistem keamanan akun pengguna dengan enkripsi kredensial dan validasi hak akses."
+      },
+      {
+        "title": "Modul Pemrosesan Logika Sistem",
+        "desc": "Pengolahan alur kerja utama aplikasi sesuai aturan bisnis yang diterapkan."
+      },
+      {
+        "title": "Modul Antarmuka Responsif & Interaktif",
+        "desc": "Tampilan antarmuka dinamis yang nyaman diakses pada perangkat desktop maupun mobile."
+      },
+      {
+        "title": "Modul Rekapitulasi Data & Ekspor",
+        "desc": "Penyajian ringkasan data operasional dan kemudahan pengelolaan arsip."
+      }
+    ]
   },
   {
     "id": "sp_penyakit_anak",
@@ -342,7 +1054,39 @@ const PROJECTS_DATA = [
       "History riwayat konsultasi orang tua"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/sp_penyakit_anak.png"
+    "image": "assets/screenshots/sp_penyakit_anak.png",
+    "languages": [
+      "PHP 8.x",
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3",
+      "SQL"
+    ],
+    "frameworks": [
+      "PHP Native",
+      "MySQL"
+    ],
+    "database": "MySQL / MariaDB (Relational Schema & Indexed Foreign Keys)",
+    "algorithm": "Rule-Based Inference & Multi-Criteria Decision Evaluation",
+    "algorithm_desc": "Mengolah fakta dan bobot masukan pengguna menggunakan inferensi komputasi untuk menentukan rekomendasi keputusan paling akurat.",
+    "modules": [
+      {
+        "title": "Modul Otentikasi & Hak Akses",
+        "desc": "Sistem keamanan akun pengguna dengan enkripsi kredensial dan validasi hak akses."
+      },
+      {
+        "title": "Modul Pemrosesan Logika Sistem",
+        "desc": "Pengolahan alur kerja utama aplikasi sesuai aturan bisnis yang diterapkan."
+      },
+      {
+        "title": "Modul Antarmuka Responsif & Interaktif",
+        "desc": "Tampilan antarmuka dinamis yang nyaman diakses pada perangkat desktop maupun mobile."
+      },
+      {
+        "title": "Modul Rekapitulasi Data & Ekspor",
+        "desc": "Penyajian ringkasan data operasional dan kemudahan pengelolaan arsip."
+      }
+    ]
   },
   {
     "id": "spk-saw",
@@ -357,7 +1101,39 @@ const PROJECTS_DATA = [
       "Export rekap keputusan"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/spk-saw.png"
+    "image": "assets/screenshots/spk-saw.png",
+    "algorithm": "Simple Additive Weighting (SAW) / Fuzzy Multi-Attribute Decision Making",
+    "algorithm_desc": "Penyaringan dan perangkingan mobil bekas terbaik berdasarkan kriteria harga (cost), tahun produksi, konsumsi BBM, ketersediaan sparepart, dan kondisi mesin (benefit) dengan normalisasi matriks.",
+    "languages": [
+      "PHP 8.x",
+      "JavaScript",
+      "SQL",
+      "HTML5/CSS3"
+    ],
+    "frameworks": [
+      "PHP Native",
+      "Bootstrap 4",
+      "DataTables"
+    ],
+    "database": "MySQL (Tabel Katalog Mobil, Kriteria Pembeli, Nilai Normalisasi, Ranking Rekomendasi)",
+    "modules": [
+      {
+        "title": "Pencarian Sesuai Budget Pembeli",
+        "desc": "Filter preferensi batas dana maksimal, transmisi, dan tipe bodi kendaraan."
+      },
+      {
+        "title": "Proses Normalisasi Kriteria Mobil",
+        "desc": "Penyesuaian nilai harga dan kondisi teknis ke dalam matriks keputusan seragam."
+      },
+      {
+        "title": "Perankingan Mobil Paling Efisien",
+        "desc": "Urutan unit mobil yang memberikan value-for-money tertinggi bagi konsumen."
+      },
+      {
+        "title": "Master Data Stok Kendaraan",
+        "desc": "Pengelolaan unit mobil showroom yang siap dipasarkan."
+      }
+    ]
   },
   {
     "id": "spk_waspas",
@@ -372,7 +1148,40 @@ const PROJECTS_DATA = [
       "Visualisasi grafik peringkat"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/spk_waspas.png"
+    "image": "assets/screenshots/spk_waspas.png",
+    "algorithm": "Weight Aggregated Sum Product Assessment (WASPAS) Algorithm",
+    "algorithm_desc": "Metode pengambil keputusan multikriteria menggabungkan pendekatan WSM (Weighted Sum Model) dan WPM (Weighted Product Model) dengan optimasi parameter lambda untuk tingkat seleksi alternatif yang sangat objektif.",
+    "languages": [
+      "PHP 8.x",
+      "JavaScript",
+      "SQL",
+      "HTML5/CSS3"
+    ],
+    "frameworks": [
+      "PHP Native OOP",
+      "Bootstrap 5",
+      "DataTables",
+      "Custom Math Solver"
+    ],
+    "database": "MySQL (Tabel Alternatif, Bobot Kriteria, Matriks Ternormalisasi, Nilai Q-Score)",
+    "modules": [
+      {
+        "title": "Matriks Keputusan Kriteria",
+        "desc": "Input nilai performa tiap alternatif pada masing-masing parameter benefit dan cost."
+      },
+      {
+        "title": "Komputasi Model WSM & WPM",
+        "desc": "Perhitungan serempak penjumlahan terbobot dan perkalian eksponensial terbobot."
+      },
+      {
+        "title": "Kombinasi Nilai WASPAS (Q-Score)",
+        "desc": "Penerapan koefisien lambda untuk mendapatkan peringkat keputusan terbaik."
+      },
+      {
+        "title": "Laporan Rekomendasi Terpilih",
+        "desc": "Visualisasi peringkat alternatif terbaik siap ekspor ke dokumen pendukung."
+      }
+    ]
   },
   {
     "id": "hondasakti-stockopname",
@@ -387,7 +1196,39 @@ const PROJECTS_DATA = [
       "Laporan rekonsiliasi audit bulanan"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/hondasakti-stockopname.png"
+    "image": "assets/screenshots/hondasakti-stockopname.png",
+    "algorithm": "Barcode EAN-13 Checksum Parsing & Physical Inventory Discrepancy Reconciliation",
+    "algorithm_desc": "Audit stok fisik suku cadang dealer Honda dengan pemindaian barcode cepat. Menghitung otomatis varian minus (stok hilang/rusak) dan plus (kelebihan stok) terhadap master data ERP.",
+    "languages": [
+      "PHP 8.x",
+      "JavaScript",
+      "SQL",
+      "HTML5/CSS3"
+    ],
+    "frameworks": [
+      "PHP Native Enterprise",
+      "Bootstrap 4",
+      "QuaggaJS / HTML5 Barcode Reader"
+    ],
+    "database": "MySQL (Tabel Master Part Honda, Hasil Scan Fisik, Selisih Varian, dan Berita Acara)",
+    "modules": [
+      {
+        "title": "Validasi Barcode Suku Cadang",
+        "desc": "Pemindaian barcode part number Honda untuk pencocokan otomatis nama dan rak penyimpanan."
+      },
+      {
+        "title": "Deteksi Selisih Varian Fisik vs Sistem",
+        "desc": "Tampilan seketika jumlah fisik versus catatan sistem (status Cocok, Minus, atau Plus)."
+      },
+      {
+        "title": "Rekonsiliasi Audit Bulanan",
+        "desc": "Penerbitan Berita Acara Hasil Stock Opname untuk bagian akuntansi dan audit internal."
+      },
+      {
+        "title": "Master Rak & Lokasi Gudang",
+        "desc": "Pemetaan koordinat rak gudang dealer agar proses audit fisik berjalan sistematis."
+      }
+    ]
   },
   {
     "id": "ujian-online-laravel-vue",
@@ -402,7 +1243,40 @@ const PROJECTS_DATA = [
       "Monitoring live pengerjaan siswa"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/ujian-online-laravel-vue.png"
+    "image": "assets/screenshots/ujian-online-laravel-vue.png",
+    "algorithm": "Client-Server Real-time Sync & Anti-Cheat Focus Loss Detection Algorithm",
+    "algorithm_desc": "Arsitektur decoupled: Backend Laravel API mengelola bank soal terenkripsi dan timer server-side; Frontend Vue.js SPA menyajikan pengalaman ujian interaktif tanpa jeda reload dengan auto-save jawaban dan deteksi kecurangan.",
+    "languages": [
+      "PHP 8.2",
+      "JavaScript (Vue.js 3)",
+      "SQL",
+      "HTML5/CSS3"
+    ],
+    "frameworks": [
+      "Laravel 10 REST API",
+      "Vue.js 3 (Vite + SPA)",
+      "Pinia State Management",
+      "Tailwind CSS"
+    ],
+    "database": "MySQL (Tabel Peserta Ujian, Bank Soal, Lembar Jawaban, Token Sesi, Nilai Otomatis)",
+    "modules": [
+      {
+        "title": "Ruang Ujian Interaktif (SPA)",
+        "desc": "Pengerjaan soal pilihan ganda & esai dengan navigasi nomor soal dan penanda ragu-ragu."
+      },
+      {
+        "title": "Sistem Anti-Cheat & Timer Server",
+        "desc": "Pencegahan buka tab baru, penguncian kursor, dan auto-submit saat waktu habis."
+      },
+      {
+        "title": "Koreksi Nilai Otomatis (Auto-Grading)",
+        "desc": "Skor ujian langsung dikalkulasi seketika peserta menekan tombol selesai ujian."
+      },
+      {
+        "title": "Manajemen Bank Soal & Token (Guru)",
+        "desc": "Pembuatan paket soal, pengacakan urutan pertanyaan, dan generate token ujian."
+      }
+    ]
   },
   {
     "id": "Inventory-Barang",
@@ -417,7 +1291,40 @@ const PROJECTS_DATA = [
       "Filter pencarian barang cepat"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/Inventory-Barang.png"
+    "image": "assets/screenshots/Inventory-Barang.png",
+    "languages": [
+      "PHP 8.x",
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3",
+      "SQL"
+    ],
+    "frameworks": [
+      "CodeIgniter",
+      "PHP",
+      "MySQL"
+    ],
+    "database": "MySQL / MariaDB (Relational Schema & Indexed Foreign Keys)",
+    "algorithm": "Inventory Stock Movement & Ledger Transaction Accounting",
+    "algorithm_desc": "Pencatatan mutasi kuantitas stok barang, rekonsiliasi arus masuk dan keluar barang, serta pencegahan selisih inventaris riil.",
+    "modules": [
+      {
+        "title": "Modul Otentikasi & Hak Akses",
+        "desc": "Sistem keamanan akun pengguna dengan enkripsi kredensial dan validasi hak akses."
+      },
+      {
+        "title": "Modul Pemrosesan Logika Sistem",
+        "desc": "Pengolahan alur kerja utama aplikasi sesuai aturan bisnis yang diterapkan."
+      },
+      {
+        "title": "Modul Antarmuka Responsif & Interaktif",
+        "desc": "Tampilan antarmuka dinamis yang nyaman diakses pada perangkat desktop maupun mobile."
+      },
+      {
+        "title": "Modul Rekapitulasi Data & Ekspor",
+        "desc": "Penyajian ringkasan data operasional dan kemudahan pengelolaan arsip."
+      }
+    ]
   },
   {
     "id": "GiWeb",
@@ -432,7 +1339,38 @@ const PROJECTS_DATA = [
       "Keamanan akses pengguna"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/GiWeb.png"
+    "image": "assets/screenshots/GiWeb.png",
+    "languages": [
+      "PHP 8.x",
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3",
+      "SQL"
+    ],
+    "frameworks": [
+      "PHP Native"
+    ],
+    "database": "Local State / Indexed Storage",
+    "algorithm": "MVC Architecture & Asynchronous Event-Driven Processing",
+    "algorithm_desc": "Pemisahan logika model, view, dan controller untuk pemrosesan data responsif, modular, dan terstruktur rapi.",
+    "modules": [
+      {
+        "title": "Modul Otentikasi & Hak Akses",
+        "desc": "Sistem keamanan akun pengguna dengan enkripsi kredensial dan validasi hak akses."
+      },
+      {
+        "title": "Modul Pemrosesan Logika Sistem",
+        "desc": "Pengolahan alur kerja utama aplikasi sesuai aturan bisnis yang diterapkan."
+      },
+      {
+        "title": "Modul Antarmuka Responsif & Interaktif",
+        "desc": "Tampilan antarmuka dinamis yang nyaman diakses pada perangkat desktop maupun mobile."
+      },
+      {
+        "title": "Modul Rekapitulasi Data & Ekspor",
+        "desc": "Penyajian ringkasan data operasional dan kemudahan pengelolaan arsip."
+      }
+    ]
   },
   {
     "id": "e-laundry",
@@ -447,7 +1385,40 @@ const PROJECTS_DATA = [
       "Kirim notifikasi cucian selesai"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/e-laundry.png"
+    "image": "assets/screenshots/e-laundry.png",
+    "algorithm": "Weight-Based Dynamic Tariffing & Automated Customer Status Notification",
+    "algorithm_desc": "Sistem kasir laundry kiloan dan satuan: Menghitung tarif otomatis berdasarkan bobot timbangan, pilihan layanan (Reguler, Kilat, Express), dan estimasi selesai dengan cetak nota thermal.",
+    "languages": [
+      "PHP 8.x",
+      "JavaScript",
+      "SQL",
+      "HTML5/CSS3"
+    ],
+    "frameworks": [
+      "PHP Native",
+      "Bootstrap 4",
+      "jQuery",
+      "DataTables.js"
+    ],
+    "database": "MySQL (Tabel Pelanggan, Paket Laundry, Transaksi Masuk, dan Kas Keuangan)",
+    "modules": [
+      {
+        "title": "Penerimaan Order Kiloan & Satuan",
+        "desc": "Input berat timbangan pakaian dan pemilihan paket cuci kering setrika."
+      },
+      {
+        "title": "Status Pengerjaan Cucian",
+        "desc": "Monitor antrean cucian (Dicuci, Dikeringkan, Disetrika, Siap Diambil, Selesai)."
+      },
+      {
+        "title": "Cetak Nota Transaksi & Struk",
+        "desc": "Penerbitan tanda terima pakaian bernomor barcode untuk bukti pengambilan."
+      },
+      {
+        "title": "Laporan Pendapatan & Pengeluaran",
+        "desc": "Pencatatan laba kotor harian dan rekap pengeluaran deterjen serta parfum."
+      }
+    ]
   },
   {
     "id": "kedai_baleni_ci",
@@ -462,7 +1433,39 @@ const PROJECTS_DATA = [
       "Laporan tutup buku harian"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/kedai_baleni_ci.png"
+    "image": "assets/screenshots/kedai_baleni_ci.png",
+    "languages": [
+      "PHP 8.x",
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3",
+      "SQL"
+    ],
+    "frameworks": [
+      "CodeIgniter",
+      "MySQL"
+    ],
+    "database": "MySQL / MariaDB (Relational Schema & Indexed Foreign Keys)",
+    "algorithm": "Inventory Stock Movement & Ledger Transaction Accounting",
+    "algorithm_desc": "Pencatatan mutasi kuantitas stok barang, rekonsiliasi arus masuk dan keluar barang, serta pencegahan selisih inventaris riil.",
+    "modules": [
+      {
+        "title": "Modul Otentikasi & Hak Akses",
+        "desc": "Sistem keamanan akun pengguna dengan enkripsi kredensial dan validasi hak akses."
+      },
+      {
+        "title": "Modul Pemrosesan Logika Sistem",
+        "desc": "Pengolahan alur kerja utama aplikasi sesuai aturan bisnis yang diterapkan."
+      },
+      {
+        "title": "Modul Antarmuka Responsif & Interaktif",
+        "desc": "Tampilan antarmuka dinamis yang nyaman diakses pada perangkat desktop maupun mobile."
+      },
+      {
+        "title": "Modul Rekapitulasi Data & Ekspor",
+        "desc": "Penyajian ringkasan data operasional dan kemudahan pengelolaan arsip."
+      }
+    ]
   },
   {
     "id": "kedai_djoenang",
@@ -477,7 +1480,39 @@ const PROJECTS_DATA = [
       "Manajemen diskon member"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/kedai_djoenang.png"
+    "image": "assets/screenshots/kedai_djoenang.png",
+    "languages": [
+      "PHP 8.x",
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3",
+      "SQL"
+    ],
+    "frameworks": [
+      "PHP Native",
+      "MySQL"
+    ],
+    "database": "MySQL / MariaDB (Relational Schema & Indexed Foreign Keys)",
+    "algorithm": "Inventory Stock Movement & Ledger Transaction Accounting",
+    "algorithm_desc": "Pencatatan mutasi kuantitas stok barang, rekonsiliasi arus masuk dan keluar barang, serta pencegahan selisih inventaris riil.",
+    "modules": [
+      {
+        "title": "Modul Otentikasi & Hak Akses",
+        "desc": "Sistem keamanan akun pengguna dengan enkripsi kredensial dan validasi hak akses."
+      },
+      {
+        "title": "Modul Pemrosesan Logika Sistem",
+        "desc": "Pengolahan alur kerja utama aplikasi sesuai aturan bisnis yang diterapkan."
+      },
+      {
+        "title": "Modul Antarmuka Responsif & Interaktif",
+        "desc": "Tampilan antarmuka dinamis yang nyaman diakses pada perangkat desktop maupun mobile."
+      },
+      {
+        "title": "Modul Rekapitulasi Data & Ekspor",
+        "desc": "Penyajian ringkasan data operasional dan kemudahan pengelolaan arsip."
+      }
+    ]
   },
   {
     "id": "kedai_djoenang-lucuk",
@@ -492,7 +1527,39 @@ const PROJECTS_DATA = [
       "Responsive design smartphone"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/kedai_djoenang-lucuk.png"
+    "image": "assets/screenshots/kedai_djoenang-lucuk.png",
+    "languages": [
+      "Java 17 / Swing OOP",
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3"
+    ],
+    "frameworks": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "database": "Local State / Indexed Storage",
+    "algorithm": "Inventory Stock Movement & Ledger Transaction Accounting",
+    "algorithm_desc": "Pencatatan mutasi kuantitas stok barang, rekonsiliasi arus masuk dan keluar barang, serta pencegahan selisih inventaris riil.",
+    "modules": [
+      {
+        "title": "Modul Otentikasi & Hak Akses",
+        "desc": "Sistem keamanan akun pengguna dengan enkripsi kredensial dan validasi hak akses."
+      },
+      {
+        "title": "Modul Pemrosesan Logika Sistem",
+        "desc": "Pengolahan alur kerja utama aplikasi sesuai aturan bisnis yang diterapkan."
+      },
+      {
+        "title": "Modul Antarmuka Responsif & Interaktif",
+        "desc": "Tampilan antarmuka dinamis yang nyaman diakses pada perangkat desktop maupun mobile."
+      },
+      {
+        "title": "Modul Rekapitulasi Data & Ekspor",
+        "desc": "Penyajian ringkasan data operasional dan kemudahan pengelolaan arsip."
+      }
+    ]
   },
   {
     "id": "laundry_native",
@@ -507,7 +1574,39 @@ const PROJECTS_DATA = [
       "Export data transaksi"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/laundry_native.png"
+    "image": "assets/screenshots/laundry_native.png",
+    "languages": [
+      "PHP 8.x",
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3",
+      "SQL"
+    ],
+    "frameworks": [
+      "PHP Native",
+      "MySQL"
+    ],
+    "database": "MySQL / MariaDB (Relational Schema & Indexed Foreign Keys)",
+    "algorithm": "Inventory Stock Movement & Ledger Transaction Accounting",
+    "algorithm_desc": "Pencatatan mutasi kuantitas stok barang, rekonsiliasi arus masuk dan keluar barang, serta pencegahan selisih inventaris riil.",
+    "modules": [
+      {
+        "title": "Modul Otentikasi & Hak Akses",
+        "desc": "Sistem keamanan akun pengguna dengan enkripsi kredensial dan validasi hak akses."
+      },
+      {
+        "title": "Modul Pemrosesan Logika Sistem",
+        "desc": "Pengolahan alur kerja utama aplikasi sesuai aturan bisnis yang diterapkan."
+      },
+      {
+        "title": "Modul Antarmuka Responsif & Interaktif",
+        "desc": "Tampilan antarmuka dinamis yang nyaman diakses pada perangkat desktop maupun mobile."
+      },
+      {
+        "title": "Modul Rekapitulasi Data & Ekspor",
+        "desc": "Penyajian ringkasan data operasional dan kemudahan pengelolaan arsip."
+      }
+    ]
   },
   {
     "id": "risma_laundry_CI",
@@ -522,7 +1621,39 @@ const PROJECTS_DATA = [
       "Filter transaksi belum lunas"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/risma_laundry_CI.png"
+    "image": "assets/screenshots/risma_laundry_CI.png",
+    "languages": [
+      "PHP 8.x",
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3",
+      "SQL"
+    ],
+    "frameworks": [
+      "CodeIgniter",
+      "MySQL"
+    ],
+    "database": "MySQL / MariaDB (Relational Schema & Indexed Foreign Keys)",
+    "algorithm": "Inventory Stock Movement & Ledger Transaction Accounting",
+    "algorithm_desc": "Pencatatan mutasi kuantitas stok barang, rekonsiliasi arus masuk dan keluar barang, serta pencegahan selisih inventaris riil.",
+    "modules": [
+      {
+        "title": "Modul Otentikasi & Hak Akses",
+        "desc": "Sistem keamanan akun pengguna dengan enkripsi kredensial dan validasi hak akses."
+      },
+      {
+        "title": "Modul Pemrosesan Logika Sistem",
+        "desc": "Pengolahan alur kerja utama aplikasi sesuai aturan bisnis yang diterapkan."
+      },
+      {
+        "title": "Modul Antarmuka Responsif & Interaktif",
+        "desc": "Tampilan antarmuka dinamis yang nyaman diakses pada perangkat desktop maupun mobile."
+      },
+      {
+        "title": "Modul Rekapitulasi Data & Ekspor",
+        "desc": "Penyajian ringkasan data operasional dan kemudahan pengelolaan arsip."
+      }
+    ]
   },
   {
     "id": "summit_adventure",
@@ -537,7 +1668,40 @@ const PROJECTS_DATA = [
       "Cetak surat perjanjian sewa"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/summit_adventure.png"
+    "image": "assets/screenshots/summit_adventure.png",
+    "languages": [
+      "PHP 8.x",
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3",
+      "SQL"
+    ],
+    "frameworks": [
+      "PHP",
+      "CodeIgniter",
+      "Bootstrap"
+    ],
+    "database": "Local State / Indexed Storage",
+    "algorithm": "Inventory Stock Movement & Ledger Transaction Accounting",
+    "algorithm_desc": "Pencatatan mutasi kuantitas stok barang, rekonsiliasi arus masuk dan keluar barang, serta pencegahan selisih inventaris riil.",
+    "modules": [
+      {
+        "title": "Modul Otentikasi & Hak Akses",
+        "desc": "Sistem keamanan akun pengguna dengan enkripsi kredensial dan validasi hak akses."
+      },
+      {
+        "title": "Modul Pemrosesan Logika Sistem",
+        "desc": "Pengolahan alur kerja utama aplikasi sesuai aturan bisnis yang diterapkan."
+      },
+      {
+        "title": "Modul Antarmuka Responsif & Interaktif",
+        "desc": "Tampilan antarmuka dinamis yang nyaman diakses pada perangkat desktop maupun mobile."
+      },
+      {
+        "title": "Modul Rekapitulasi Data & Ekspor",
+        "desc": "Penyajian ringkasan data operasional dan kemudahan pengelolaan arsip."
+      }
+    ]
   },
   {
     "id": "website_cms_UTS2233073",
@@ -552,7 +1716,40 @@ const PROJECTS_DATA = [
       "Panel kontrol moderasi konten"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/website_cms_UTS2233073.png"
+    "image": "assets/screenshots/website_cms_UTS2233073.png",
+    "languages": [
+      "PHP 8.x",
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3",
+      "SQL"
+    ],
+    "frameworks": [
+      "PHP",
+      "MySQL",
+      "Bootstrap"
+    ],
+    "database": "MySQL / MariaDB (Relational Schema & Indexed Foreign Keys)",
+    "algorithm": "MVC Architecture & Asynchronous Event-Driven Processing",
+    "algorithm_desc": "Pemisahan logika model, view, dan controller untuk pemrosesan data responsif, modular, dan terstruktur rapi.",
+    "modules": [
+      {
+        "title": "Modul Otentikasi & Hak Akses",
+        "desc": "Sistem keamanan akun pengguna dengan enkripsi kredensial dan validasi hak akses."
+      },
+      {
+        "title": "Modul Pemrosesan Logika Sistem",
+        "desc": "Pengolahan alur kerja utama aplikasi sesuai aturan bisnis yang diterapkan."
+      },
+      {
+        "title": "Modul Antarmuka Responsif & Interaktif",
+        "desc": "Tampilan antarmuka dinamis yang nyaman diakses pada perangkat desktop maupun mobile."
+      },
+      {
+        "title": "Modul Rekapitulasi Data & Ekspor",
+        "desc": "Penyajian ringkasan data operasional dan kemudahan pengelolaan arsip."
+      }
+    ]
   },
   {
     "id": "pembayaranTU_CI3",
@@ -567,7 +1764,40 @@ const PROJECTS_DATA = [
       "Rekap tunggakan pembayaran siswa"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/pembayaranTU_CI3.png"
+    "image": "assets/screenshots/pembayaranTU_CI3.png",
+    "algorithm": "Student Tuition Billing Ledger & Payment Reconciliation Accounting",
+    "algorithm_desc": "Buku kas elektronik tata usaha sekolah untuk manajemen tagihan SPP bulanan, uang gedung, seragam, dan ujian, dengan deteksi tunggakan per siswa dan generate kwitansi bukti bayar.",
+    "languages": [
+      "PHP 8.x",
+      "JavaScript",
+      "SQL",
+      "HTML5/CSS3"
+    ],
+    "frameworks": [
+      "CodeIgniter 3",
+      "Bootstrap 4",
+      "DataTables.js",
+      "FPDF Kwitansi"
+    ],
+    "database": "MySQL (Tabel Siswa, Pos Tagihan, Transaksi Pembayaran TU, dan Kas Masuk/Keluar)",
+    "modules": [
+      {
+        "title": "Loket Pembayaran SPP & Iuran Sekolah",
+        "desc": "Input cicilan atau pelunasan tagihan siswa dengan kalkulasi sisa piutang akurat."
+      },
+      {
+        "title": "Cetak Kwitansi Pembayaran Resmi",
+        "desc": "Format cetak bukti setor dana bermaterai dan paraf petugas bendahara TU."
+      },
+      {
+        "title": "Monitoring Siswa Menunggak",
+        "desc": "Laporan filter cepat nama siswa yang belum melunasi kewajiban administrasi."
+      },
+      {
+        "title": "Rekapitulasi Kas Keuangan Bulanan",
+        "desc": "Buku kas umum tata usaha untuk pertanggungjawaban kepada kepala sekolah."
+      }
+    ]
   },
   {
     "id": "nocturnal_ci",
@@ -582,7 +1812,40 @@ const PROJECTS_DATA = [
       "Formulir pesan kontak terhubung email"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/nocturnal_ci.png"
+    "image": "assets/screenshots/nocturnal_ci.png",
+    "languages": [
+      "PHP 8.x",
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3",
+      "SQL"
+    ],
+    "frameworks": [
+      "CodeIgniter",
+      "CSS3",
+      "JavaScript"
+    ],
+    "database": "Local State / Indexed Storage",
+    "algorithm": "MVC Architecture & Asynchronous Event-Driven Processing",
+    "algorithm_desc": "Pemisahan logika model, view, dan controller untuk pemrosesan data responsif, modular, dan terstruktur rapi.",
+    "modules": [
+      {
+        "title": "Modul Otentikasi & Hak Akses",
+        "desc": "Sistem keamanan akun pengguna dengan enkripsi kredensial dan validasi hak akses."
+      },
+      {
+        "title": "Modul Pemrosesan Logika Sistem",
+        "desc": "Pengolahan alur kerja utama aplikasi sesuai aturan bisnis yang diterapkan."
+      },
+      {
+        "title": "Modul Antarmuka Responsif & Interaktif",
+        "desc": "Tampilan antarmuka dinamis yang nyaman diakses pada perangkat desktop maupun mobile."
+      },
+      {
+        "title": "Modul Rekapitulasi Data & Ekspor",
+        "desc": "Penyajian ringkasan data operasional dan kemudahan pengelolaan arsip."
+      }
+    ]
   },
   {
     "id": "si_rocket_chicken",
@@ -597,7 +1860,40 @@ const PROJECTS_DATA = [
       "Laporan omset harian & menu terlaris"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/si_rocket_chicken.png"
+    "image": "assets/screenshots/si_rocket_chicken.png",
+    "languages": [
+      "PHP 8.x",
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3",
+      "SQL"
+    ],
+    "frameworks": [
+      "PHP",
+      "CodeIgniter",
+      "MySQL"
+    ],
+    "database": "MySQL / MariaDB (Relational Schema & Indexed Foreign Keys)",
+    "algorithm": "Inventory Stock Movement & Ledger Transaction Accounting",
+    "algorithm_desc": "Pencatatan mutasi kuantitas stok barang, rekonsiliasi arus masuk dan keluar barang, serta pencegahan selisih inventaris riil.",
+    "modules": [
+      {
+        "title": "Modul Otentikasi & Hak Akses",
+        "desc": "Sistem keamanan akun pengguna dengan enkripsi kredensial dan validasi hak akses."
+      },
+      {
+        "title": "Modul Pemrosesan Logika Sistem",
+        "desc": "Pengolahan alur kerja utama aplikasi sesuai aturan bisnis yang diterapkan."
+      },
+      {
+        "title": "Modul Antarmuka Responsif & Interaktif",
+        "desc": "Tampilan antarmuka dinamis yang nyaman diakses pada perangkat desktop maupun mobile."
+      },
+      {
+        "title": "Modul Rekapitulasi Data & Ekspor",
+        "desc": "Penyajian ringkasan data operasional dan kemudahan pengelolaan arsip."
+      }
+    ]
   },
   {
     "id": "monitoring",
@@ -612,7 +1908,40 @@ const PROJECTS_DATA = [
       "Manajemen IP dan domain endpoint"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/monitoring.png"
+    "image": "assets/screenshots/monitoring.png",
+    "languages": [
+      "PHP 8.x",
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3",
+      "SQL"
+    ],
+    "frameworks": [
+      "PHP",
+      "AJAX",
+      "Shell"
+    ],
+    "database": "Local State / Indexed Storage",
+    "algorithm": "MVC Architecture & Asynchronous Event-Driven Processing",
+    "algorithm_desc": "Pemisahan logika model, view, dan controller untuk pemrosesan data responsif, modular, dan terstruktur rapi.",
+    "modules": [
+      {
+        "title": "Modul Otentikasi & Hak Akses",
+        "desc": "Sistem keamanan akun pengguna dengan enkripsi kredensial dan validasi hak akses."
+      },
+      {
+        "title": "Modul Pemrosesan Logika Sistem",
+        "desc": "Pengolahan alur kerja utama aplikasi sesuai aturan bisnis yang diterapkan."
+      },
+      {
+        "title": "Modul Antarmuka Responsif & Interaktif",
+        "desc": "Tampilan antarmuka dinamis yang nyaman diakses pada perangkat desktop maupun mobile."
+      },
+      {
+        "title": "Modul Rekapitulasi Data & Ekspor",
+        "desc": "Penyajian ringkasan data operasional dan kemudahan pengelolaan arsip."
+      }
+    ]
   },
   {
     "id": "native-pengiriman-barang",
@@ -627,7 +1956,39 @@ const PROJECTS_DATA = [
       "Kalkulasi ongkos kirim"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/native-pengiriman-barang.png"
+    "image": "assets/screenshots/native-pengiriman-barang.png",
+    "languages": [
+      "PHP 8.x",
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3",
+      "SQL"
+    ],
+    "frameworks": [
+      "PHP Native",
+      "MySQL"
+    ],
+    "database": "MySQL / MariaDB (Relational Schema & Indexed Foreign Keys)",
+    "algorithm": "Inventory Stock Movement & Ledger Transaction Accounting",
+    "algorithm_desc": "Pencatatan mutasi kuantitas stok barang, rekonsiliasi arus masuk dan keluar barang, serta pencegahan selisih inventaris riil.",
+    "modules": [
+      {
+        "title": "Modul Otentikasi & Hak Akses",
+        "desc": "Sistem keamanan akun pengguna dengan enkripsi kredensial dan validasi hak akses."
+      },
+      {
+        "title": "Modul Pemrosesan Logika Sistem",
+        "desc": "Pengolahan alur kerja utama aplikasi sesuai aturan bisnis yang diterapkan."
+      },
+      {
+        "title": "Modul Antarmuka Responsif & Interaktif",
+        "desc": "Tampilan antarmuka dinamis yang nyaman diakses pada perangkat desktop maupun mobile."
+      },
+      {
+        "title": "Modul Rekapitulasi Data & Ekspor",
+        "desc": "Penyajian ringkasan data operasional dan kemudahan pengelolaan arsip."
+      }
+    ]
   },
   {
     "id": "myproject_2233061",
@@ -642,7 +2003,38 @@ const PROJECTS_DATA = [
       "Keamanan akses pengguna"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/myproject_2233061.png"
+    "image": "assets/screenshots/myproject_2233061.png",
+    "languages": [
+      "PHP 8.x",
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3",
+      "SQL"
+    ],
+    "frameworks": [
+      "CodeIgniter (PHP)"
+    ],
+    "database": "Local State / Indexed Storage",
+    "algorithm": "MVC Architecture & Asynchronous Event-Driven Processing",
+    "algorithm_desc": "Pemisahan logika model, view, dan controller untuk pemrosesan data responsif, modular, dan terstruktur rapi.",
+    "modules": [
+      {
+        "title": "Modul Otentikasi & Hak Akses",
+        "desc": "Sistem keamanan akun pengguna dengan enkripsi kredensial dan validasi hak akses."
+      },
+      {
+        "title": "Modul Pemrosesan Logika Sistem",
+        "desc": "Pengolahan alur kerja utama aplikasi sesuai aturan bisnis yang diterapkan."
+      },
+      {
+        "title": "Modul Antarmuka Responsif & Interaktif",
+        "desc": "Tampilan antarmuka dinamis yang nyaman diakses pada perangkat desktop maupun mobile."
+      },
+      {
+        "title": "Modul Rekapitulasi Data & Ekspor",
+        "desc": "Penyajian ringkasan data operasional dan kemudahan pengelolaan arsip."
+      }
+    ]
   },
   {
     "id": "myproject",
@@ -657,7 +2049,38 @@ const PROJECTS_DATA = [
       "Keamanan akses pengguna"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/myproject.png"
+    "image": "assets/screenshots/myproject.png",
+    "languages": [
+      "PHP 8.x",
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3",
+      "SQL"
+    ],
+    "frameworks": [
+      "CodeIgniter (PHP)"
+    ],
+    "database": "Local State / Indexed Storage",
+    "algorithm": "MVC Architecture & Asynchronous Event-Driven Processing",
+    "algorithm_desc": "Pemisahan logika model, view, dan controller untuk pemrosesan data responsif, modular, dan terstruktur rapi.",
+    "modules": [
+      {
+        "title": "Modul Otentikasi & Hak Akses",
+        "desc": "Sistem keamanan akun pengguna dengan enkripsi kredensial dan validasi hak akses."
+      },
+      {
+        "title": "Modul Pemrosesan Logika Sistem",
+        "desc": "Pengolahan alur kerja utama aplikasi sesuai aturan bisnis yang diterapkan."
+      },
+      {
+        "title": "Modul Antarmuka Responsif & Interaktif",
+        "desc": "Tampilan antarmuka dinamis yang nyaman diakses pada perangkat desktop maupun mobile."
+      },
+      {
+        "title": "Modul Rekapitulasi Data & Ekspor",
+        "desc": "Penyajian ringkasan data operasional dan kemudahan pengelolaan arsip."
+      }
+    ]
   },
   {
     "id": "invtrio",
@@ -672,7 +2095,39 @@ const PROJECTS_DATA = [
       "Manajemen hak akses kasir & supervisor"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/invtrio.png"
+    "image": "assets/screenshots/invtrio.png",
+    "languages": [
+      "PHP 8.x",
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3",
+      "SQL"
+    ],
+    "frameworks": [
+      "PHP Native",
+      "MySQL"
+    ],
+    "database": "MySQL / MariaDB (Relational Schema & Indexed Foreign Keys)",
+    "algorithm": "Inventory Stock Movement & Ledger Transaction Accounting",
+    "algorithm_desc": "Pencatatan mutasi kuantitas stok barang, rekonsiliasi arus masuk dan keluar barang, serta pencegahan selisih inventaris riil.",
+    "modules": [
+      {
+        "title": "Modul Otentikasi & Hak Akses",
+        "desc": "Sistem keamanan akun pengguna dengan enkripsi kredensial dan validasi hak akses."
+      },
+      {
+        "title": "Modul Pemrosesan Logika Sistem",
+        "desc": "Pengolahan alur kerja utama aplikasi sesuai aturan bisnis yang diterapkan."
+      },
+      {
+        "title": "Modul Antarmuka Responsif & Interaktif",
+        "desc": "Tampilan antarmuka dinamis yang nyaman diakses pada perangkat desktop maupun mobile."
+      },
+      {
+        "title": "Modul Rekapitulasi Data & Ekspor",
+        "desc": "Penyajian ringkasan data operasional dan kemudahan pengelolaan arsip."
+      }
+    ]
   },
   {
     "id": "jilqu",
@@ -687,7 +2142,38 @@ const PROJECTS_DATA = [
       "Keamanan akses pengguna"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/jilqu.png"
+    "image": "assets/screenshots/jilqu.png",
+    "languages": [
+      "PHP 8.x",
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3",
+      "SQL"
+    ],
+    "frameworks": [
+      "PHP Native"
+    ],
+    "database": "Local State / Indexed Storage",
+    "algorithm": "MVC Architecture & Asynchronous Event-Driven Processing",
+    "algorithm_desc": "Pemisahan logika model, view, dan controller untuk pemrosesan data responsif, modular, dan terstruktur rapi.",
+    "modules": [
+      {
+        "title": "Modul Otentikasi & Hak Akses",
+        "desc": "Sistem keamanan akun pengguna dengan enkripsi kredensial dan validasi hak akses."
+      },
+      {
+        "title": "Modul Pemrosesan Logika Sistem",
+        "desc": "Pengolahan alur kerja utama aplikasi sesuai aturan bisnis yang diterapkan."
+      },
+      {
+        "title": "Modul Antarmuka Responsif & Interaktif",
+        "desc": "Tampilan antarmuka dinamis yang nyaman diakses pada perangkat desktop maupun mobile."
+      },
+      {
+        "title": "Modul Rekapitulasi Data & Ekspor",
+        "desc": "Penyajian ringkasan data operasional dan kemudahan pengelolaan arsip."
+      }
+    ]
   },
   {
     "id": "inventory_gita",
@@ -702,7 +2188,39 @@ const PROJECTS_DATA = [
       "Cetak invoice surat jalan"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/inventory_gita.PNG"
+    "image": "assets/screenshots/inventory_gita.PNG",
+    "languages": [
+      "PHP 8.x",
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3",
+      "SQL"
+    ],
+    "frameworks": [
+      "PHP Native",
+      "MySQL"
+    ],
+    "database": "MySQL / MariaDB (Relational Schema & Indexed Foreign Keys)",
+    "algorithm": "Inventory Stock Movement & Ledger Transaction Accounting",
+    "algorithm_desc": "Pencatatan mutasi kuantitas stok barang, rekonsiliasi arus masuk dan keluar barang, serta pencegahan selisih inventaris riil.",
+    "modules": [
+      {
+        "title": "Modul Otentikasi & Hak Akses",
+        "desc": "Sistem keamanan akun pengguna dengan enkripsi kredensial dan validasi hak akses."
+      },
+      {
+        "title": "Modul Pemrosesan Logika Sistem",
+        "desc": "Pengolahan alur kerja utama aplikasi sesuai aturan bisnis yang diterapkan."
+      },
+      {
+        "title": "Modul Antarmuka Responsif & Interaktif",
+        "desc": "Tampilan antarmuka dinamis yang nyaman diakses pada perangkat desktop maupun mobile."
+      },
+      {
+        "title": "Modul Rekapitulasi Data & Ekspor",
+        "desc": "Penyajian ringkasan data operasional dan kemudahan pengelolaan arsip."
+      }
+    ]
   },
   {
     "id": "doc-control",
@@ -717,7 +2235,40 @@ const PROJECTS_DATA = [
       "Log riwayat perubahan dokumen"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/doc-control.png"
+    "image": "assets/screenshots/doc-control.png",
+    "languages": [
+      "PHP 8.x",
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3",
+      "SQL"
+    ],
+    "frameworks": [
+      "Laravel",
+      "PHP",
+      "MySQL"
+    ],
+    "database": "MySQL / MariaDB (Relational Schema & Indexed Foreign Keys)",
+    "algorithm": "MVC Architecture & Asynchronous Event-Driven Processing",
+    "algorithm_desc": "Pemisahan logika model, view, dan controller untuk pemrosesan data responsif, modular, dan terstruktur rapi.",
+    "modules": [
+      {
+        "title": "Modul Otentikasi & Hak Akses",
+        "desc": "Sistem keamanan akun pengguna dengan enkripsi kredensial dan validasi hak akses."
+      },
+      {
+        "title": "Modul Pemrosesan Logika Sistem",
+        "desc": "Pengolahan alur kerja utama aplikasi sesuai aturan bisnis yang diterapkan."
+      },
+      {
+        "title": "Modul Antarmuka Responsif & Interaktif",
+        "desc": "Tampilan antarmuka dinamis yang nyaman diakses pada perangkat desktop maupun mobile."
+      },
+      {
+        "title": "Modul Rekapitulasi Data & Ekspor",
+        "desc": "Penyajian ringkasan data operasional dan kemudahan pengelolaan arsip."
+      }
+    ]
   },
   {
     "id": "hbd-1",
@@ -732,7 +2283,37 @@ const PROJECTS_DATA = [
       "Keamanan akses pengguna"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/hbd-1.png"
+    "image": "assets/screenshots/hbd-1.png",
+    "languages": [
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3"
+    ],
+    "frameworks": [
+      "Native",
+      "Other"
+    ],
+    "database": "Local State / Indexed Storage",
+    "algorithm": "MVC Architecture & Asynchronous Event-Driven Processing",
+    "algorithm_desc": "Pemisahan logika model, view, dan controller untuk pemrosesan data responsif, modular, dan terstruktur rapi.",
+    "modules": [
+      {
+        "title": "Modul Otentikasi & Hak Akses",
+        "desc": "Sistem keamanan akun pengguna dengan enkripsi kredensial dan validasi hak akses."
+      },
+      {
+        "title": "Modul Pemrosesan Logika Sistem",
+        "desc": "Pengolahan alur kerja utama aplikasi sesuai aturan bisnis yang diterapkan."
+      },
+      {
+        "title": "Modul Antarmuka Responsif & Interaktif",
+        "desc": "Tampilan antarmuka dinamis yang nyaman diakses pada perangkat desktop maupun mobile."
+      },
+      {
+        "title": "Modul Rekapitulasi Data & Ekspor",
+        "desc": "Penyajian ringkasan data operasional dan kemudahan pengelolaan arsip."
+      }
+    ]
   },
   {
     "id": "hbd2u",
@@ -747,7 +2328,37 @@ const PROJECTS_DATA = [
       "Keamanan akses pengguna"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/hbd2u.png"
+    "image": "assets/screenshots/hbd2u.png",
+    "languages": [
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3"
+    ],
+    "frameworks": [
+      "Native",
+      "Other"
+    ],
+    "database": "Local State / Indexed Storage",
+    "algorithm": "MVC Architecture & Asynchronous Event-Driven Processing",
+    "algorithm_desc": "Pemisahan logika model, view, dan controller untuk pemrosesan data responsif, modular, dan terstruktur rapi.",
+    "modules": [
+      {
+        "title": "Modul Otentikasi & Hak Akses",
+        "desc": "Sistem keamanan akun pengguna dengan enkripsi kredensial dan validasi hak akses."
+      },
+      {
+        "title": "Modul Pemrosesan Logika Sistem",
+        "desc": "Pengolahan alur kerja utama aplikasi sesuai aturan bisnis yang diterapkan."
+      },
+      {
+        "title": "Modul Antarmuka Responsif & Interaktif",
+        "desc": "Tampilan antarmuka dinamis yang nyaman diakses pada perangkat desktop maupun mobile."
+      },
+      {
+        "title": "Modul Rekapitulasi Data & Ekspor",
+        "desc": "Penyajian ringkasan data operasional dan kemudahan pengelolaan arsip."
+      }
+    ]
   },
   {
     "id": "CRUD-Restoran",
@@ -762,7 +2373,39 @@ const PROJECTS_DATA = [
       "CRUD kategori menu dinamis"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/CRUD-Restoran.png"
+    "image": "assets/screenshots/CRUD-Restoran.png",
+    "languages": [
+      "PHP 8.x",
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3",
+      "SQL"
+    ],
+    "frameworks": [
+      "PHP Native",
+      "MySQL"
+    ],
+    "database": "MySQL / MariaDB (Relational Schema & Indexed Foreign Keys)",
+    "algorithm": "Inventory Stock Movement & Ledger Transaction Accounting",
+    "algorithm_desc": "Pencatatan mutasi kuantitas stok barang, rekonsiliasi arus masuk dan keluar barang, serta pencegahan selisih inventaris riil.",
+    "modules": [
+      {
+        "title": "Modul Otentikasi & Hak Akses",
+        "desc": "Sistem keamanan akun pengguna dengan enkripsi kredensial dan validasi hak akses."
+      },
+      {
+        "title": "Modul Pemrosesan Logika Sistem",
+        "desc": "Pengolahan alur kerja utama aplikasi sesuai aturan bisnis yang diterapkan."
+      },
+      {
+        "title": "Modul Antarmuka Responsif & Interaktif",
+        "desc": "Tampilan antarmuka dinamis yang nyaman diakses pada perangkat desktop maupun mobile."
+      },
+      {
+        "title": "Modul Rekapitulasi Data & Ekspor",
+        "desc": "Penyajian ringkasan data operasional dan kemudahan pengelolaan arsip."
+      }
+    ]
   },
   {
     "id": "first_flutter_app",
@@ -777,7 +2420,38 @@ const PROJECTS_DATA = [
       "Integrasi API data eksternal"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/first_flutter_app.png"
+    "image": "assets/screenshots/first_flutter_app.png",
+    "languages": [
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3"
+    ],
+    "frameworks": [
+      "Flutter",
+      "Dart",
+      "Android"
+    ],
+    "database": "Local State / Indexed Storage",
+    "algorithm": "MVC Architecture & Asynchronous Event-Driven Processing",
+    "algorithm_desc": "Pemisahan logika model, view, dan controller untuk pemrosesan data responsif, modular, dan terstruktur rapi.",
+    "modules": [
+      {
+        "title": "Modul Otentikasi & Hak Akses",
+        "desc": "Sistem keamanan akun pengguna dengan enkripsi kredensial dan validasi hak akses."
+      },
+      {
+        "title": "Modul Pemrosesan Logika Sistem",
+        "desc": "Pengolahan alur kerja utama aplikasi sesuai aturan bisnis yang diterapkan."
+      },
+      {
+        "title": "Modul Antarmuka Responsif & Interaktif",
+        "desc": "Tampilan antarmuka dinamis yang nyaman diakses pada perangkat desktop maupun mobile."
+      },
+      {
+        "title": "Modul Rekapitulasi Data & Ekspor",
+        "desc": "Penyajian ringkasan data operasional dan kemudahan pengelolaan arsip."
+      }
+    ]
   },
   {
     "id": "LAH_vue",
@@ -792,7 +2466,39 @@ const PROJECTS_DATA = [
       "Optimalisasi bundle performa tinggi"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/LAH_vue.png"
+    "image": "assets/screenshots/LAH_vue.png",
+    "languages": [
+      "Java 17 / Swing OOP",
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3"
+    ],
+    "frameworks": [
+      "Vue.js",
+      "Vite",
+      "JavaScript"
+    ],
+    "database": "Local State / Indexed Storage",
+    "algorithm": "MVC Architecture & Asynchronous Event-Driven Processing",
+    "algorithm_desc": "Pemisahan logika model, view, dan controller untuk pemrosesan data responsif, modular, dan terstruktur rapi.",
+    "modules": [
+      {
+        "title": "Modul Otentikasi & Hak Akses",
+        "desc": "Sistem keamanan akun pengguna dengan enkripsi kredensial dan validasi hak akses."
+      },
+      {
+        "title": "Modul Pemrosesan Logika Sistem",
+        "desc": "Pengolahan alur kerja utama aplikasi sesuai aturan bisnis yang diterapkan."
+      },
+      {
+        "title": "Modul Antarmuka Responsif & Interaktif",
+        "desc": "Tampilan antarmuka dinamis yang nyaman diakses pada perangkat desktop maupun mobile."
+      },
+      {
+        "title": "Modul Rekapitulasi Data & Ekspor",
+        "desc": "Penyajian ringkasan data operasional dan kemudahan pengelolaan arsip."
+      }
+    ]
   },
   {
     "id": "lah-tki",
@@ -807,7 +2513,37 @@ const PROJECTS_DATA = [
       "Keamanan akses pengguna"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/lah-tki.png"
+    "image": "assets/screenshots/lah-tki.png",
+    "languages": [
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3"
+    ],
+    "frameworks": [
+      "Native",
+      "Other"
+    ],
+    "database": "Local State / Indexed Storage",
+    "algorithm": "MVC Architecture & Asynchronous Event-Driven Processing",
+    "algorithm_desc": "Pemisahan logika model, view, dan controller untuk pemrosesan data responsif, modular, dan terstruktur rapi.",
+    "modules": [
+      {
+        "title": "Modul Otentikasi & Hak Akses",
+        "desc": "Sistem keamanan akun pengguna dengan enkripsi kredensial dan validasi hak akses."
+      },
+      {
+        "title": "Modul Pemrosesan Logika Sistem",
+        "desc": "Pengolahan alur kerja utama aplikasi sesuai aturan bisnis yang diterapkan."
+      },
+      {
+        "title": "Modul Antarmuka Responsif & Interaktif",
+        "desc": "Tampilan antarmuka dinamis yang nyaman diakses pada perangkat desktop maupun mobile."
+      },
+      {
+        "title": "Modul Rekapitulasi Data & Ekspor",
+        "desc": "Penyajian ringkasan data operasional dan kemudahan pengelolaan arsip."
+      }
+    ]
   },
   {
     "id": "PrintAutoCount-web",
@@ -822,7 +2558,40 @@ const PROJECTS_DATA = [
       "Laporan produksi per operator"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/PrintAutoCount-web.png"
+    "image": "assets/screenshots/PrintAutoCount-web.png",
+    "languages": [
+      "PHP 8.x",
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3",
+      "SQL"
+    ],
+    "frameworks": [
+      "PHP",
+      "JavaScript",
+      "WebSocket"
+    ],
+    "database": "Local State / Indexed Storage",
+    "algorithm": "MVC Architecture & Asynchronous Event-Driven Processing",
+    "algorithm_desc": "Pemisahan logika model, view, dan controller untuk pemrosesan data responsif, modular, dan terstruktur rapi.",
+    "modules": [
+      {
+        "title": "Modul Otentikasi & Hak Akses",
+        "desc": "Sistem keamanan akun pengguna dengan enkripsi kredensial dan validasi hak akses."
+      },
+      {
+        "title": "Modul Pemrosesan Logika Sistem",
+        "desc": "Pengolahan alur kerja utama aplikasi sesuai aturan bisnis yang diterapkan."
+      },
+      {
+        "title": "Modul Antarmuka Responsif & Interaktif",
+        "desc": "Tampilan antarmuka dinamis yang nyaman diakses pada perangkat desktop maupun mobile."
+      },
+      {
+        "title": "Modul Rekapitulasi Data & Ekspor",
+        "desc": "Penyajian ringkasan data operasional dan kemudahan pengelolaan arsip."
+      }
+    ]
   },
   {
     "id": "PrintAutoCount",
@@ -837,7 +2606,38 @@ const PROJECTS_DATA = [
       "Log audit operator percetakan"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/PrintAutoCount.png"
+    "image": "assets/screenshots/PrintAutoCount.png",
+    "languages": [
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3"
+    ],
+    "frameworks": [
+      "Node.js",
+      "Electron",
+      "Desktop"
+    ],
+    "database": "MySQL / MongoDB Database",
+    "algorithm": "MVC Architecture & Asynchronous Event-Driven Processing",
+    "algorithm_desc": "Pemisahan logika model, view, dan controller untuk pemrosesan data responsif, modular, dan terstruktur rapi.",
+    "modules": [
+      {
+        "title": "Modul Otentikasi & Hak Akses",
+        "desc": "Sistem keamanan akun pengguna dengan enkripsi kredensial dan validasi hak akses."
+      },
+      {
+        "title": "Modul Pemrosesan Logika Sistem",
+        "desc": "Pengolahan alur kerja utama aplikasi sesuai aturan bisnis yang diterapkan."
+      },
+      {
+        "title": "Modul Antarmuka Responsif & Interaktif",
+        "desc": "Tampilan antarmuka dinamis yang nyaman diakses pada perangkat desktop maupun mobile."
+      },
+      {
+        "title": "Modul Rekapitulasi Data & Ekspor",
+        "desc": "Penyajian ringkasan data operasional dan kemudahan pengelolaan arsip."
+      }
+    ]
   },
   {
     "id": "lbg-new",
@@ -852,7 +2652,36 @@ const PROJECTS_DATA = [
       "Keamanan akses pengguna"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/lbg-new.png"
+    "image": "assets/screenshots/lbg-new.png",
+    "languages": [
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3"
+    ],
+    "frameworks": [
+      "Vue.js"
+    ],
+    "database": "Local State / Indexed Storage",
+    "algorithm": "MVC Architecture & Asynchronous Event-Driven Processing",
+    "algorithm_desc": "Pemisahan logika model, view, dan controller untuk pemrosesan data responsif, modular, dan terstruktur rapi.",
+    "modules": [
+      {
+        "title": "Modul Otentikasi & Hak Akses",
+        "desc": "Sistem keamanan akun pengguna dengan enkripsi kredensial dan validasi hak akses."
+      },
+      {
+        "title": "Modul Pemrosesan Logika Sistem",
+        "desc": "Pengolahan alur kerja utama aplikasi sesuai aturan bisnis yang diterapkan."
+      },
+      {
+        "title": "Modul Antarmuka Responsif & Interaktif",
+        "desc": "Tampilan antarmuka dinamis yang nyaman diakses pada perangkat desktop maupun mobile."
+      },
+      {
+        "title": "Modul Rekapitulasi Data & Ekspor",
+        "desc": "Penyajian ringkasan data operasional dan kemudahan pengelolaan arsip."
+      }
+    ]
   },
   {
     "id": "sikel_vue",
@@ -867,7 +2696,39 @@ const PROJECTS_DATA = [
       "Form validation real-time"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/sikel_vue.png"
+    "image": "assets/screenshots/sikel_vue.png",
+    "languages": [
+      "Java 17 / Swing OOP",
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3"
+    ],
+    "frameworks": [
+      "Vue.js",
+      "JavaScript",
+      "CSS3"
+    ],
+    "database": "Local State / Indexed Storage",
+    "algorithm": "MVC Architecture & Asynchronous Event-Driven Processing",
+    "algorithm_desc": "Pemisahan logika model, view, dan controller untuk pemrosesan data responsif, modular, dan terstruktur rapi.",
+    "modules": [
+      {
+        "title": "Modul Otentikasi & Hak Akses",
+        "desc": "Sistem keamanan akun pengguna dengan enkripsi kredensial dan validasi hak akses."
+      },
+      {
+        "title": "Modul Pemrosesan Logika Sistem",
+        "desc": "Pengolahan alur kerja utama aplikasi sesuai aturan bisnis yang diterapkan."
+      },
+      {
+        "title": "Modul Antarmuka Responsif & Interaktif",
+        "desc": "Tampilan antarmuka dinamis yang nyaman diakses pada perangkat desktop maupun mobile."
+      },
+      {
+        "title": "Modul Rekapitulasi Data & Ekspor",
+        "desc": "Penyajian ringkasan data operasional dan kemudahan pengelolaan arsip."
+      }
+    ]
   },
   {
     "id": "lbg-email-sender-api",
@@ -882,7 +2743,38 @@ const PROJECTS_DATA = [
       "Logging deliverability & status pengiriman"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/lbg-email-sender-api.png"
+    "image": "assets/screenshots/lbg-email-sender-api.png",
+    "languages": [
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3"
+    ],
+    "frameworks": [
+      "Node.js",
+      "Express",
+      "Nodemailer"
+    ],
+    "database": "MySQL / MongoDB Database",
+    "algorithm": "MVC Architecture & Asynchronous Event-Driven Processing",
+    "algorithm_desc": "Pemisahan logika model, view, dan controller untuk pemrosesan data responsif, modular, dan terstruktur rapi.",
+    "modules": [
+      {
+        "title": "Modul Otentikasi & Hak Akses",
+        "desc": "Sistem keamanan akun pengguna dengan enkripsi kredensial dan validasi hak akses."
+      },
+      {
+        "title": "Modul Pemrosesan Logika Sistem",
+        "desc": "Pengolahan alur kerja utama aplikasi sesuai aturan bisnis yang diterapkan."
+      },
+      {
+        "title": "Modul Antarmuka Responsif & Interaktif",
+        "desc": "Tampilan antarmuka dinamis yang nyaman diakses pada perangkat desktop maupun mobile."
+      },
+      {
+        "title": "Modul Rekapitulasi Data & Ekspor",
+        "desc": "Penyajian ringkasan data operasional dan kemudahan pengelolaan arsip."
+      }
+    ]
   },
   {
     "id": "sjb_timbangan_api",
@@ -897,7 +2789,38 @@ const PROJECTS_DATA = [
       "Integritas data anti-manipulasi timbangan"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/sjb_timbangan_api.png"
+    "image": "assets/screenshots/sjb_timbangan_api.png",
+    "languages": [
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3"
+    ],
+    "frameworks": [
+      "Node.js",
+      "Express",
+      "REST API"
+    ],
+    "database": "MySQL / MongoDB Database",
+    "algorithm": "MVC Architecture & Asynchronous Event-Driven Processing",
+    "algorithm_desc": "Pemisahan logika model, view, dan controller untuk pemrosesan data responsif, modular, dan terstruktur rapi.",
+    "modules": [
+      {
+        "title": "Modul Otentikasi & Hak Akses",
+        "desc": "Sistem keamanan akun pengguna dengan enkripsi kredensial dan validasi hak akses."
+      },
+      {
+        "title": "Modul Pemrosesan Logika Sistem",
+        "desc": "Pengolahan alur kerja utama aplikasi sesuai aturan bisnis yang diterapkan."
+      },
+      {
+        "title": "Modul Antarmuka Responsif & Interaktif",
+        "desc": "Tampilan antarmuka dinamis yang nyaman diakses pada perangkat desktop maupun mobile."
+      },
+      {
+        "title": "Modul Rekapitulasi Data & Ekspor",
+        "desc": "Penyajian ringkasan data operasional dan kemudahan pengelolaan arsip."
+      }
+    ]
   },
   {
     "id": "laravel_inventory",
@@ -912,7 +2835,40 @@ const PROJECTS_DATA = [
       "Dashboard grafik pergerakan stok"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/laravel_inventory.png"
+    "image": "assets/screenshots/laravel_inventory.png",
+    "languages": [
+      "PHP 8.x",
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3",
+      "SQL"
+    ],
+    "frameworks": [
+      "Laravel",
+      "MySQL",
+      "Tailwind"
+    ],
+    "database": "MySQL / MariaDB (Relational Schema & Indexed Foreign Keys)",
+    "algorithm": "Inventory Stock Movement & Ledger Transaction Accounting",
+    "algorithm_desc": "Pencatatan mutasi kuantitas stok barang, rekonsiliasi arus masuk dan keluar barang, serta pencegahan selisih inventaris riil.",
+    "modules": [
+      {
+        "title": "Modul Otentikasi & Hak Akses",
+        "desc": "Sistem keamanan akun pengguna dengan enkripsi kredensial dan validasi hak akses."
+      },
+      {
+        "title": "Modul Pemrosesan Logika Sistem",
+        "desc": "Pengolahan alur kerja utama aplikasi sesuai aturan bisnis yang diterapkan."
+      },
+      {
+        "title": "Modul Antarmuka Responsif & Interaktif",
+        "desc": "Tampilan antarmuka dinamis yang nyaman diakses pada perangkat desktop maupun mobile."
+      },
+      {
+        "title": "Modul Rekapitulasi Data & Ekspor",
+        "desc": "Penyajian ringkasan data operasional dan kemudahan pengelolaan arsip."
+      }
+    ]
   },
   {
     "id": "inventoryweb-laravel",
@@ -927,7 +2883,40 @@ const PROJECTS_DATA = [
       "Export data barang ke format Excel & PDF"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/inventoryweb-laravel.png"
+    "image": "assets/screenshots/inventoryweb-laravel.png",
+    "languages": [
+      "PHP 8.x",
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3",
+      "SQL"
+    ],
+    "frameworks": [
+      "Laravel",
+      "Blade",
+      "MySQL"
+    ],
+    "database": "MySQL / MariaDB (Relational Schema & Indexed Foreign Keys)",
+    "algorithm": "Inventory Stock Movement & Ledger Transaction Accounting",
+    "algorithm_desc": "Pencatatan mutasi kuantitas stok barang, rekonsiliasi arus masuk dan keluar barang, serta pencegahan selisih inventaris riil.",
+    "modules": [
+      {
+        "title": "Modul Otentikasi & Hak Akses",
+        "desc": "Sistem keamanan akun pengguna dengan enkripsi kredensial dan validasi hak akses."
+      },
+      {
+        "title": "Modul Pemrosesan Logika Sistem",
+        "desc": "Pengolahan alur kerja utama aplikasi sesuai aturan bisnis yang diterapkan."
+      },
+      {
+        "title": "Modul Antarmuka Responsif & Interaktif",
+        "desc": "Tampilan antarmuka dinamis yang nyaman diakses pada perangkat desktop maupun mobile."
+      },
+      {
+        "title": "Modul Rekapitulasi Data & Ekspor",
+        "desc": "Penyajian ringkasan data operasional dan kemudahan pengelolaan arsip."
+      }
+    ]
   },
   {
     "id": "rent-nodejs",
@@ -942,7 +2931,39 @@ const PROJECTS_DATA = [
       "Manajemen data pelanggan & sewa"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/rent-nodejs.png"
+    "image": "assets/screenshots/rent-nodejs.png",
+    "languages": [
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3"
+    ],
+    "frameworks": [
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "MySQL"
+    ],
+    "database": "MySQL / MariaDB (Relational Schema & Indexed Foreign Keys)",
+    "algorithm": "MVC Architecture & Asynchronous Event-Driven Processing",
+    "algorithm_desc": "Pemisahan logika model, view, dan controller untuk pemrosesan data responsif, modular, dan terstruktur rapi.",
+    "modules": [
+      {
+        "title": "Modul Otentikasi & Hak Akses",
+        "desc": "Sistem keamanan akun pengguna dengan enkripsi kredensial dan validasi hak akses."
+      },
+      {
+        "title": "Modul Pemrosesan Logika Sistem",
+        "desc": "Pengolahan alur kerja utama aplikasi sesuai aturan bisnis yang diterapkan."
+      },
+      {
+        "title": "Modul Antarmuka Responsif & Interaktif",
+        "desc": "Tampilan antarmuka dinamis yang nyaman diakses pada perangkat desktop maupun mobile."
+      },
+      {
+        "title": "Modul Rekapitulasi Data & Ekspor",
+        "desc": "Penyajian ringkasan data operasional dan kemudahan pengelolaan arsip."
+      }
+    ]
   },
   {
     "id": "sentimen_analysis_tb_nativ",
@@ -957,7 +2978,40 @@ const PROJECTS_DATA = [
       "Evaluasi akurasi confusion matrix"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/sentimen_analysis_tb_nativ.png"
+    "image": "assets/screenshots/sentimen_analysis_tb_nativ.png",
+    "algorithm": "NLP Text Preprocessing & Lexicon-Based Naive Bayes Sentiment Classifier",
+    "algorithm_desc": "Pemrosesan teks bahasa Indonesia: Case Folding, Cleansing, Tokenizing, Stopwords Removal, dan Stemming algoritma Nazief-Adriani, dilanjutkan klasifikasi probabilitas polaritas Opini (Positif, Negatif, Netral).",
+    "languages": [
+      "PHP 8.x",
+      "JavaScript",
+      "SQL",
+      "Python NLP Script Engine"
+    ],
+    "frameworks": [
+      "PHP Native OOP",
+      "Bootstrap 4",
+      "Sastrawi Stemmer Library",
+      "Chart.js"
+    ],
+    "database": "MySQL (Tabel Tweet Mentah, Hasil Preprocessing, Kamus Sentimen, dan Klasifikasi)",
+    "modules": [
+      {
+        "title": "Pembersihan & Preprocessing Teks",
+        "desc": "Penghapusan mention, hashtag, tanda baca, serta ekstraksi kata dasar bahasa Indonesia."
+      },
+      {
+        "title": "Klasifikasi Sentimen Naive Bayes",
+        "desc": "Penentuan probabilitas dokumen terhadap kelas sentimen positif versus negatif."
+      },
+      {
+        "title": "Diagram Pie Polaritas & Word Cloud",
+        "desc": "Visualisasi proporsi persepsi publik dan kata kunci yang paling sering muncul."
+      },
+      {
+        "title": "Evaluasi Akurasi & Confusion Matrix",
+        "desc": "Pengukuran metrik Precision, Recall, dan F1-Score model klasifikasi teks."
+      }
+    ]
   },
   {
     "id": "sinarjo-vue",
@@ -972,7 +3026,39 @@ const PROJECTS_DATA = [
       "Komponen data table responsive"
     ],
     "is_flagship": false,
-    "image": null
+    "image": null,
+    "languages": [
+      "Java 17 / Swing OOP",
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3"
+    ],
+    "frameworks": [
+      "Vue.js",
+      "JavaScript",
+      "Tailwind"
+    ],
+    "database": "Local State / Indexed Storage",
+    "algorithm": "MVC Architecture & Asynchronous Event-Driven Processing",
+    "algorithm_desc": "Pemisahan logika model, view, dan controller untuk pemrosesan data responsif, modular, dan terstruktur rapi.",
+    "modules": [
+      {
+        "title": "Modul Otentikasi & Hak Akses",
+        "desc": "Sistem keamanan akun pengguna dengan enkripsi kredensial dan validasi hak akses."
+      },
+      {
+        "title": "Modul Pemrosesan Logika Sistem",
+        "desc": "Pengolahan alur kerja utama aplikasi sesuai aturan bisnis yang diterapkan."
+      },
+      {
+        "title": "Modul Antarmuka Responsif & Interaktif",
+        "desc": "Tampilan antarmuka dinamis yang nyaman diakses pada perangkat desktop maupun mobile."
+      },
+      {
+        "title": "Modul Rekapitulasi Data & Ekspor",
+        "desc": "Penyajian ringkasan data operasional dan kemudahan pengelolaan arsip."
+      }
+    ]
   },
   {
     "id": "abstract-java",
@@ -987,7 +3073,39 @@ const PROJECTS_DATA = [
       "Dokumentasi struktur OOP"
     ],
     "is_flagship": false,
-    "image": null
+    "image": null,
+    "languages": [
+      "Java 17 / Swing OOP",
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3"
+    ],
+    "frameworks": [
+      "Java",
+      "OOP",
+      "Design Patterns"
+    ],
+    "database": "Local State / Indexed Storage",
+    "algorithm": "MVC Architecture & Asynchronous Event-Driven Processing",
+    "algorithm_desc": "Pemisahan logika model, view, dan controller untuk pemrosesan data responsif, modular, dan terstruktur rapi.",
+    "modules": [
+      {
+        "title": "Modul Otentikasi & Hak Akses",
+        "desc": "Sistem keamanan akun pengguna dengan enkripsi kredensial dan validasi hak akses."
+      },
+      {
+        "title": "Modul Pemrosesan Logika Sistem",
+        "desc": "Pengolahan alur kerja utama aplikasi sesuai aturan bisnis yang diterapkan."
+      },
+      {
+        "title": "Modul Antarmuka Responsif & Interaktif",
+        "desc": "Tampilan antarmuka dinamis yang nyaman diakses pada perangkat desktop maupun mobile."
+      },
+      {
+        "title": "Modul Rekapitulasi Data & Ekspor",
+        "desc": "Penyajian ringkasan data operasional dan kemudahan pengelolaan arsip."
+      }
+    ]
   },
   {
     "id": "inventorySholikah",
@@ -1002,7 +3120,39 @@ const PROJECTS_DATA = [
       "Sistem backup database"
     ],
     "is_flagship": false,
-    "image": null
+    "image": null,
+    "languages": [
+      "PHP 8.x",
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3",
+      "SQL"
+    ],
+    "frameworks": [
+      "PHP Native",
+      "MySQL"
+    ],
+    "database": "MySQL / MariaDB (Relational Schema & Indexed Foreign Keys)",
+    "algorithm": "Inventory Stock Movement & Ledger Transaction Accounting",
+    "algorithm_desc": "Pencatatan mutasi kuantitas stok barang, rekonsiliasi arus masuk dan keluar barang, serta pencegahan selisih inventaris riil.",
+    "modules": [
+      {
+        "title": "Modul Otentikasi & Hak Akses",
+        "desc": "Sistem keamanan akun pengguna dengan enkripsi kredensial dan validasi hak akses."
+      },
+      {
+        "title": "Modul Pemrosesan Logika Sistem",
+        "desc": "Pengolahan alur kerja utama aplikasi sesuai aturan bisnis yang diterapkan."
+      },
+      {
+        "title": "Modul Antarmuka Responsif & Interaktif",
+        "desc": "Tampilan antarmuka dinamis yang nyaman diakses pada perangkat desktop maupun mobile."
+      },
+      {
+        "title": "Modul Rekapitulasi Data & Ekspor",
+        "desc": "Penyajian ringkasan data operasional dan kemudahan pengelolaan arsip."
+      }
+    ]
   },
   {
     "id": "industri_native",
@@ -1017,7 +3167,37 @@ const PROJECTS_DATA = [
       "Keamanan akses pengguna"
     ],
     "is_flagship": false,
-    "image": null
+    "image": null,
+    "languages": [
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3"
+    ],
+    "frameworks": [
+      "Native",
+      "Other"
+    ],
+    "database": "Local State / Indexed Storage",
+    "algorithm": "MVC Architecture & Asynchronous Event-Driven Processing",
+    "algorithm_desc": "Pemisahan logika model, view, dan controller untuk pemrosesan data responsif, modular, dan terstruktur rapi.",
+    "modules": [
+      {
+        "title": "Modul Otentikasi & Hak Akses",
+        "desc": "Sistem keamanan akun pengguna dengan enkripsi kredensial dan validasi hak akses."
+      },
+      {
+        "title": "Modul Pemrosesan Logika Sistem",
+        "desc": "Pengolahan alur kerja utama aplikasi sesuai aturan bisnis yang diterapkan."
+      },
+      {
+        "title": "Modul Antarmuka Responsif & Interaktif",
+        "desc": "Tampilan antarmuka dinamis yang nyaman diakses pada perangkat desktop maupun mobile."
+      },
+      {
+        "title": "Modul Rekapitulasi Data & Ekspor",
+        "desc": "Penyajian ringkasan data operasional dan kemudahan pengelolaan arsip."
+      }
+    ]
   },
   {
     "id": "Prediksi-Kelas-Data",
@@ -1032,7 +3212,40 @@ const PROJECTS_DATA = [
       "Visualisasi matriks akurasi"
     ],
     "is_flagship": false,
-    "image": null
+    "image": null,
+    "languages": [
+      "PHP 8.x",
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3",
+      "SQL"
+    ],
+    "frameworks": [
+      "Python",
+      "PHP",
+      "Machine Learning"
+    ],
+    "database": "Local State / Indexed Storage",
+    "algorithm": "Machine Learning Pattern Extraction & Statistical Modeling",
+    "algorithm_desc": "Pelatihan model klasifikasi/regresi dengan preprocessing data, feature scaling, dan optimasi metrik evaluasi.",
+    "modules": [
+      {
+        "title": "Modul Otentikasi & Hak Akses",
+        "desc": "Sistem keamanan akun pengguna dengan enkripsi kredensial dan validasi hak akses."
+      },
+      {
+        "title": "Modul Pemrosesan Logika Sistem",
+        "desc": "Pengolahan alur kerja utama aplikasi sesuai aturan bisnis yang diterapkan."
+      },
+      {
+        "title": "Modul Antarmuka Responsif & Interaktif",
+        "desc": "Tampilan antarmuka dinamis yang nyaman diakses pada perangkat desktop maupun mobile."
+      },
+      {
+        "title": "Modul Rekapitulasi Data & Ekspor",
+        "desc": "Penyajian ringkasan data operasional dan kemudahan pengelolaan arsip."
+      }
+    ]
   },
   {
     "id": "nextjs-portfolio-pageview-counter",
@@ -1047,7 +3260,37 @@ const PROJECTS_DATA = [
       "Keamanan akses pengguna"
     ],
     "is_flagship": false,
-    "image": "assets/screenshots/nextjs-portfolio-pageview-counter.png"
+    "image": "assets/screenshots/nextjs-portfolio-pageview-counter.png",
+    "languages": [
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3"
+    ],
+    "frameworks": [
+      "React",
+      "Next.js"
+    ],
+    "database": "Local State / Indexed Storage",
+    "algorithm": "MVC Architecture & Asynchronous Event-Driven Processing",
+    "algorithm_desc": "Pemisahan logika model, view, dan controller untuk pemrosesan data responsif, modular, dan terstruktur rapi.",
+    "modules": [
+      {
+        "title": "Modul Otentikasi & Hak Akses",
+        "desc": "Sistem keamanan akun pengguna dengan enkripsi kredensial dan validasi hak akses."
+      },
+      {
+        "title": "Modul Pemrosesan Logika Sistem",
+        "desc": "Pengolahan alur kerja utama aplikasi sesuai aturan bisnis yang diterapkan."
+      },
+      {
+        "title": "Modul Antarmuka Responsif & Interaktif",
+        "desc": "Tampilan antarmuka dinamis yang nyaman diakses pada perangkat desktop maupun mobile."
+      },
+      {
+        "title": "Modul Rekapitulasi Data & Ekspor",
+        "desc": "Penyajian ringkasan data operasional dan kemudahan pengelolaan arsip."
+      }
+    ]
   },
   {
     "id": "testing",
@@ -1062,7 +3305,38 @@ const PROJECTS_DATA = [
       "Keamanan akses pengguna"
     ],
     "is_flagship": false,
-    "image": null
+    "image": null,
+    "languages": [
+      "Java 17 / Swing OOP",
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3"
+    ],
+    "frameworks": [
+      "JavaScript",
+      "Web"
+    ],
+    "database": "Local State / Indexed Storage",
+    "algorithm": "MVC Architecture & Asynchronous Event-Driven Processing",
+    "algorithm_desc": "Pemisahan logika model, view, dan controller untuk pemrosesan data responsif, modular, dan terstruktur rapi.",
+    "modules": [
+      {
+        "title": "Modul Otentikasi & Hak Akses",
+        "desc": "Sistem keamanan akun pengguna dengan enkripsi kredensial dan validasi hak akses."
+      },
+      {
+        "title": "Modul Pemrosesan Logika Sistem",
+        "desc": "Pengolahan alur kerja utama aplikasi sesuai aturan bisnis yang diterapkan."
+      },
+      {
+        "title": "Modul Antarmuka Responsif & Interaktif",
+        "desc": "Tampilan antarmuka dinamis yang nyaman diakses pada perangkat desktop maupun mobile."
+      },
+      {
+        "title": "Modul Rekapitulasi Data & Ekspor",
+        "desc": "Penyajian ringkasan data operasional dan kemudahan pengelolaan arsip."
+      }
+    ]
   },
   {
     "id": "roblox",
@@ -1077,7 +3351,38 @@ const PROJECTS_DATA = [
       "Keamanan akses pengguna"
     ],
     "is_flagship": false,
-    "image": null
+    "image": null,
+    "languages": [
+      "Python 3.12",
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3"
+    ],
+    "frameworks": [
+      "Python",
+      "Data Science"
+    ],
+    "database": "Local State / Indexed Storage",
+    "algorithm": "MVC Architecture & Asynchronous Event-Driven Processing",
+    "algorithm_desc": "Pemisahan logika model, view, dan controller untuk pemrosesan data responsif, modular, dan terstruktur rapi.",
+    "modules": [
+      {
+        "title": "Modul Otentikasi & Hak Akses",
+        "desc": "Sistem keamanan akun pengguna dengan enkripsi kredensial dan validasi hak akses."
+      },
+      {
+        "title": "Modul Pemrosesan Logika Sistem",
+        "desc": "Pengolahan alur kerja utama aplikasi sesuai aturan bisnis yang diterapkan."
+      },
+      {
+        "title": "Modul Antarmuka Responsif & Interaktif",
+        "desc": "Tampilan antarmuka dinamis yang nyaman diakses pada perangkat desktop maupun mobile."
+      },
+      {
+        "title": "Modul Rekapitulasi Data & Ekspor",
+        "desc": "Penyajian ringkasan data operasional dan kemudahan pengelolaan arsip."
+      }
+    ]
   },
   {
     "id": "anagwer",
@@ -1092,6 +3397,36 @@ const PROJECTS_DATA = [
       "Keamanan akses pengguna"
     ],
     "is_flagship": false,
-    "image": null
+    "image": null,
+    "languages": [
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3"
+    ],
+    "frameworks": [
+      "Native",
+      "Other"
+    ],
+    "database": "Local State / Indexed Storage",
+    "algorithm": "MVC Architecture & Asynchronous Event-Driven Processing",
+    "algorithm_desc": "Pemisahan logika model, view, dan controller untuk pemrosesan data responsif, modular, dan terstruktur rapi.",
+    "modules": [
+      {
+        "title": "Modul Otentikasi & Hak Akses",
+        "desc": "Sistem keamanan akun pengguna dengan enkripsi kredensial dan validasi hak akses."
+      },
+      {
+        "title": "Modul Pemrosesan Logika Sistem",
+        "desc": "Pengolahan alur kerja utama aplikasi sesuai aturan bisnis yang diterapkan."
+      },
+      {
+        "title": "Modul Antarmuka Responsif & Interaktif",
+        "desc": "Tampilan antarmuka dinamis yang nyaman diakses pada perangkat desktop maupun mobile."
+      },
+      {
+        "title": "Modul Rekapitulasi Data & Ekspor",
+        "desc": "Penyajian ringkasan data operasional dan kemudahan pengelolaan arsip."
+      }
+    ]
   }
 ];
